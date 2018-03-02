@@ -1,0 +1,179 @@
+19:48:09.260 INFO  controller.MenuController : Add author selected.
+19:48:30.763 INFO  gateway.AuthorTableGateway : Database connection closed.
+19:48:30.764 INFO  controller.MenuController$1 : Application closed.
+19:49:17.006 INFO  controller.MenuController : Add author selected.
+19:49:21.348 INFO  controller.AuthorAddController : Author add selected.
+19:49:29.003 INFO  controller.MenuController : Author list selected.
+19:49:29.188 ERROR gateway.AuthorTableGateway : Error reading from author table in database: Table 'wyw110.author' doesn't exist
+19:49:36.353 INFO  controller.MenuController : Quit selected.
+19:49:48.669 INFO  controller.MenuController : Add author selected.
+19:54:06.165 INFO  gateway.AuthorTableGateway : Database connection closed.
+19:54:06.166 INFO  controller.MenuController$1 : Application closed.
+19:54:17.806 ERROR gateway.AuthorTableGateway : An error occured in creating a connection to the database: Access denied for user 'wyw110'@'%' to database 'phpmyadmin'
+19:54:17.920 ERROR gateway.AuthorTableGateway : An error occured in creating a connection to the database: Access denied for user 'wyw110'@'%' to database 'phpmyadmin'
+19:54:25.541 INFO  controller.MenuController$1 : Application closed.
+19:55:24.088 ERROR gateway.AuthorTableGateway : An error occured in creating a connection to the database: Access denied for user 'wyw110'@'%' to database 'phpmyadmin:wyw110'
+19:55:24.195 ERROR gateway.AuthorTableGateway : An error occured in creating a connection to the database: Access denied for user 'wyw110'@'%' to database 'phpmyadmin:wyw110'
+19:55:31.046 INFO  controller.MenuController$1 : Application closed.
+20:15:41.409 INFO  controller.MenuController : Add author selected.
+20:19:36.063 INFO  gateway.AuthorTableGateway : Database connection closed.
+20:19:36.064 INFO  controller.MenuController$1 : Application closed.
+20:19:47.943 INFO  controller.MenuController : Add author selected.
+20:20:28.277 ERROR gateway.AuthorTableGateway : Didn't get the new key.
+20:20:28.279 INFO  gateway.AuthorTableGateway : New author created. Id = 0
+20:26:22.029 ERROR gateway.AuthorTableGateway : Didn't get the new key.
+20:26:22.031 INFO  gateway.AuthorTableGateway : New author created. Id = 0
+20:26:24.100 INFO  gateway.AuthorTableGateway : Database connection closed.
+20:26:24.101 INFO  controller.MenuController$1 : Application closed.
+20:26:36.673 INFO  controller.MenuController : Author list selected.
+20:26:41.623 INFO  gateway.AuthorTableGateway : Author with id = 0 deleted from database.
+20:26:48.059 INFO  gateway.AuthorTableGateway : Author with id = 0 deleted from database.
+20:26:55.895 INFO  controller.MenuController : Author list selected.
+20:27:02.402 INFO  controller.AuthorListController$1 : Author Faisal selected.
+20:27:13.307 INFO  gateway.AuthorTableGateway : Author with id = 0 deleted from database.
+20:27:21.557 INFO  gateway.AuthorTableGateway : Author with id = 0 deleted from database.
+20:27:23.995 INFO  gateway.AuthorTableGateway : Database connection closed.
+20:27:23.996 INFO  controller.MenuController$1 : Application closed.
+20:35:06.316 INFO  controller.MenuController : Add author selected.
+20:35:40.243 ERROR gateway.AuthorTableGateway : Error inserting into author table in database: Table 'wyw110.author' doesn't exist
+23:02:00.741 INFO  gateway.AuthorTableGateway : Database connection closed.
+23:02:00.742 INFO  controller.MenuController$1 : Application closed.
+23:07:32.194 INFO  controller.MenuController : Author list selected.
+23:07:32.321 ERROR gateway.AuthorTableGateway : Error reading from author table in database: Table 'wyw110.author' doesn't exist
+23:07:49.075 INFO  controller.MenuController : Add author selected.
+23:07:56.628 INFO  gateway.AuthorTableGateway : Database connection closed.
+23:07:56.629 INFO  controller.MenuController$1 : Application closed.
+23:13:55.582 INFO  gateway.AuthorTableGateway : Database connection closed.
+23:13:55.588 INFO  controller.MenuController$1 : Application closed.
+23:14:07.556 INFO  controller.MenuController : Add author selected.
+23:14:52.455 INFO  gateway.AuthorTableGateway : New author created. Id = 1
+23:15:27.113 INFO  gateway.AuthorTableGateway : Database connection closed.
+23:15:27.114 INFO  controller.MenuController$1 : Application closed.
+23:15:37.006 INFO  controller.MenuController : Author list selected.
+23:15:40.178 INFO  controller.AuthorListController$1 : Author Bill selected.
+23:16:02.900 ERROR gateway.AuthorTableGateway : Error updating dog table in database: Column 'gender' cannot be null
+23:16:31.531 INFO  gateway.AuthorTableGateway : Updated author
+23:16:44.559 INFO  gateway.AuthorTableGateway : Database connection closed.
+23:16:44.560 INFO  controller.MenuController$1 : Application closed.
+23:17:05.342 INFO  controller.MenuController : Add author selected.
+23:17:07.715 INFO  gateway.AuthorTableGateway : Database connection closed.
+23:17:07.715 INFO  controller.MenuController$1 : Application closed.
+23:17:18.828 INFO  controller.MenuController : Author list selected.
+23:17:31.017 INFO  gateway.AuthorTableGateway : Database connection closed.
+23:17:31.019 INFO  controller.MenuController$1 : Application closed.
+23:17:40.196 INFO  controller.MenuController : Add author selected.
+23:18:29.280 INFO  gateway.AuthorTableGateway : New author created. Id = 2
+23:18:35.076 INFO  controller.MenuController : Author list selected.
+23:19:16.110 INFO  controller.MenuController : Add author selected.
+23:20:09.915 INFO  gateway.AuthorTableGateway : New author created. Id = 3
+23:20:49.931 INFO  gateway.AuthorTableGateway : Database connection closed.
+23:20:49.932 INFO  controller.MenuController$1 : Application closed.
+23:21:01.840 INFO  controller.MenuController : Author list selected.
+23:21:04.828 INFO  controller.AuthorListController$1 : Author Bob selected.
+23:21:16.780 INFO  controller.AuthorListController$1 : Author Sharmila selected.
+23:21:29.572 INFO  controller.AuthorListController$1 : Author John selected.
+23:21:35.769 INFO  gateway.AuthorTableGateway : Database connection closed.
+23:21:35.770 INFO  controller.MenuController$1 : Application closed.
+23:34:48.079 INFO  controller.MenuController : Author list selected.
+23:34:50.812 INFO  controller.AuthorListController$1 : Author Sharmila selected.
+23:34:57.552 INFO  gateway.AuthorTableGateway : Database connection closed.
+23:34:57.553 INFO  controller.MenuController$1 : Application closed.
+17:04:44.291 INFO  controller.MenuController : Add author selected.
+17:05:31.167 INFO  gateway.AuthorTableGateway : New author created. Id = 4
+17:05:40.882 INFO  controller.AuthorAddController : Author add selected.
+17:05:44.327 INFO  gateway.AuthorTableGateway : Database connection closed.
+17:05:44.328 INFO  controller.MenuController$1 : Application closed.
+17:08:59.890 INFO  controller.MenuController : Author list selected.
+17:09:05.822 INFO  gateway.AuthorTableGateway : Database connection closed.
+17:09:05.823 INFO  controller.MenuController$1 : Application closed.
+17:35:39.761 INFO  controller.MenuController : Author list selected.
+17:35:43.677 INFO  controller.AuthorListController$1 : Author Bob selected.
+17:35:52.018 ERROR gateway.DBGateway : Error updating dog table in database: Column 'gender' cannot be null
+17:35:59.053 INFO  controller.MenuController : Add author selected.
+17:36:51.565 INFO  controller.AuthorAddController : Author add selected.
+17:36:57.503 INFO  gateway.DBGateway : Database connection closed.
+17:36:57.504 INFO  controller.MenuController$1 : Application closed.
+17:38:24.730 INFO  controller.MenuController : Author list selected.
+17:38:29.637 INFO  controller.MenuController : Add author selected.
+17:38:59.862 INFO  gateway.DBGateway : New author created. Id = 5
+17:39:08.501 INFO  gateway.DBGateway : Database connection closed.
+17:39:08.502 INFO  controller.MenuController$1 : Application closed.
+18:49:46.188 INFO  controller.MenuController : Author list selected.
+18:49:49.079 INFO  controller.AuthorListController$1 : Author Batista selected.
+18:49:59.467 INFO  gateway.DBGateway : Author with id = 5 deleted from database.
+18:50:04.670 INFO  gateway.DBGateway : Database connection closed.
+18:50:04.671 INFO  controller.MenuController$1 : Application closed.
+19:14:52.510 ERROR gateway.DBGateway : An error occured in creating a connection to the database: Access denied for user 'user id'@'cpe-66-69-45-71.satx.res.rr.com' (using password: YES)
+19:14:52.643 ERROR gateway.DBGateway : An error occured in creating a connection to the database: Access denied for user 'user id'@'cpe-66-69-45-71.satx.res.rr.com' (using password: YES)
+19:14:55.398 INFO  controller.MenuController : Author list selected.
+19:14:55.435 ERROR controller.MenuController : Error opening authorList.fxml 
+/C:/Users/austin/Documents/compsci/CS%204743/CS4743Assignment2111.zip_expanded/CS4743Assignment%202/bin/view/authorList.fxml
+
+19:16:14.194 INFO  controller.MenuController$1 : Application closed.
+19:16:18.071 INFO  controller.MenuController : Author list selected.
+19:16:18.165 ERROR gateway.DBGateway : Error reading from author table in database: Table 'hyq004.author' doesn't exist
+19:16:28.818 INFO  gateway.DBGateway : Database connection closed.
+19:16:28.819 INFO  controller.MenuController$1 : Application closed.
+19:16:40.839 INFO  controller.MenuController : Author list selected.
+19:16:40.921 ERROR gateway.DBGateway : Error reading from author table in database: Column 'firstname' not found.
+19:16:45.043 INFO  gateway.DBGateway : Database connection closed.
+19:16:45.044 INFO  controller.MenuController$1 : Application closed.
+19:19:02.550 INFO  controller.MenuController : Author list selected.
+19:19:02.618 ERROR gateway.DBGateway : Error reading from author table in database: Table 'hyq004.author' doesn't exist
+19:19:05.425 INFO  gateway.DBGateway : Database connection closed.
+19:19:05.426 INFO  controller.MenuController$1 : Application closed.
+19:19:34.055 INFO  controller.MenuController : Author list selected.
+19:19:34.133 ERROR gateway.DBGateway : Error reading from author table in database: Table 'hyq004.author' doesn't exist
+19:19:37.871 INFO  gateway.DBGateway : Database connection closed.
+19:19:37.871 INFO  controller.MenuController$1 : Application closed.
+19:20:37.023 INFO  controller.MenuController : Author list selected.
+19:21:30.391 INFO  controller.AuthorListController$1 : Author hello selected.
+19:21:38.886 ERROR gateway.DBGateway : Error updating dog table in database: Column 'gender' cannot be null
+19:21:46.629 ERROR gateway.DBGateway : Error updating dog table in database: Data truncation: Data too long for column 'gender' at row 1
+19:22:44.836 ERROR gateway.DBGateway : Error updating dog table in database: Data truncation: Data too long for column 'gender' at row 1
+19:23:34.102 INFO  gateway.DBGateway : Database connection closed.
+19:23:34.103 INFO  controller.MenuController$1 : Application closed.
+19:23:41.720 INFO  controller.MenuController : Author list selected.
+19:23:43.386 INFO  controller.AuthorListController$1 : Author halo selected.
+19:23:47.345 INFO  gateway.DBGateway : Updated author
+19:24:25.917 ERROR gateway.DBGateway : Error updating dog table in database: Column 'gender' cannot be null
+19:24:52.393 INFO  controller.AuthorListController$1 : Author halo selected.
+19:25:02.106 INFO  controller.AuthorListController$1 : Author halo selected.
+19:25:05.876 INFO  gateway.DBGateway : Updated author
+19:25:23.619 INFO  gateway.DBGateway : Author with id = 2 deleted from database.
+19:26:00.600 INFO  controller.MenuController : Add author selected.
+19:26:27.353 ERROR gateway.DBGateway : Error inserting into Author table in database: Data truncation: Data too long for column 'gender' at row 1
+19:26:52.949 INFO  controller.MenuController : Add author selected.
+19:27:16.046 INFO  gateway.DBGateway : New author created. Id = 4
+19:27:16.136 INFO  gateway.DBGateway : Updated author
+19:27:37.753 INFO  gateway.DBGateway : Database connection closed.
+19:27:37.754 INFO  controller.MenuController$1 : Application closed.
+12:34:15.511 INFO  controller.MenuController : Author list selected.
+12:34:16.902 INFO  controller.AuthorListController$1 : Author hello selected.
+12:34:21.699 INFO  gateway.DBGateway : Database connection closed.
+12:34:21.699 INFO  controller.MenuController$1 : Application closed.
+15:50:52.990 INFO  controller.MenuController : Author list selected.
+15:50:53.045 ERROR gateway.DBGateway : Error reading from author table in database: Table 'hyq004.Author' doesn't exist
+15:52:30.282 INFO  controller.MenuController : Author list selected.
+15:52:31.988 INFO  controller.AuthorListController$1 : Author a selected.
+15:52:36.175 ERROR gateway.DBGateway : Error updating dog table in database: Data truncation: Data too long for column 'gender' at row 1
+15:53:31.777 INFO  controller.MenuController : Author list selected.
+15:53:32.987 INFO  controller.AuthorListController$1 : Author a selected.
+15:53:36.832 INFO  gateway.DBGateway : Updated author
+15:53:41.028 INFO  gateway.DBGateway : Author with id = 4 deleted from database.
+15:53:45.033 INFO  controller.MenuController : Author list selected.
+15:53:45.935 INFO  controller.AuthorListController$1 : Author cheldo selected.
+15:53:49.324 INFO  controller.MenuController : Add author selected.
+15:54:05.938 ERROR gateway.DBGateway : Error inserting into Author table in database: Data truncation: Incorrect date value: '12/29/1995' for column 'dob' at row 1
+15:55:43.367 INFO  gateway.DBGateway : Database connection closed.
+15:55:43.367 INFO  controller.MenuController$1 : Application closed.
+15:55:46.047 INFO  gateway.DBGateway : Database connection closed.
+15:55:46.047 INFO  controller.MenuController$1 : Application closed.
+15:55:49.517 INFO  gateway.DBGateway : Database connection closed.
+15:55:49.518 INFO  controller.MenuController$1 : Application closed.
+16:11:30.597 INFO  controller.MenuController : Author list selected.
+16:11:32.032 INFO  controller.AuthorListController$1 : Author cheldo selected.
+16:11:44.106 INFO  gateway.DBGateway : Database connection closed.
+16:11:44.107 INFO  controller.MenuController$1 : Application closed.
+16:18:39.920 INFO  gateway.DBGateway : Database connection closed.
+16:18:39.923 INFO  controller.MenuController$1 : Application closed.
