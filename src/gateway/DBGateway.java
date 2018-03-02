@@ -10,6 +10,10 @@ import java.sql.*;
 import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
 
 import model.Author;
+import model.Book;
+import model.Publisher;
+import java.time.LocalDate;
+import java.time.*;
 
 public class DBGateway {
 
@@ -61,6 +65,42 @@ public class DBGateway {
 		return authors;
 	}
 
+	public ArrayList<Book> getBooks() {
+
+		ArrayList<Book> books = new ArrayList<Book>();
+		PreparedStatement st = null;
+		ResultSet rs = null;
+		try {
+
+			String query = "select * " + " from book ";
+			st = conn.prepareStatement(query);
+
+			// used to run select statements
+			rs = st.executeQuery();
+
+			// create a book object for each row in the book table
+			while (rs.next()) {
+				books.add(new Book(rs.getInt("id"), rs.getString("title"), rs.getString("summary"),
+						rs.getInt("year_published"), new Publisher(rs.getInt("publisher_id"), "unknown"), rs.getString("isbn"),
+						LocalDate.now()));
+			}
+
+		} catch (SQLException e) {
+			logger.error("Error reading from book table in database: " + e.getMessage());
+		} finally {
+			try {
+				if (rs != null)
+					rs.close();
+				if (st != null)
+					st.close();
+			} catch (SQLException e) {
+				logger.error("Set close Statement or Result error: " + e.getMessage());
+			}
+		}
+
+		return books;
+	}
+	
 	// modify an existing author
 	public void updateAuthor(Author author) {
 		PreparedStatement st = null;
@@ -157,6 +197,31 @@ public class DBGateway {
 			}
 		}
 	}
+	
+	//To delete the author
+		public void deleteBook(Book book) {
+			PreparedStatement st = null;
+			ResultSet rs = null;
+			try {
+				String query = "Delete from book " + "where id = ?";
+				st = conn.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
+				st.setInt(1, book.getId());
+				// executeUpdate is used to run insert, update, and delete statements
+				st.executeUpdate();
+				logger.info("Book with id = " + book.getId() + " deleted from database.");
+			} catch (SQLException e) {
+				logger.error("Error: deleting from book table in Database: " + e.getMessage());
+			} finally {
+				try {
+					if (rs != null)
+						rs.close();
+					if (st != null)
+						st.close();
+				} catch (SQLException e) {
+					logger.error("Set close Statement or Result error" + e.getMessage());
+				}
+			}
+		}
 
 	public void close() {
 		try {

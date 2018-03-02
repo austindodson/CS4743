@@ -22,6 +22,8 @@ public class MenuController {
 	private MenuItem authorList;
 	@FXML
 	private MenuItem authorAdd;
+	@FXML
+	private MenuItem bookList;
 	private Logger logger = LogManager.getLogger(MenuController.class);
 	private DBGateway gateway;
 
@@ -44,7 +46,10 @@ public class MenuController {
 		} else if (event.getSource() == quit) {
 			logger.info("Quit selected.");
 			System.exit(0);
-		}
+		} else if (event.getSource() == bookList) {
+			logger.info("Book List selected.");
+			changeToBookScene();
+		} 
 	}
 
 	//Border Layout center settings
@@ -60,6 +65,20 @@ public class MenuController {
 			throw new IOException(e);
 		}
 	}
+	
+	//Border Layout center settings
+		private void changeToBookScene() throws IOException {
+			Driver app = driver.getInstance();
+			try {
+				FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/authorList.fxml"));
+				loader.setController(new BookListController(gateway));
+				Pane pane = (Pane) loader.load();
+				app.getRootPane().setCenter(pane);
+			} catch (IOException e) {
+				logger.error("Error opening authorList.fxml " + e.getMessage());
+				throw new IOException(e);
+			}
+		}
 
 	private void changeToAuthorAddScene() throws IOException {
 		Driver app = driver.getInstance();
