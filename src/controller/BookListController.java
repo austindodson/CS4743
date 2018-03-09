@@ -55,20 +55,20 @@ public class BookListController {
 						try {
 							Stage stage = new Stage();
 							Pane pane = new Pane();
-							FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/AuthorDetail.fxml"));
-							//loader.setController(new BookDetailController(selected, stage));
+							FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/BookDetail.fxml"));
+							loader.setController(new BookDetailController(selected, stage));
 							pane = (Pane) loader.load();
 							// set the scene with the pane
 							Scene scene = new Scene(pane, 800, 400);
 							// set title
-							stage.setTitle("Author Details");
+							stage.setTitle("Book Details");
 							// put the scene on the stage
 							stage.setScene(scene);
 							// show time
 							stage.show();
 						} catch (IOException e) {
 							System.out.println(e.getMessage());
-							logger.error("Error opening authordetail.fxml: " + e.getMessage());
+							logger.error("Error opening bookdetail.fxml: " + e.getMessage());
 						}
 
 						logger.info("Book " + selected.getTitle() + " selected.");
