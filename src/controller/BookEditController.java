@@ -1,6 +1,7 @@
 package controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -22,7 +23,7 @@ import model.Publisher;
 
 public class BookEditController {
 
-	private ObservableList<String> genderList = FXCollections.observableArrayList("Unknown");
+	private ObservableList<String> publisherList;
 	private Book book;
 	private Stage stage;
 	private Logger logger = LogManager.getLogger(AuthorEditController.class);
@@ -46,6 +47,12 @@ public class BookEditController {
 	public BookEditController(Book book, Stage stage) {
 		this.book = book;
 		this.stage = stage;
+		ArrayList<Publisher> pubs = book.getGateway().getPublishers();
+		ArrayList<String> names = new ArrayList<String>();
+		for(Publisher pub: pubs) {
+			names.add(pub.getPublisherName());
+		}
+		this.publisherList = FXCollections.observableArrayList(names);
 	}
 
 	public void setFields() {
@@ -53,7 +60,7 @@ public class BookEditController {
 		title.setText(book.getTitle());
 		summary.setText(book.getSummary());
 		yearPublished.setText(book.getYearPublished()+"");
-		publisher.setItems(genderList);
+		publisher.setItems(publisherList);
 		isbn.setText(book.getIsbn());
 
 	}
@@ -147,6 +154,7 @@ public class BookEditController {
 	public void initialize() {
 		setFields();
 		setButtonHandlers();
+		publisher.setValue("Unknown");
 	}
 
 }

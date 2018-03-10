@@ -31,15 +31,29 @@ public class Book {
 		this.gateway = gateway;
 	}
 	
+	public Book() {
+		this.id= 0;
+		this.title = "";
+		this.summary= "";
+		this.yearPublished = 0;
+		this.isbn = "";
+		this.dateAdded = "";
+		
+	}
+	
 	@Override
 	public String toString() {
 		return "Book [id=" + id + ", title=" + title + ", summary=" + summary + ", yearPublished=" + yearPublished
-				+ ", publisher=" + publisher + ", isbn=" + isbn + ", dateAdded=" + dateAdded + ", gateway=" + gateway
-				+ "]";
+				+ ", publisher=" + publisher + ", isbn=" + isbn + ", dateAdded=" + dateAdded + "]";
 	}
 
 	public void updateBook() {
 		gateway.updateBook(this);
+	}
+	
+	public void saveBook() {
+		System.out.println("saving book");
+		gateway.saveBook(this);
 	}
 
 	public int getId() {
@@ -98,6 +112,12 @@ public class Book {
 		this.dateAdded = dateAdded;
 	}
 	
+	public void setGateway(DBGateway gateway) {
+		this.gateway = gateway;
+	}
 	
+	public DBGateway getGateway() {
+		return gateway;
+	}
 
 }

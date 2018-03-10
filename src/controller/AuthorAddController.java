@@ -74,5 +74,6 @@ public class AuthorAddController {
 	@FXML
 	public void initialize() {
 		gender.setItems(genderList);
+		gender.setValue("Unknown");
 	}
 }

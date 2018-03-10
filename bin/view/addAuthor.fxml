@@ -87,7 +87,7 @@
 			GridPane.rowIndex="3">
 			<children>
 				<TextField fx:id="dateofbirth" layoutX="32.0" layoutY="10.0"
-					prefHeight="54.0" prefWidth="187.0">
+					prefHeight="54.0" prefWidth="187.0" text="YYYY-MM-DD">
 					<font>
 						<Font size="22.0" />
 					</font>
@@ -98,7 +98,7 @@
 			GridPane.rowIndex="4">
 			<children>
 				<ChoiceBox fx:id="gender" layoutX="32.0" layoutY="17.0"
-					prefHeight="32.0" prefWidth="187.0" />
+					prefHeight="32.0" prefWidth="187.0"/>
 			</children>
 		</Pane>
 		<Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">

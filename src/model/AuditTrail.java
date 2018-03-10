@@ -5,35 +5,35 @@ import java.sql.Timestamp;
 
 public class AuditTrail {
 
-	private String recordDescriptor;
-	private Timestamp dateAdded;
+	private int id;
+	private String dateAdded;
 	private String message;
 	
 	public AuditTrail(){
-		recordDescriptor = null;
+		id = 0;
 		dateAdded = null;
 		message = null;
 	}
 	
-	public AuditTrail(String recordDescriptor, Timestamp dateAdded, String message){
-		this.recordDescriptor = recordDescriptor;
+	public AuditTrail(int id, String dateAdded, String message){
+		this.id = id;
 		this.dateAdded = dateAdded;
 		this.message = message;
 	}
 
-	public String getRecordDescriptor() {
-		return recordDescriptor;
+	public int getRecordDescriptor() {
+		return id;
 	}
 
-	public void setRecordDescriptor(String recordDescriptor) {
-		this.recordDescriptor = recordDescriptor;
+	public void setRecordDescriptor(int id) {
+		this.id = id;
 	}
 
-	public Timestamp getDateAdded() {
+	public String getDateAdded() {
 		return dateAdded;
 	}
 
-	public void setDateAdded(Timestamp dateAdded) {
+	public void setDateAdded(String dateAdded) {
 		this.dateAdded = dateAdded;
 	}
 

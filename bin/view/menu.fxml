@@ -19,6 +19,8 @@
 					onAction="#handleMenuAction" text="Add Author" />
 				<MenuItem fx:id="bookList" mnemonicParsing="false"
 					onAction="#handleMenuAction" text="Book List" />
+				<MenuItem fx:id="bookAdd" mnemonicParsing="false"
+					onAction="#handleMenuAction" text="Add book" />	
 			</items>
 		</Menu>
 	</menus>

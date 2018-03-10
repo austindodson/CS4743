@@ -49,7 +49,7 @@
       </Pane>
       <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
          <children>
-            <TextField fx:id="title" layoutX="32.0" layoutY="1.0" prefHeight="54.0" prefWidth="187.0" text="title">
+            <TextField fx:id="title" layoutX="32.0" layoutY="1.0" prefHeight="54.0" prefWidth="187.0" text="">
                <font>
                   <Font size="22.0" />
                </font>
@@ -58,7 +58,7 @@
       </Pane>
       <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
          <children>
-            <TextField fx:id="summary" layoutX="32.0" layoutY="2.0" prefHeight="54.0" prefWidth="187.0" text="summary">
+            <TextField fx:id="summary" layoutX="32.0" layoutY="2.0" prefHeight="54.0" prefWidth="187.0" text="">
                <font>
                   <Font size="22.0" />
                </font>
@@ -67,7 +67,7 @@
       </Pane>
       <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
          <children>
-            <TextField fx:id="yearPublished" layoutX="32.0" layoutY="10.0" prefHeight="54.0" prefWidth="187.0" text="YYYY-MM-DD">
+            <TextField fx:id="yearPublished" layoutX="32.0" layoutY="10.0" prefHeight="54.0" prefWidth="187.0" text="YYYY">
                <font>
                   <Font size="22.0" />
                </font>
@@ -99,7 +99,7 @@
       </Pane>
       <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
          <children>
-            <Label fx:id="id" layoutX="32.0" layoutY="13.0" prefHeight="54.0" prefWidth="187.0" text="id">
+            <Label fx:id="id" layoutX="32.0" layoutY="13.0" prefHeight="54.0" prefWidth="187.0" text="">
                <font>
                   <Font size="29.0" />
                </font>
@@ -122,7 +122,7 @@
       </Pane>
       <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
          <children>
-            <TextField fx:id="isbn" layoutX="32.0" layoutY="2.0" prefHeight="54.0" prefWidth="187.0" text="isbn">
+            <TextField fx:id="isbn" layoutX="32.0" layoutY="2.0" prefHeight="54.0" prefWidth="187.0" text="">
                <font>
                   <Font size="22.0" />
                </font>

@@ -67,7 +67,7 @@
       </Pane>
       <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
          <children>
-            <TextField fx:id="dateofbirth" layoutX="32.0" layoutY="10.0" prefHeight="54.0" prefWidth="187.0" text="dateofbirth">
+            <TextField fx:id="dateofbirth" layoutX="32.0" layoutY="10.0" prefHeight="54.0" prefWidth="187.0" text="YYY-MM-DD">
                <font>
                   <Font size="22.0" />
                </font>

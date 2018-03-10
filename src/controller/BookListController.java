@@ -22,11 +22,16 @@ public class BookListController {
 	private ArrayList<Book> booksList;
 	private Logger logger = LogManager.getLogger(BookListController.class);
 	private DBGateway gateway;
+	private String matchingString = "";
 
 	@FXML
 	private ListView<String> list = new ListView<String>();
 	@FXML
 	private Button delete;
+	@FXML
+	private Button goSearch;
+	@FXML
+	private TextField search;
 
 	public BookListController(DBGateway gateway) {
 		this.gateway = gateway;
@@ -34,8 +39,13 @@ public class BookListController {
 
 	public void setListView() {
 
-		booksList = gateway.getBooks();
-
+		if (!matchingString.equals("")) {
+			booksList = gateway.getBooksLike(matchingString);
+		}
+		else {
+			booksList = gateway.getBooks();
+		}
+		
 		ObservableList<String> bookItems = FXCollections.observableArrayList();
 		// fill the ObservableList with the author names
 		for (int i = 0; i < booksList.size(); i++) {
@@ -78,6 +88,7 @@ public class BookListController {
 		};
 
 		list.setOnMouseClicked(doubleClick);
+		matchingString = "";
 	}
 
 	public void setButtonHandler() {
@@ -96,6 +107,17 @@ public class BookListController {
 			}
 		};
 		delete.setOnMouseClicked(deleteHandler);
+		
+		EventHandler<MouseEvent> searchHandler = new EventHandler<MouseEvent>() {
+			@Override
+			public void handle(MouseEvent mouseEvent) {
+				if (mouseEvent.getButton().equals(MouseButton.PRIMARY)) {
+					matchingString = search.getText();
+					setListView();
+				}
+			}
+		};
+		goSearch.setOnMouseClicked(searchHandler);
 	}
 
 	// Activate fxml to set List View.

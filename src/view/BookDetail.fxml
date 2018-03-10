@@ -168,6 +168,8 @@
 		</Pane>
 		<Pane prefHeight="57.0" prefWidth="466.0" GridPane.rowIndex="6">
 			<children>
+				<Button fx:id="audit" layoutX="250" layoutY="13.0" mnemonicParsing="false"
+				prefHeight="31.0" prefWidth="82.0" text="Audit Trail"/>
 				<Button fx:id="edit" layoutX="338.0" layoutY="13.0"
 					mnemonicParsing="false" prefHeight="31.0" prefWidth="82.0" text="Edit" />
 			</children>

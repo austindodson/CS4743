@@ -2,6 +2,9 @@ package controller;
 
 import java.io.IOException;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -18,6 +21,7 @@ public class BookDetailController {
 
 	private Book book;
 	private Stage stage;
+	private Logger logger = LogManager.getLogger(BookDetailController.class);
 	@FXML
 	private Label id;
 	@FXML
@@ -34,6 +38,8 @@ public class BookDetailController {
 	private Label dateAdded;
 	@FXML
 	private Button edit;
+	@FXML
+	private Button audit;
 
 	public BookDetailController(Book book, Stage stage) {
 		this.book = book;
@@ -77,13 +83,45 @@ public class BookDetailController {
 						//Show time
 						stage.show();
 					} catch (IOException e) {
-						System.out.println(e.getMessage());
+						logger.error(e.getMessage());
 					}
 				}
 			}
 		};
 		// Setting mouse click event to the List View
 		edit.setOnMouseClicked(editHandler);
+		EventHandler<MouseEvent> auditHandler = new EventHandler<MouseEvent>() {
+			//Overriden function for EventHandler
+			@Override
+			public void handle(MouseEvent mouseEvent) {
+				//Mouse button usually the left one
+				if (mouseEvent.getButton().equals(MouseButton.PRIMARY)) {
+					//Creating of another scene
+					try {
+						//New pane layout to set the scene
+						Pane pane = new Pane();
+						//Loader for the fxml file
+						FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/bookaudittrail.fxml"));
+						//Controller setting for the author editing
+						loader.setController(new bookauditlistController(book, book.getGateway()));
+						//Loading of fxml file to the pane
+						pane = (Pane) loader.load();
+						//Setting of the scene
+						Scene scene = new Scene(pane, 500, 400);
+						//The title setting
+						stage.setTitle("Book Audit");
+						//Setting scene on the stage
+						stage.setScene(scene);
+						//Show time
+						stage.show();
+					} catch (IOException e) {
+						logger.error(e.getMessage());
+					}
+				}
+			}
+		};
+		// Setting mouse click event to the List View
+		audit.setOnMouseClicked(auditHandler);
 	}
 	//Initialize to run stLabels in the fxml as part og the controller
 	@FXML

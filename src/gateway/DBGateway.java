@@ -9,6 +9,7 @@ import org.apache.logging.log4j.Logger;
 import java.sql.*;
 import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
 
+import model.AuditTrail;
 import model.Author;
 import model.Book;
 import model.Publisher;
@@ -26,6 +27,68 @@ public class DBGateway {
 			makeConnection();
 		} catch (Exception e) {
 			logger.error("An error occured in creating a connection to the database: " + e.getMessage());
+		}
+	}
+	
+	public ArrayList<AuditTrail> getAudits(int book_id) {
+		ArrayList<AuditTrail> audits = new ArrayList<AuditTrail>();
+		PreparedStatement st = null;
+		ResultSet rs = null;
+		try {
+
+			String query = "select * " + " from book_audit_trail WHERE book_id = ?";
+			st = conn.prepareStatement(query);
+			st.setInt(1, book_id);
+
+			// used to run select statements
+			rs = st.executeQuery();
+
+			// create a book object for each row in the book table
+			while (rs.next()) {
+				audits.add(new AuditTrail(rs.getInt("id"), rs.getDate("date_added").toString(),
+						rs.getString("entry_msg")));
+			}
+
+		} catch (SQLException e) {
+			logger.error("Error reading from audit table in database: " + e.getMessage());
+		} finally {
+			try {
+				if (rs != null)
+					rs.close();
+				if (st != null)
+					st.close();
+			} catch (SQLException e) {
+				logger.error("Set close Statement or Result error: " + e.getMessage());
+			}
+		}
+
+		return audits;
+		
+	}
+	
+	public void addAuditTrailBook(String message, int bookid) {
+		PreparedStatement st = null;
+		ResultSet rs = null;
+		
+		try {
+			String query = "insert into book_audit_trail (entry_msg, book_id)"+"values (?,?)";
+			st=conn.prepareStatement(query);
+			st.setString(1, message);
+			st.setInt(2, bookid);
+			st.executeUpdate();
+			logger.info("New audit trail created for book "+ bookid);
+		}
+		catch(SQLException e){
+			logger.error("Error in audit trail entry " + e.getMessage());
+		}finally {
+			try {
+				if (rs != null)
+					rs.close();
+				if (st != null)
+					st.close();
+			} catch (SQLException e) {
+				logger.error("Set close Statement or Result error" + e.getMessage());
+			}
 		}
 	}
 
@@ -64,6 +127,40 @@ public class DBGateway {
 
 		return authors;
 	}
+	
+	public ArrayList<Publisher> getPublishers() {
+
+		ArrayList<Publisher> publishers = new ArrayList<Publisher>();
+		PreparedStatement st = null;
+		ResultSet rs = null;
+		try {
+
+			String query = "select * " + " from publisher ";
+			st = conn.prepareStatement(query);
+
+			// used to run select statements
+			rs = st.executeQuery();
+
+			// create a author object for each row in the dog table
+			while (rs.next()) {
+				publishers.add(new Publisher(rs.getInt("id"), rs.getString("publisher_name")));
+			}
+
+		} catch (SQLException e) {
+			logger.error("Error reading from author table in database: " + e.getMessage());
+		} finally {
+			try {
+				if (rs != null)
+					rs.close();
+				if (st != null)
+					st.close();
+			} catch (SQLException e) {
+				logger.error("Set close Statement or Result error: " + e.getMessage());
+			}
+		}
+
+		return publishers;
+	}
 
 	public ArrayList<Book> getBooks() {
 
@@ -74,6 +171,43 @@ public class DBGateway {
 
 			String query = "select * " + " from book ";
 			st = conn.prepareStatement(query);
+
+			// used to run select statements
+			rs = st.executeQuery();
+
+			// create a book object for each row in the book table
+			while (rs.next()) {
+				books.add(new Book(rs.getInt("id"), rs.getString("title"), rs.getString("summary"),
+						rs.getInt("year_published"), new Publisher(rs.getInt("publisher_id"), "unknown"), rs.getString("isbn"),
+						rs.getString("date_added"), this));
+			}
+
+		} catch (SQLException e) {
+			logger.error("Error reading from book table in database: " + e.getMessage());
+		} finally {
+			try {
+				if (rs != null)
+					rs.close();
+				if (st != null)
+					st.close();
+			} catch (SQLException e) {
+				logger.error("Set close Statement or Result error: " + e.getMessage());
+			}
+		}
+
+		return books;
+	}
+	
+	public ArrayList<Book> getBooksLike(String matching) {
+
+		ArrayList<Book> books = new ArrayList<Book>();
+		PreparedStatement st = null;
+		ResultSet rs = null;
+		try {
+
+			String query = "select * " + " from book WHERE title LIKE ?";
+			st = conn.prepareStatement(query);
+			st.setString(1, "%"+matching+"%");
 
 			// used to run select statements
 			rs = st.executeQuery();
@@ -143,7 +277,6 @@ public class DBGateway {
 			String query = "update book set title = ?, summary = ?, year_published = ?, publisher_id = ?, isbn = ?"
 					+ "where id = ? ";
 			st = conn.prepareStatement(query);
-			System.out.print("hello!!!!!!!!"+book.toString());
 			st.setString(1, book.getTitle());
 			st.setString(2, book.getSummary());
 			st.setInt(3, book.getYearPublished());
@@ -151,6 +284,7 @@ public class DBGateway {
 			st.setString(5, book.getIsbn());
 			st.setInt(6, book.getId());
 
+			addAuditTrailBook(book.toString() + "changed", book.getId());
 			// executeUpdate is used to run insert, update, and delete statements
 			st.executeUpdate();
 
@@ -206,6 +340,44 @@ public class DBGateway {
 			}
 		}
 	}
+	
+	// create a new author
+		public void saveBook(Book book) {
+			PreparedStatement st = null;
+			ResultSet rs = null;
+			try {
+
+				String query = "insert into book (title, summary, year_published, publisher_id, isbn) "
+						+ "values (?, ?, ?, ?, ?)";
+				st = conn.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
+				st.setString(1, book.getTitle());
+				st.setString(2, book.getSummary());
+				st.setInt(3, book.getYearPublished());
+				st.setInt(4, book.getPublisher().getId());
+				st.setString(5, book.getIsbn());
+				// executeUpdate is used to run insert, update, and delete statements
+				st.executeUpdate();
+				rs = st.getGeneratedKeys();
+				if (rs.first()) {
+					book.setId(rs.getInt(1));
+				} else {
+					logger.error("Didn't get the new key.");
+				}
+				logger.info("New book created. Id = " + book.getId());
+				addAuditTrailBook(book.toString() + " added", book.getId());
+			} catch (SQLException e) {
+				logger.error("Error inserting into book table in database: " + e.getMessage());
+			} finally {
+				try {
+					if (rs != null)
+						rs.close();
+					if (st != null)
+						st.close();
+				} catch (SQLException e) {
+					logger.error("Set close Statement or Result error: " + e.getMessage());
+				}
+			}
+		}
 
 	//To delete the author
 	public void deleteAuthor(Author author) {

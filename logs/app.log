@@ -404,3 +404,367 @@
 18:04:10.088 INFO  controller.BookListController$1 : Book I am also a book selected.
 18:04:13.833 INFO  gateway.DBGateway : Database connection closed.
 18:04:13.834 INFO  controller.MenuController$1 : Application closed.
+19:59:59.652 INFO  controller.MenuController : Book List selected.
+20:00:01.261 INFO  controller.BookListController$1 : Book I am also a book selected.
+20:00:18.184 INFO  gateway.DBGateway : Updated book
+20:00:26.804 INFO  controller.MenuController : Book List selected.
+20:00:33.779 INFO  controller.BookListController$1 : Book hello i have been a book selected.
+20:00:42.354 INFO  gateway.DBGateway : Database connection closed.
+20:00:42.355 INFO  controller.MenuController$1 : Application closed.
+20:02:32.101 INFO  controller.MenuController : Book List selected.
+20:02:35.395 INFO  gateway.DBGateway : Database connection closed.
+20:02:35.397 INFO  controller.MenuController$1 : Application closed.
+20:03:22.131 INFO  controller.MenuController : Book List selected.
+20:03:28.084 INFO  gateway.DBGateway : Database connection closed.
+20:03:28.085 INFO  controller.MenuController$1 : Application closed.
+20:04:04.301 INFO  controller.MenuController : Book List selected.
+20:04:17.649 INFO  gateway.DBGateway : Book with id = 3 deleted from database.
+20:04:25.233 INFO  controller.MenuController : Book List selected.
+20:04:31.579 INFO  gateway.DBGateway : Database connection closed.
+20:04:31.580 INFO  controller.MenuController$1 : Application closed.
+20:06:43.023 INFO  controller.MenuController : Book List selected.
+20:06:43.038 ERROR controller.MenuController : Error opening authorList.fxml Controller value already specified.
+/C:/Users/austin/Documents/compsci/CS%204743/CS4743Assignment%203/bin/view/BooksList.fxml:11
+
+20:07:04.637 INFO  gateway.DBGateway : Database connection closed.
+20:07:04.638 INFO  controller.MenuController$1 : Application closed.
+20:07:08.908 INFO  controller.MenuController : Book List selected.
+20:07:08.977 ERROR controller.MenuController : Error opening authorList.fxml Font is not a valid type.
+/C:/Users/austin/Documents/compsci/CS%204743/CS4743Assignment%203/bin/view/BooksList.fxml:14
+
+20:07:12.841 INFO  gateway.DBGateway : Database connection closed.
+20:07:12.842 INFO  controller.MenuController$1 : Application closed.
+20:07:28.370 INFO  controller.MenuController : Book List selected.
+20:07:32.911 INFO  gateway.DBGateway : Database connection closed.
+20:07:32.912 INFO  controller.MenuController$1 : Application closed.
+20:07:53.475 INFO  controller.MenuController : Book List selected.
+20:07:59.308 INFO  gateway.DBGateway : Database connection closed.
+20:07:59.309 INFO  controller.MenuController$1 : Application closed.
+20:08:30.353 INFO  controller.MenuController : Book List selected.
+20:08:33.346 INFO  gateway.DBGateway : Database connection closed.
+20:08:33.347 INFO  controller.MenuController$1 : Application closed.
+20:09:04.910 INFO  controller.MenuController : Book List selected.
+20:09:18.584 INFO  gateway.DBGateway : Database connection closed.
+20:09:18.585 INFO  controller.MenuController$1 : Application closed.
+20:09:55.588 INFO  controller.MenuController : Book List selected.
+20:09:58.604 INFO  gateway.DBGateway : Database connection closed.
+20:09:58.604 INFO  controller.MenuController$1 : Application closed.
+20:10:23.623 INFO  controller.MenuController : Book List selected.
+20:10:26.760 INFO  gateway.DBGateway : Database connection closed.
+20:10:26.761 INFO  controller.MenuController$1 : Application closed.
+20:10:45.700 INFO  controller.MenuController : Book List selected.
+20:10:47.884 INFO  gateway.DBGateway : Database connection closed.
+20:10:47.885 INFO  controller.MenuController$1 : Application closed.
+20:11:22.224 INFO  controller.MenuController : Book List selected.
+20:11:22.270 ERROR controller.MenuController : Error opening authorList.fxml 
+/C:/Users/austin/Documents/compsci/CS%204743/CS4743Assignment%203/bin/view/BooksList.fxml:12
+
+20:11:28.929 INFO  gateway.DBGateway : Database connection closed.
+20:11:28.930 INFO  controller.MenuController$1 : Application closed.
+20:12:07.629 INFO  controller.MenuController : Book List selected.
+20:12:10.495 INFO  gateway.DBGateway : Database connection closed.
+20:12:10.496 INFO  controller.MenuController$1 : Application closed.
+20:12:24.489 INFO  controller.MenuController : Book List selected.
+20:12:27.546 INFO  gateway.DBGateway : Database connection closed.
+20:12:27.547 INFO  controller.MenuController$1 : Application closed.
+20:12:43.280 INFO  controller.MenuController : Book List selected.
+20:12:45.405 INFO  gateway.DBGateway : Database connection closed.
+20:12:45.406 INFO  controller.MenuController$1 : Application closed.
+20:12:55.605 INFO  controller.MenuController : Book List selected.
+20:14:13.971 INFO  gateway.DBGateway : Database connection closed.
+20:14:13.973 INFO  controller.MenuController$1 : Application closed.
+20:14:17.490 INFO  controller.MenuController : Book List selected.
+20:14:23.243 INFO  gateway.DBGateway : Database connection closed.
+20:14:23.244 INFO  controller.MenuController$1 : Application closed.
+20:14:43.175 INFO  controller.MenuController : Book List selected.
+20:14:50.525 INFO  gateway.DBGateway : Database connection closed.
+20:14:50.526 INFO  controller.MenuController$1 : Application closed.
+20:14:59.398 INFO  controller.MenuController : Book List selected.
+20:15:37.398 INFO  gateway.DBGateway : Database connection closed.
+20:15:37.399 INFO  controller.MenuController$1 : Application closed.
+20:15:43.915 INFO  controller.MenuController : Book List selected.
+20:15:54.296 INFO  gateway.DBGateway : Database connection closed.
+20:15:54.297 INFO  controller.MenuController$1 : Application closed.
+20:16:05.108 INFO  controller.MenuController : Book List selected.
+20:16:10.102 INFO  gateway.DBGateway : Book with id = 2 deleted from database.
+20:16:12.753 INFO  gateway.DBGateway : Database connection closed.
+20:16:12.754 INFO  controller.MenuController$1 : Application closed.
+20:18:42.869 INFO  controller.MenuController : Book List selected.
+20:18:45.940 INFO  controller.BookListController$1 : Book hellooo selected.
+20:18:53.257 INFO  gateway.DBGateway : Updated book
+20:19:02.085 INFO  gateway.DBGateway : Database connection closed.
+20:19:02.086 INFO  controller.MenuController$1 : Application closed.
+20:34:24.051 INFO  controller.MenuController : Book List selected.
+20:35:28.178 INFO  gateway.DBGateway : Database connection closed.
+20:35:28.179 INFO  controller.MenuController$1 : Application closed.
+20:35:35.850 INFO  controller.MenuController : Book List selected.
+20:36:21.653 INFO  gateway.DBGateway : Database connection closed.
+20:36:21.653 INFO  controller.MenuController$1 : Application closed.
+20:36:29.461 INFO  controller.MenuController : Book List selected.
+20:36:44.878 INFO  gateway.DBGateway : Database connection closed.
+20:36:44.879 INFO  controller.MenuController$1 : Application closed.
+20:38:06.211 INFO  controller.MenuController : Book List selected.
+20:38:23.568 INFO  gateway.DBGateway : Database connection closed.
+20:38:23.568 INFO  controller.MenuController$1 : Application closed.
+21:57:49.686 INFO  controller.MenuController : Book List selected.
+21:58:36.758 INFO  gateway.DBGateway : Database connection closed.
+21:58:36.758 INFO  controller.MenuController$1 : Application closed.
+21:58:45.038 INFO  controller.MenuController : Add book selected.
+21:58:45.093 ERROR controller.MenuController : Error opening addBook.fxml 
+/C:/Users/austin/Documents/compsci/CS%204743/CS4743Assignment%203/bin/view/addBook.fxml
+
+21:59:48.108 INFO  gateway.DBGateway : Database connection closed.
+21:59:48.109 INFO  controller.MenuController$1 : Application closed.
+21:59:55.063 INFO  controller.MenuController : Add book selected.
+22:00:33.628 INFO  controller.MenuController : Book List selected.
+22:03:29.695 INFO  gateway.DBGateway : Database connection closed.
+22:03:29.696 INFO  controller.MenuController$1 : Application closed.
+22:03:35.794 INFO  controller.MenuController : Add book selected.
+22:05:49.536 INFO  gateway.DBGateway : Database connection closed.
+22:05:49.537 INFO  controller.MenuController$1 : Application closed.
+22:05:59.041 INFO  controller.MenuController : Add author selected.
+22:06:08.983 ERROR gateway.DBGateway : Error inserting into Author table in database: Data truncation: Incorrect date value: 'adsf' for column 'dob' at row 1
+22:06:23.333 INFO  gateway.DBGateway : New author created. Id = 5
+22:06:34.428 INFO  controller.AuthorAddController : Author add selected.
+22:06:38.209 INFO  controller.MenuController : Book List selected.
+22:07:05.708 INFO  gateway.DBGateway : Database connection closed.
+22:07:05.708 INFO  controller.MenuController$1 : Application closed.
+22:07:12.779 INFO  controller.MenuController : Book List selected.
+22:07:16.032 INFO  gateway.DBGateway : Database connection closed.
+22:07:16.032 INFO  controller.MenuController$1 : Application closed.
+22:07:50.650 INFO  controller.MenuController : Book List selected.
+22:07:57.309 INFO  gateway.DBGateway : Database connection closed.
+22:07:57.310 INFO  controller.MenuController$1 : Application closed.
+22:09:06.009 INFO  controller.MenuController : Add book selected.
+22:09:36.290 INFO  gateway.DBGateway : Database connection closed.
+22:09:36.290 INFO  controller.MenuController$1 : Application closed.
+22:10:10.792 INFO  controller.MenuController : Add book selected.
+22:10:21.725 INFO  controller.MenuController : Book List selected.
+22:10:23.600 INFO  gateway.DBGateway : Database connection closed.
+22:10:23.601 INFO  controller.MenuController$1 : Application closed.
+22:11:01.237 INFO  controller.MenuController : Book List selected.
+22:11:02.614 INFO  controller.BookListController$1 : Book hellooo selected.
+22:11:08.546 ERROR gateway.DBGateway : Error in audit trail entry Unknown column 'message' in 'field list'
+22:11:08.629 INFO  gateway.DBGateway : Updated book
+22:12:04.186 INFO  gateway.DBGateway : Database connection closed.
+22:12:04.187 INFO  controller.MenuController$1 : Application closed.
+22:12:18.339 INFO  controller.MenuController : Book List selected.
+22:12:19.336 INFO  controller.BookListController$1 : Book hell selected.
+22:12:25.035 ERROR gateway.DBGateway : Error in audit trail entry Generated keys not requested. You need to specify Statement.RETURN_GENERATED_KEYS to Statement.executeUpdate(), Statement.executeLargeUpdate() or Connection.prepareStatement().
+22:12:25.097 INFO  gateway.DBGateway : Updated book
+22:13:41.180 INFO  gateway.DBGateway : Database connection closed.
+22:13:41.181 INFO  controller.MenuController$1 : Application closed.
+22:13:49.980 INFO  controller.MenuController : Book List selected.
+22:13:51.041 INFO  controller.BookListController$1 : Book sdf selected.
+22:13:56.065 INFO  gateway.DBGateway : New audit trail created for book 2
+22:13:56.175 INFO  gateway.DBGateway : Updated book
+22:14:15.563 INFO  gateway.DBGateway : Database connection closed.
+22:14:15.564 INFO  controller.MenuController$1 : Application closed.
+22:17:57.367 INFO  controller.MenuController : Add book selected.
+22:18:13.814 INFO  gateway.DBGateway : Database connection closed.
+22:18:13.815 INFO  controller.MenuController$1 : Application closed.
+22:19:23.760 INFO  controller.MenuController : Add book selected.
+22:19:37.838 INFO  gateway.DBGateway : Database connection closed.
+22:19:37.839 INFO  controller.MenuController$1 : Application closed.
+22:20:34.391 INFO  controller.MenuController : Add book selected.
+22:20:50.327 INFO  gateway.DBGateway : Database connection closed.
+22:20:50.328 INFO  controller.MenuController$1 : Application closed.
+22:21:49.132 INFO  controller.MenuController : Add book selected.
+22:22:03.326 INFO  controller.BookAddController : Book add selected.
+22:22:03.527 INFO  gateway.DBGateway : New book created. Id = 5
+22:22:03.953 INFO  gateway.DBGateway : New audit trail created for book 5
+22:22:09.574 INFO  controller.MenuController : Book List selected.
+22:22:13.987 INFO  controller.BookListController$1 : Book sdf selected.
+22:22:35.495 INFO  gateway.DBGateway : Database connection closed.
+22:22:35.496 INFO  controller.MenuController$1 : Application closed.
+22:23:31.481 INFO  controller.MenuController : Author list selected.
+22:23:33.498 INFO  controller.MenuController : Add author selected.
+22:23:35.999 INFO  controller.AuthorAddController : Author add selected.
+22:23:44.615 INFO  controller.MenuController : Add book selected.
+22:23:47.171 INFO  gateway.DBGateway : Database connection closed.
+22:23:47.172 INFO  controller.MenuController$1 : Application closed.
+22:24:43.426 INFO  controller.MenuController : Add book selected.
+22:24:46.275 INFO  gateway.DBGateway : Database connection closed.
+22:24:46.275 INFO  controller.MenuController$1 : Application closed.
+22:26:04.001 INFO  controller.MenuController : Book List selected.
+22:26:06.390 INFO  gateway.DBGateway : Book with id = 5 deleted from database.
+22:26:09.056 INFO  gateway.DBGateway : Database connection closed.
+22:26:09.056 INFO  controller.MenuController$1 : Application closed.
+22:29:37.443 INFO  controller.MenuController : Book List selected.
+22:29:40.155 INFO  controller.MenuController : Add book selected.
+22:29:46.747 INFO  gateway.DBGateway : Database connection closed.
+22:29:46.747 INFO  controller.MenuController$1 : Application closed.
+22:31:40.163 INFO  controller.MenuController : Book List selected.
+22:31:41.259 INFO  controller.BookListController$1 : Book helloo selected.
+22:31:47.153 INFO  gateway.DBGateway : Database connection closed.
+22:31:47.153 INFO  controller.MenuController$1 : Application closed.
+22:42:47.696 INFO  controller.MenuController : Book List selected.
+22:42:49.020 ERROR controller.BookListController$1 : Error opening bookdetail.fxml: 
+/C:/Users/austin/Documents/compsci/CS%204743/CS4743Assignment%203/bin/view/BookDetail.fxml:172
+
+22:42:49.021 INFO  controller.BookListController$1 : Book helloo selected.
+22:42:54.931 INFO  gateway.DBGateway : Database connection closed.
+22:42:54.932 INFO  controller.MenuController$1 : Application closed.
+22:43:27.733 INFO  controller.MenuController : Book List selected.
+22:43:31.036 ERROR controller.BookListController$1 : Error opening bookdetail.fxml: 
+/C:/Users/austin/Documents/compsci/CS%204743/CS4743Assignment%203/bin/view/BookDetail.fxml:172
+
+22:43:31.037 INFO  controller.BookListController$1 : Book helloo selected.
+22:43:36.897 INFO  gateway.DBGateway : Database connection closed.
+22:43:36.898 INFO  controller.MenuController$1 : Application closed.
+22:44:59.712 INFO  controller.MenuController : Author list selected.
+22:45:02.116 INFO  controller.MenuController : Book List selected.
+22:45:03.755 ERROR controller.BookListController$1 : Error opening bookdetail.fxml: 
+/C:/Users/austin/Documents/compsci/CS%204743/CS4743Assignment%203/bin/view/BookDetail.fxml:172
+
+22:45:03.755 INFO  controller.BookListController$1 : Book sdfas selected.
+22:45:10.510 INFO  gateway.DBGateway : Database connection closed.
+22:45:10.510 INFO  controller.MenuController$1 : Application closed.
+22:45:39.795 INFO  controller.MenuController : Book List selected.
+22:45:40.833 ERROR controller.BookListController$1 : Error opening bookdetail.fxml: Error resolving onClick='#auditButtonHandler', either the event handler is not in the Namespace or there is an error in the script.
+/C:/Users/austin/Documents/compsci/CS%204743/CS4743Assignment%203/bin/view/BookDetail.fxml:172
+
+22:45:40.834 INFO  controller.BookListController$1 : Book helloo selected.
+22:45:47.368 INFO  gateway.DBGateway : Database connection closed.
+22:45:47.369 INFO  controller.MenuController$1 : Application closed.
+22:46:37.730 INFO  controller.MenuController : Book List selected.
+22:46:39.276 ERROR controller.BookListController$1 : Error opening bookdetail.fxml: 
+/C:/Users/austin/Documents/compsci/CS%204743/CS4743Assignment%203/bin/view/BookDetail.fxml:172
+
+22:46:39.276 INFO  controller.BookListController$1 : Book helloo selected.
+22:46:43.284 INFO  gateway.DBGateway : Database connection closed.
+22:46:43.285 INFO  controller.MenuController$1 : Application closed.
+22:47:16.261 INFO  controller.MenuController : Book List selected.
+22:47:17.757 INFO  controller.BookListController$1 : Book helloo selected.
+22:47:23.518 INFO  gateway.DBGateway : Database connection closed.
+22:47:23.519 INFO  controller.MenuController$1 : Application closed.
+22:48:57.047 INFO  controller.MenuController : Book List selected.
+22:48:58.318 INFO  controller.BookListController$1 : Book helloo selected.
+22:49:00.076 ERROR controller.BookDetailController$2 : 
+/C:/Users/austin/Documents/compsci/CS%204743/CS4743Assignment%203/bin/view/audittrail.fxml
+
+22:49:12.655 INFO  gateway.DBGateway : Database connection closed.
+22:49:12.656 INFO  controller.MenuController$1 : Application closed.
+22:50:00.019 INFO  controller.MenuController : Book List selected.
+22:50:01.187 INFO  controller.BookListController$1 : Book helloo selected.
+22:50:02.279 ERROR controller.BookDetailController$2 : 
+/C:/Users/austin/Documents/compsci/CS%204743/CS4743Assignment%203/bin/view/bookaudittrail.fxml:12
+
+22:50:11.822 INFO  controller.MenuController : Add book selected.
+22:50:16.703 INFO  gateway.DBGateway : Database connection closed.
+22:50:16.704 INFO  controller.MenuController$1 : Application closed.
+22:50:39.272 INFO  controller.MenuController : Book List selected.
+22:50:40.440 INFO  controller.BookListController$1 : Book helloo selected.
+22:50:46.770 INFO  gateway.DBGateway : Database connection closed.
+22:50:46.770 INFO  controller.MenuController$1 : Application closed.
+23:05:14.344 INFO  controller.MenuController : Book List selected.
+23:05:15.745 INFO  controller.BookListController$1 : Book helloo selected.
+23:05:29.274 INFO  gateway.DBGateway : Database connection closed.
+23:05:29.274 INFO  controller.MenuController$1 : Application closed.
+23:06:37.701 INFO  controller.MenuController : Book List selected.
+23:06:39.218 INFO  controller.BookListController$1 : Book sdfas selected.
+23:06:40.080 ERROR controller.BookDetailController$2 : 
+/C:/Users/austin/Documents/compsci/CS%204743/CS4743Assignment%203/bin/view/bookaudittrail.fxml:13
+
+23:06:45.365 INFO  gateway.DBGateway : Database connection closed.
+23:06:45.365 INFO  controller.MenuController$1 : Application closed.
+23:06:57.903 INFO  controller.MenuController : Book List selected.
+23:06:59.033 INFO  controller.BookListController$1 : Book helloo selected.
+23:07:00.319 ERROR controller.BookDetailController$2 : 
+/C:/Users/austin/Documents/compsci/CS%204743/CS4743Assignment%203/bin/view/bookaudittrail.fxml:13
+
+23:07:03.545 INFO  controller.BookListController$1 : Book sdfas selected.
+23:07:04.555 ERROR controller.BookDetailController$2 : 
+/C:/Users/austin/Documents/compsci/CS%204743/CS4743Assignment%203/bin/view/bookaudittrail.fxml:13
+
+23:07:06.611 INFO  gateway.DBGateway : Database connection closed.
+23:07:06.612 INFO  controller.MenuController$1 : Application closed.
+23:07:19.571 INFO  controller.MenuController : Book List selected.
+23:07:20.603 INFO  controller.BookListController$1 : Book helloo selected.
+23:07:24.045 INFO  gateway.DBGateway : Database connection closed.
+23:07:24.046 INFO  controller.MenuController$1 : Application closed.
+23:07:33.004 INFO  controller.MenuController : Book List selected.
+23:07:34.140 INFO  controller.BookListController$1 : Book helloo selected.
+23:07:38.093 INFO  gateway.DBGateway : Database connection closed.
+23:07:38.094 INFO  controller.MenuController$1 : Application closed.
+23:07:53.418 INFO  controller.MenuController : Book List selected.
+23:07:54.637 INFO  controller.BookListController$1 : Book helloo selected.
+23:07:57.756 INFO  gateway.DBGateway : Database connection closed.
+23:07:57.756 INFO  controller.MenuController$1 : Application closed.
+23:08:10.682 INFO  controller.MenuController : Book List selected.
+23:08:11.803 INFO  controller.BookListController$1 : Book sdfas selected.
+23:08:16.788 INFO  gateway.DBGateway : Database connection closed.
+23:08:16.789 INFO  controller.MenuController$1 : Application closed.
+23:09:37.673 INFO  controller.MenuController : Book List selected.
+23:09:38.751 INFO  controller.BookListController$1 : Book helloo selected.
+23:09:50.983 INFO  controller.BookListController$1 : Book helloo selected.
+23:09:54.400 INFO  gateway.DBGateway : Database connection closed.
+23:09:54.400 INFO  controller.MenuController$1 : Application closed.
+23:11:44.776 INFO  controller.MenuController : Book List selected.
+23:11:49.318 INFO  controller.BookListController$1 : Book helloo selected.
+23:11:55.734 INFO  gateway.DBGateway : New audit trail created for book 1
+23:11:55.804 INFO  gateway.DBGateway : Updated book
+23:12:09.268 INFO  controller.MenuController : Book List selected.
+23:12:14.333 INFO  controller.MenuController : Add book selected.
+23:12:29.476 INFO  controller.BookAddController : Book add selected.
+23:12:29.551 INFO  gateway.DBGateway : New book created. Id = 6
+23:12:29.609 INFO  gateway.DBGateway : New audit trail created for book 6
+23:12:33.314 INFO  controller.MenuController : Book List selected.
+23:12:34.806 INFO  controller.BookListController$1 : Book new book selected.
+23:12:38.808 INFO  gateway.DBGateway : Book with id = 6 deleted from database.
+23:12:42.848 INFO  controller.MenuController : Book List selected.
+23:12:55.869 INFO  gateway.DBGateway : Database connection closed.
+23:12:55.870 INFO  controller.MenuController$1 : Application closed.
+23:21:49.675 INFO  controller.MenuController : Add book selected.
+23:21:54.434 INFO  gateway.DBGateway : Database connection closed.
+23:21:54.435 INFO  controller.MenuController$1 : Application closed.
+23:26:54.128 INFO  controller.MenuController : Author list selected.
+23:27:00.153 INFO  controller.AuthorListController$1 : Author heeloo selected.
+23:27:05.244 INFO  controller.MenuController : Book List selected.
+23:27:06.636 INFO  controller.BookListController$1 : Book sdfas selected.
+23:28:08.459 INFO  controller.MenuController : Add book selected.
+23:28:29.841 INFO  controller.BookAddController : Book add selected.
+23:28:29.913 INFO  gateway.DBGateway : New book created. Id = 7
+23:28:29.980 INFO  gateway.DBGateway : New audit trail created for book 7
+23:28:35.806 INFO  controller.MenuController : Book List selected.
+23:28:37.282 INFO  controller.BookListController$1 : Book lord of the flies selected.
+23:28:49.095 INFO  gateway.DBGateway : Database connection closed.
+23:28:49.096 INFO  controller.MenuController$1 : Application closed.
+23:29:31.172 INFO  gateway.DBGateway : Database connection closed.
+23:29:31.178 INFO  controller.MenuController$1 : Application closed.
+23:30:37.543 INFO  controller.MenuController : Author list selected.
+23:30:38.845 INFO  controller.AuthorListController$1 : Author hello selected.
+23:30:45.182 INFO  gateway.DBGateway : Updated author
+23:30:50.357 INFO  controller.MenuController : Author list selected.
+23:30:53.302 INFO  controller.MenuController : Add author selected.
+23:31:12.268 INFO  gateway.DBGateway : New author created. Id = 6
+23:31:17.180 INFO  controller.MenuController : Author list selected.
+23:31:19.042 INFO  controller.AuthorListController$1 : Author new author selected.
+23:31:20.953 INFO  gateway.DBGateway : Database connection closed.
+23:31:20.954 INFO  controller.MenuController$1 : Application closed.
+23:34:35.894 INFO  controller.MenuController : Add author selected.
+23:34:38.041 INFO  gateway.DBGateway : Database connection closed.
+23:34:38.042 INFO  controller.MenuController$1 : Application closed.
+23:34:49.780 INFO  controller.MenuController : Author list selected.
+23:34:53.055 INFO  controller.MenuController : Add author selected.
+23:34:59.679 INFO  gateway.DBGateway : Database connection closed.
+23:34:59.680 INFO  controller.MenuController$1 : Application closed.
+23:35:41.340 INFO  controller.MenuController : Author list selected.
+23:35:42.565 INFO  controller.AuthorListController$1 : Author cheldo selected.
+23:35:49.294 INFO  gateway.DBGateway : Database connection closed.
+23:35:49.295 INFO  controller.MenuController$1 : Application closed.
+23:36:29.826 INFO  controller.MenuController : Author list selected.
+23:36:31.034 INFO  controller.AuthorListController$1 : Author cheldo selected.
+23:36:39.061 INFO  controller.MenuController : Add author selected.
+23:36:46.775 INFO  controller.MenuController : Book List selected.
+23:36:47.757 INFO  controller.BookListController$1 : Book hell selected.
+23:36:54.962 INFO  gateway.DBGateway : Database connection closed.
+23:36:54.963 INFO  controller.MenuController$1 : Application closed.
+23:37:46.686 INFO  controller.MenuController : Book List selected.
+23:37:48.015 INFO  controller.BookListController$1 : Book sdfas selected.
+23:37:55.451 INFO  gateway.DBGateway : New audit trail created for book 2
+23:37:55.522 INFO  gateway.DBGateway : Updated book
+23:37:59.369 INFO  controller.BookListController$1 : Book sdfas selected.
+23:38:05.070 INFO  controller.MenuController : Add book selected.
+23:38:09.051 INFO  gateway.DBGateway : Database connection closed.
+23:38:09.052 INFO  controller.MenuController$1 : Application closed.

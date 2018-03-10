@@ -10,6 +10,7 @@ import javafx.event.*;
 import javafx.fxml.*;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
+import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
 public class MenuController {
@@ -24,6 +25,8 @@ public class MenuController {
 	private MenuItem authorAdd;
 	@FXML
 	private MenuItem bookList;
+	@FXML 
+	private MenuItem bookAdd;
 	private Logger logger = LogManager.getLogger(MenuController.class);
 	private DBGateway gateway;
 
@@ -49,6 +52,9 @@ public class MenuController {
 		} else if (event.getSource() == bookList) {
 			logger.info("Book List selected.");
 			changeToBookScene();
+		} else if (event.getSource() == bookAdd) {
+			logger.info("Add book selected.");
+			changeToBookAddScene();
 		} 
 	}
 
@@ -70,12 +76,12 @@ public class MenuController {
 		private void changeToBookScene() throws IOException {
 			Driver app = driver.getInstance();
 			try {
-				FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/authorList.fxml"));
+				FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/BooksList.fxml"));
 				loader.setController(new BookListController(gateway));
 				Pane pane = (Pane) loader.load();
 				app.getRootPane().setCenter(pane);
 			} catch (IOException e) {
-				logger.error("Error opening authorList.fxml " + e.getMessage());
+				logger.error("Error opening BooksList.fxml " + e.getMessage());
 				throw new IOException(e);
 			}
 		}
@@ -89,7 +95,21 @@ public class MenuController {
 			// replace current content with the new content pane
 			app.getRootPane().setCenter(pane);
 		} catch (IOException e) {
-			logger.error("Error opening authorlist.fxml " + e.getMessage());
+			logger.error("Error opening addAuthor.fxml " + e.getMessage());
+			throw new IOException(e);
+		}
+	}
+	
+	private void changeToBookAddScene() throws IOException {
+		Driver app = driver.getInstance();
+		try {
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/addBook.fxml"));
+			loader.setController(new BookAddController(driver, gateway));
+			Pane pane = (Pane) loader.load();
+			// replace current content with the new content pane
+			app.getRootPane().setCenter(pane);
+		} catch (IOException e) {
+			logger.error("Error opening addBook.fxml " + e.getMessage());
 			throw new IOException(e);
 		}
 	}
