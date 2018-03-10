@@ -36,7 +36,7 @@
 			<children>
 				<Label layoutX="162.0" layoutY="4.0" text="ID:">
 					<font>
-						<Font size="29.0" />
+						<Font size="20.0" />
 					</font>
 				</Label>
 			</children>
@@ -46,16 +46,16 @@
 				<Label alignment="CENTER" contentDisplay="CENTER" layoutX="101.0"
 					layoutY="1.0" text="Title:">
 					<font>
-						<Font size="29.0" />
+						<Font size="20.0" />
 					</font>
 				</Label>
 			</children>
 		</Pane>
 		<Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
 			<children>
-				<Label layoutX="102.0" layoutY="-2.0" text="Last Name:">
+				<Label layoutX="102.0" layoutY="-2.0" text="Summary:">
 					<font>
-						<Font size="29.0" />
+						<Font size="20.0" />
 					</font>
 				</Label>
 			</children>
@@ -64,7 +64,7 @@
 			<children>
 				<Label fx:id="id" layoutX="133.0" layoutY="3.0" text="id">
 					<font>
-						<Font size="29.0" />
+						<Font size="20.0" />
 					</font>
 				</Label>
 			</children>
@@ -74,7 +74,7 @@
 			<children>
 				<Label fx:id="title" layoutX="102.0" layoutY="3.0" text="title">
 					<font>
-						<Font size="29.0" />
+						<Font size="20.0" />
 					</font>
 				</Label>
 			</children>
@@ -82,36 +82,45 @@
 		<Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1"
 			GridPane.rowIndex="2">
 			<children>
-				<Label fx:id="lastname" layoutX="107.0" layoutY="4.0" text="lastname">
+				<Label fx:id="summary" layoutX="107.0" layoutY="4.0" text="summary">
 					<font>
-						<Font size="29.0" />
+						<Font size="20.0" />
 					</font>
 				</Label>
 			</children>
 		</Pane>
 		<Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
 			<children>
-				<Label layoutX="76.0" layoutY="4.0" text="Date of Birth:">
+				<Label layoutX="76.0" layoutY="4.0" text="Year Published:">
 					<font>
-						<Font size="29.0" />
+						<Font size="20.0" />
 					</font>
 				</Label>
 			</children>
 		</Pane>
 		<Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="4">
 			<children>
-				<Label layoutX="143.0" layoutY="-3.0" text="Gender:">
+				<Label layoutX="143.0" layoutY="-3.0" text="Publisher:">
 					<font>
-						<Font size="29.0" />
+						<Font size="20.0" />
 					</font>
 				</Label>
 			</children>
 		</Pane>
 		<Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="5">
 			<children>
-				<Label layoutX="133.0" layoutY="5.0" text="Web Site:">
+				<Label layoutX="133.0" layoutY="-1.0" text="ISBN:">
 					<font>
-						<Font size="29.0" />
+						<Font size="20.0" />
+					</font>
+				</Label>
+			</children>
+		</Pane>
+		<Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="5">
+			<children>
+				<Label layoutX="133.0" layoutY="15.0" text="Date Added:">
+					<font>
+						<Font size="20.0" />
 					</font>
 				</Label>
 			</children>
@@ -119,10 +128,10 @@
 		<Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1"
 			GridPane.rowIndex="3">
 			<children>
-				<Label fx:id="dateofbirth" layoutX="102.0" layoutY="4.0"
-					text="dateofbirth">
+				<Label fx:id="yearPublished" layoutX="102.0" layoutY="4.0"
+					text="yearpublished">
 					<font>
-						<Font size="29.0" />
+						<Font size="20.0" />
 					</font>
 				</Label>
 			</children>
@@ -130,9 +139,9 @@
 		<Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1"
 			GridPane.rowIndex="4">
 			<children>
-				<Label fx:id="gender" layoutX="105.0" layoutY="4.0" text="gender">
+				<Label fx:id="publisher" layoutX="105.0" layoutY="4.0" text="publisher">
 					<font>
-						<Font size="29.0" />
+						<Font size="20.0" />
 					</font>
 				</Label>
 			</children>
@@ -140,9 +149,19 @@
 		<Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1"
 			GridPane.rowIndex="5">
 			<children>
-				<Label fx:id="website" layoutX="103.0" layoutY="-1.0" text="website">
+				<Label fx:id="isbn" layoutX="103.0" layoutY="-1.0" text="isbn">
 					<font>
-						<Font size="29.0" />
+						<Font size="20.0" />
+					</font>
+				</Label>
+			</children>
+		</Pane>
+		<Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1"
+			GridPane.rowIndex="5">
+			<children>
+				<Label fx:id="dateAdded" layoutX="103.0" layoutY="15.0" text="dateAdded">
+					<font>
+						<Font size="20.0" />
 					</font>
 				</Label>
 			</children>

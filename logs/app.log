@@ -315,3 +315,92 @@
 16:02:28.348 INFO  controller.BookListController$1 : Book I am book selected.
 16:02:31.791 INFO  gateway.DBGateway : Database connection closed.
 16:02:31.792 INFO  controller.MenuController$1 : Application closed.
+16:08:50.548 INFO  controller.MenuController : Author list selected.
+16:08:51.885 INFO  controller.AuthorListController$1 : Author hello selected.
+16:08:55.729 INFO  gateway.DBGateway : Database connection closed.
+16:08:55.730 INFO  controller.MenuController$1 : Application closed.
+16:11:02.307 INFO  controller.MenuController : Book List selected.
+16:11:02.383 ERROR gateway.DBGateway : Error reading from book table in database: Column 'dateAdded' not found.
+16:11:51.577 INFO  gateway.DBGateway : Database connection closed.
+16:11:51.578 INFO  controller.MenuController$1 : Application closed.
+16:11:54.184 INFO  controller.MenuController : Book List selected.
+16:11:55.629 INFO  controller.BookListController$1 : Book I am also a book selected.
+16:12:04.367 INFO  gateway.DBGateway : Database connection closed.
+16:12:04.368 INFO  controller.MenuController$1 : Application closed.
+16:12:46.065 INFO  controller.MenuController : Book List selected.
+16:12:47.022 ERROR controller.BookListController$1 : Error opening bookdetail.fxml: 
+/C:/Users/austin/Documents/compsci/CS%204743/CS4743Assignment%203/bin/view/BookDetail.fxml
+
+16:12:47.022 INFO  controller.BookListController$1 : Book I am also a book selected.
+16:12:50.263 INFO  gateway.DBGateway : Database connection closed.
+16:12:50.263 INFO  controller.MenuController$1 : Application closed.
+16:12:57.912 INFO  controller.MenuController : Book List selected.
+16:12:59.020 ERROR controller.BookListController$1 : Error opening bookdetail.fxml: 
+/C:/Users/austin/Documents/compsci/CS%204743/CS4743Assignment%203/bin/view/BookDetail.fxml
+
+16:12:59.021 INFO  controller.BookListController$1 : Book I am also a book selected.
+16:13:00.913 INFO  gateway.DBGateway : Database connection closed.
+16:13:00.914 INFO  controller.MenuController$1 : Application closed.
+16:17:44.135 INFO  controller.MenuController : Book List selected.
+16:17:45.463 INFO  controller.BookListController$1 : Book I am book selected.
+16:17:56.593 INFO  gateway.DBGateway : Database connection closed.
+16:17:56.594 INFO  controller.MenuController$1 : Application closed.
+16:18:55.558 INFO  controller.MenuController : Book List selected.
+16:18:56.733 INFO  controller.BookListController$1 : Book I am book selected.
+16:19:41.661 INFO  gateway.DBGateway : Database connection closed.
+16:19:41.662 INFO  controller.MenuController$1 : Application closed.
+16:19:50.671 INFO  controller.MenuController : Book List selected.
+16:19:51.835 INFO  controller.BookListController$1 : Book I am also a book selected.
+16:20:11.711 INFO  gateway.DBGateway : Database connection closed.
+16:20:11.711 INFO  controller.MenuController$1 : Application closed.
+16:20:18.867 INFO  controller.MenuController : Book List selected.
+16:20:20.123 INFO  controller.BookListController$1 : Book I am book selected.
+16:20:26.453 INFO  gateway.DBGateway : Database connection closed.
+16:20:26.454 INFO  controller.MenuController$1 : Application closed.
+16:20:46.505 INFO  controller.MenuController : Book List selected.
+16:20:47.773 INFO  controller.BookListController$1 : Book I am book selected.
+16:20:51.316 INFO  gateway.DBGateway : Database connection closed.
+16:20:51.317 INFO  controller.MenuController$1 : Application closed.
+16:21:15.424 INFO  controller.MenuController : Book List selected.
+16:21:17.000 INFO  controller.BookListController$1 : Book I am also a book selected.
+16:21:27.396 INFO  gateway.DBGateway : Database connection closed.
+16:21:27.397 INFO  controller.MenuController$1 : Application closed.
+16:21:45.822 INFO  controller.MenuController : Book List selected.
+16:21:47.033 INFO  controller.BookListController$1 : Book I am book selected.
+16:21:56.978 INFO  gateway.DBGateway : Database connection closed.
+16:21:56.979 INFO  controller.MenuController$1 : Application closed.
+16:23:48.867 INFO  controller.MenuController : Author list selected.
+16:23:49.955 INFO  controller.AuthorListController$1 : Author hello selected.
+16:23:56.992 INFO  gateway.DBGateway : Database connection closed.
+16:23:56.993 INFO  controller.MenuController$1 : Application closed.
+16:24:36.086 INFO  controller.MenuController : Author list selected.
+16:24:37.978 INFO  controller.AuthorListController$1 : Author cheldo selected.
+16:24:40.125 INFO  gateway.DBGateway : Database connection closed.
+16:24:40.126 INFO  controller.MenuController$1 : Application closed.
+16:28:40.250 INFO  controller.MenuController : Book List selected.
+16:28:45.012 INFO  controller.BookListController$1 : Book I am book selected.
+16:29:16.830 INFO  gateway.DBGateway : Database connection closed.
+16:29:16.831 INFO  controller.MenuController$1 : Application closed.
+16:41:28.450 INFO  gateway.DBGateway : Database connection closed.
+16:41:28.455 INFO  controller.MenuController$1 : Application closed.
+17:57:04.241 INFO  controller.MenuController : Book List selected.
+17:57:06.550 INFO  controller.BookListController$1 : Book I am also a book selected.
+17:59:37.307 INFO  gateway.DBGateway : Database connection closed.
+17:59:37.308 INFO  controller.MenuController$1 : Application closed.
+17:59:41.039 INFO  controller.MenuController : Book List selected.
+17:59:43.004 INFO  controller.BookListController$1 : Book I am also a book selected.
+18:00:09.668 INFO  gateway.DBGateway : Database connection closed.
+18:00:09.669 INFO  controller.MenuController$1 : Application closed.
+18:00:17.980 INFO  controller.MenuController : Book List selected.
+18:00:19.429 INFO  controller.BookListController$1 : Book I am also a book selected.
+18:02:18.703 INFO  gateway.DBGateway : Database connection closed.
+18:02:18.704 INFO  controller.MenuController$1 : Application closed.
+18:03:45.814 INFO  controller.MenuController : Book List selected.
+18:03:47.274 INFO  controller.BookListController$1 : Book I am also a book selected.
+18:03:53.442 INFO  gateway.DBGateway : Updated book
+18:04:00.056 INFO  controller.BookListController$1 : Book I am also a book selected.
+18:04:03.041 INFO  controller.BookListController$1 : Book I am also a book selected.
+18:04:06.660 INFO  gateway.DBGateway : Updated book
+18:04:10.088 INFO  controller.BookListController$1 : Book I am also a book selected.
+18:04:13.833 INFO  gateway.DBGateway : Database connection closed.
+18:04:13.834 INFO  controller.MenuController$1 : Application closed.

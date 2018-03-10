@@ -44,11 +44,11 @@ public class BookDetailController {
 	public void setLabels() {
 		id.setText(String.valueOf(book.getId()));
 		title.setText(book.getTitle());
-		//summary.setText(book.getSummary());
-		//yearPublished.setText(book.getYearPublished()+"");
-		//publisher.setText(book.getPublisher().getPublisherName());
-		//isbn.setText(book.getIsbn());
-		//dateAdded.setText(book.getDateAdded().toString());
+		summary.setText(book.getSummary());
+		yearPublished.setText(book.getYearPublished()+"");
+		publisher.setText(book.getPublisher().getPublisherName());
+		isbn.setText(book.getIsbn());
+		dateAdded.setText(book.getDateAdded());
 	}
 
 	public void setButtonHandler() {
@@ -63,7 +63,7 @@ public class BookDetailController {
 						//New pane layout to set the scene
 						Pane pane = new Pane();
 						//Loader for the fxml file
-						FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/AuthorDetailEdit.fxml"));
+						FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/BookDetailEdit.fxml"));
 						//Controller setting for the author editing
 						loader.setController(new BookEditController(book, stage));
 						//Loading of fxml file to the pane

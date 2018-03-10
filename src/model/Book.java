@@ -2,6 +2,7 @@ package model;
 
 import java.time.LocalDate;
 
+import gateway.DBGateway;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -13,11 +14,12 @@ public class Book {
 	private int yearPublished;
 	private Publisher publisher;
 	private String isbn;
-	private LocalDate dateAdded;
+	private String dateAdded;
+	private DBGateway gateway;
 	
 	public Book(int id, String title, String summary, int yearPublished,
 			Publisher publisher, String isbn,
-			LocalDate localDate) {
+			String localDate, DBGateway gateway) {
 		super();
 		this.id = id;
 		this.setTitle(title);
@@ -26,6 +28,18 @@ public class Book {
 		this.setPublisher(publisher);
 		this.setIsbn(isbn);
 		this.setDateAdded(localDate);
+		this.gateway = gateway;
+	}
+	
+	@Override
+	public String toString() {
+		return "Book [id=" + id + ", title=" + title + ", summary=" + summary + ", yearPublished=" + yearPublished
+				+ ", publisher=" + publisher + ", isbn=" + isbn + ", dateAdded=" + dateAdded + ", gateway=" + gateway
+				+ "]";
+	}
+
+	public void updateBook() {
+		gateway.updateBook(this);
 	}
 
 	public int getId() {
@@ -76,11 +90,11 @@ public class Book {
 		this.isbn = isbn;
 	}
 
-	public LocalDate getDateAdded() {
+	public String getDateAdded() {
 		return dateAdded;
 	}
 
-	public void setDateAdded(LocalDate dateAdded) {
+	public void setDateAdded(String dateAdded) {
 		this.dateAdded = dateAdded;
 	}
 	

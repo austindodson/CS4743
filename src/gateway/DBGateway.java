@@ -82,7 +82,7 @@ public class DBGateway {
 			while (rs.next()) {
 				books.add(new Book(rs.getInt("id"), rs.getString("title"), rs.getString("summary"),
 						rs.getInt("year_published"), new Publisher(rs.getInt("publisher_id"), "unknown"), rs.getString("isbn"),
-						LocalDate.now()));
+						rs.getString("date_added"), this));
 			}
 
 		} catch (SQLException e) {
@@ -123,6 +123,40 @@ public class DBGateway {
 			logger.info("Updated author");
 		} catch (SQLException e) {
 			logger.error("Error updating author table in database: " + e.getMessage());
+		} finally {
+			try {
+				if (rs != null)
+					rs.close();
+				if (st != null)
+					st.close();
+			} catch (SQLException e) {
+				logger.error("Set close Statement or Result error: " + e.getMessage());
+			}
+		}
+	}
+	
+	public void updateBook(Book book) {
+		PreparedStatement st = null;
+		ResultSet rs = null;
+		try {
+
+			String query = "update book set title = ?, summary = ?, year_published = ?, publisher_id = ?, isbn = ?"
+					+ "where id = ? ";
+			st = conn.prepareStatement(query);
+			System.out.print("hello!!!!!!!!"+book.toString());
+			st.setString(1, book.getTitle());
+			st.setString(2, book.getSummary());
+			st.setInt(3, book.getYearPublished());
+			st.setInt(4, book.getPublisher().getId());
+			st.setString(5, book.getIsbn());
+			st.setInt(6, book.getId());
+
+			// executeUpdate is used to run insert, update, and delete statements
+			st.executeUpdate();
+
+			logger.info("Updated book");
+		} catch (SQLException e) {
+			logger.error("Error updating book table in database: " + e.getMessage());
 		} finally {
 			try {
 				if (rs != null)
