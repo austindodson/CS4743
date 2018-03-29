@@ -925,3 +925,120 @@
 12:19:42.977 INFO  gateway.DBGateway : Updated author
 12:20:00.252 INFO  gateway.DBGateway : Database connection closed.
 12:20:00.252 INFO  controller.MenuController$1 : Application closed.
+12:26:10.402 INFO  controller.MenuController : Author list selected.
+12:26:11.911 INFO  controller.MenuController : Author list selected.
+12:26:12.971 INFO  controller.AuthorListController$1 : Author cheld selected.
+12:26:19.299 INFO  gateway.DBGateway : Updated author
+12:26:22.510 INFO  controller.AuthorListController$1 : Author cheld selected.
+12:26:27.419 INFO  gateway.DBGateway : Updated author
+12:26:36.049 INFO  controller.MenuController : Author list selected.
+12:26:38.998 INFO  controller.MenuController : Author list selected.
+12:30:54.473 INFO  gateway.DBGateway : Database connection closed.
+12:30:54.474 INFO  controller.MenuController$1 : Application closed.
+12:30:59.996 INFO  controller.MenuController : Author list selected.
+12:31:00.036 ERROR gateway.DBGateway : Error saving author timestamp: Before start of result set
+12:31:00.041 ERROR gateway.DBGateway : Error saving author timestamp: Before start of result set
+12:31:00.044 ERROR gateway.DBGateway : Error saving author timestamp: Before start of result set
+12:31:00.047 ERROR gateway.DBGateway : Error saving author timestamp: Before start of result set
+12:31:00.050 ERROR gateway.DBGateway : Error saving author timestamp: Before start of result set
+12:31:00.053 ERROR gateway.DBGateway : Error saving author timestamp: Before start of result set
+12:31:00.057 ERROR gateway.DBGateway : Error saving author timestamp: Before start of result set
+12:31:00.060 ERROR gateway.DBGateway : Error saving author timestamp: Before start of result set
+12:31:00.063 ERROR gateway.DBGateway : Error saving author timestamp: Before start of result set
+12:31:00.066 ERROR gateway.DBGateway : Error saving author timestamp: Before start of result set
+12:31:00.070 ERROR gateway.DBGateway : Error saving author timestamp: Before start of result set
+12:31:00.074 ERROR gateway.DBGateway : Error saving author timestamp: Before start of result set
+12:31:00.077 ERROR gateway.DBGateway : Error saving author timestamp: Before start of result set
+12:31:22.712 INFO  gateway.DBGateway : Database connection closed.
+12:31:22.712 INFO  controller.MenuController$1 : Application closed.
+12:31:27.466 INFO  controller.MenuController : Author list selected.
+12:31:27.506 ERROR gateway.DBGateway : Error saving author timestamp: Before start of result set
+12:31:27.510 ERROR gateway.DBGateway : Error saving author timestamp: Before start of result set
+12:31:27.513 ERROR gateway.DBGateway : Error saving author timestamp: Before start of result set
+12:31:27.518 ERROR gateway.DBGateway : Error saving author timestamp: Before start of result set
+12:31:27.522 ERROR gateway.DBGateway : Error saving author timestamp: Before start of result set
+12:31:27.525 ERROR gateway.DBGateway : Error saving author timestamp: Before start of result set
+12:31:27.529 ERROR gateway.DBGateway : Error saving author timestamp: Before start of result set
+12:31:27.536 ERROR gateway.DBGateway : Error saving author timestamp: Before start of result set
+12:31:27.541 ERROR gateway.DBGateway : Error saving author timestamp: Before start of result set
+12:31:27.547 ERROR gateway.DBGateway : Error saving author timestamp: Before start of result set
+12:31:27.551 ERROR gateway.DBGateway : Error saving author timestamp: Before start of result set
+12:31:27.554 ERROR gateway.DBGateway : Error saving author timestamp: Before start of result set
+12:31:27.558 ERROR gateway.DBGateway : Error saving author timestamp: Before start of result set
+12:31:31.259 INFO  gateway.DBGateway : Database connection closed.
+12:31:31.259 INFO  controller.MenuController$1 : Application closed.
+12:37:40.719 INFO  gateway.DBGateway : Database connection closed.
+12:37:40.720 INFO  controller.MenuController$1 : Application closed.
+12:37:46.716 INFO  controller.MenuController : Author list selected.
+12:38:05.485 INFO  gateway.DBGateway : Database connection closed.
+12:38:05.486 INFO  controller.MenuController$1 : Application closed.
+12:38:23.842 INFO  controller.MenuController : Author list selected.
+12:39:00.963 INFO  controller.MenuController : Author list selected.
+12:39:05.689 INFO  controller.AuthorListController$1 : Author chel selected.
+12:39:12.630 INFO  gateway.DBGateway : Updated author
+12:39:20.231 INFO  gateway.DBGateway : Database connection closed.
+12:39:20.231 INFO  controller.MenuController$1 : Application closed.
+12:39:21.290 INFO  gateway.DBGateway : Database connection closed.
+12:39:21.290 INFO  controller.MenuController$1 : Application closed.
+12:40:29.878 INFO  controller.MenuController : Author list selected.
+12:41:03.394 INFO  controller.MenuController : Author list selected.
+12:41:05.807 INFO  controller.AuthorListController$1 : Author che selected.
+12:41:12.903 INFO  gateway.DBGateway : Updated author
+12:41:17.276 INFO  gateway.DBGateway : Database connection closed.
+12:41:17.276 INFO  controller.MenuController$1 : Application closed.
+12:41:18.278 INFO  gateway.DBGateway : Database connection closed.
+12:41:18.278 INFO  controller.MenuController$1 : Application closed.
+12:42:25.651 INFO  controller.MenuController : Author list selected.
+12:43:11.886 INFO  controller.MenuController : Author list selected.
+12:43:14.113 INFO  controller.AuthorListController$1 : Author chel selected.
+12:43:19.535 INFO  gateway.DBGateway : Updated author
+12:43:40.892 INFO  gateway.DBGateway : Database connection closed.
+12:43:40.892 INFO  controller.MenuController$1 : Application closed.
+12:43:41.945 INFO  gateway.DBGateway : Database connection closed.
+12:43:41.945 INFO  controller.MenuController$1 : Application closed.
+13:09:46.959 INFO  controller.MenuController : Author list selected.
+13:10:04.666 INFO  controller.MenuController : Author list selected.
+13:10:07.137 INFO  controller.AuthorListController$1 : Author chel selected.
+13:10:10.406 INFO  gateway.DBGateway : Updated author
+13:10:23.153 INFO  controller.AuthorListController$1 : Author chel selected.
+13:10:26.681 INFO  gateway.DBGateway : Updated author
+13:10:34.798 INFO  controller.MenuController : Author list selected.
+13:11:33.695 INFO  gateway.DBGateway : Database connection closed.
+13:11:33.696 INFO  controller.MenuController$1 : Application closed.
+13:11:34.733 INFO  gateway.DBGateway : Database connection closed.
+13:11:34.733 INFO  controller.MenuController$1 : Application closed.
+13:29:06.817 INFO  controller.MenuController : Author list selected.
+13:29:09.269 INFO  controller.MenuController : Author list selected.
+13:29:13.560 INFO  controller.AuthorListController$1 : Author che selected.
+13:29:17.639 INFO  gateway.DBGateway : Updated author
+13:29:31.889 INFO  controller.AuthorListController$1 : Author che selected.
+13:29:36.291 INFO  gateway.DBGateway : Updated author
+13:33:48.835 INFO  gateway.DBGateway : Database connection closed.
+13:33:48.835 INFO  controller.MenuController$1 : Application closed.
+13:33:52.208 INFO  gateway.DBGateway : Database connection closed.
+13:33:52.209 INFO  controller.MenuController$1 : Application closed.
+13:34:42.589 INFO  controller.MenuController : Author list selected.
+13:34:45.743 INFO  controller.MenuController : Author list selected.
+13:34:47.496 INFO  controller.AuthorListController$1 : Author heel selected.
+13:34:51.460 ERROR gateway.DBGateway : Error updating author table in database: Before start of result set
+13:35:30.561 INFO  gateway.DBGateway : Database connection closed.
+13:35:30.561 INFO  controller.MenuController$1 : Application closed.
+13:43:08.088 INFO  controller.MenuController : Author list selected.
+13:43:09.289 INFO  controller.AuthorListController$1 : Author che selected.
+13:43:11.717 ERROR gateway.DBGateway : Error updating author table in database: Before start of result set
+13:43:17.089 INFO  gateway.DBGateway : Database connection closed.
+13:43:17.090 INFO  controller.MenuController$1 : Application closed.
+13:43:48.607 INFO  controller.MenuController : Author list selected.
+13:43:49.822 INFO  controller.AuthorListController$1 : Author che selected.
+13:43:53.286 INFO  gateway.DBGateway : Updated author
+13:44:08.924 INFO  controller.MenuController : Add author selected.
+13:44:10.884 INFO  controller.MenuController : Author list selected.
+13:44:12.523 INFO  controller.AuthorListController$1 : Author ch selected.
+13:44:18.377 INFO  gateway.DBGateway : Updated author
+13:44:42.243 ERROR gateway.DBGateway : Error updating author table in database: unable to insert author, timestamps differ
+13:44:46.039 INFO  gateway.DBGateway : Database connection closed.
+13:44:46.039 INFO  controller.MenuController$1 : Application closed.
+13:44:47.207 INFO  gateway.DBGateway : Database connection closed.
+13:44:47.207 INFO  controller.MenuController$1 : Application closed.
+13:44:52.852 INFO  gateway.DBGateway : Database connection closed.
+13:44:52.852 INFO  controller.MenuController$1 : Application closed.

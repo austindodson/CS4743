@@ -35,8 +35,7 @@ public class Author {
 		this.setGender(gender);
 		this.setWebsite(website);
 		this.gateway = gateway;
-		this.lastmodified = null;
-
+		gateway.setAuthorTimestamp(this);;
 	}
 
 	public void updateAuthor() {

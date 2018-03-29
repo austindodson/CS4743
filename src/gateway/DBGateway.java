@@ -19,8 +19,9 @@ import model.Publisher;
 import java.time.LocalDate;
 import java.time.*;
 
-public class DBGateway {
 
+public class DBGateway {
+	Map<Integer, LocalDateTime> current = new HashMap<Integer, LocalDateTime>();
 	private Connection conn;
 	private Logger logger = LogManager.getLogger(DBGateway.class);
 
@@ -250,7 +251,10 @@ public class DBGateway {
 			st2 = conn.prepareStatement(timequery);
 			st2.setInt(1, author.getId());
 			rs2 = st2.executeQuery();
-			
+			current.remove(author.getId());
+			if(rs2.first()) {
+				current.put(author.getId(),rs2.getTimestamp("lastmodified").toLocalDateTime()); 
+			}
 			String query = "update author set firstname = ?, lastname = ?, dob = ?, gender = ?, website = ? "
 					+ "where id = ? ";
 			st = conn.prepareStatement(query);
@@ -261,18 +265,11 @@ public class DBGateway {
 			st.setString(5, author.getWebsite());
 			st.setInt(6, author.getId());
 			
-			LocalDateTime current;
-			
-			if (rs2.first()) {
-				current = rs2.getTimestamp(1).toLocalDateTime();
-				if (author.getTimestamp() == null) {
-					author.setTimestamp(current);
-				}
-			}
-			else {
-				throw new SQLException("Error in getting lastmodified for author");
-			}
-			if (author.getTimestamp().equals(current) || author.getTimestamp().equals(null)) {
+			//NEED TO UPDATE TIME EACH TIME ITS SELECTED
+			System.out.println("author: " + author.getTimestamp().toString());
+			System.out.println(current.get(author.getId()).toString());
+			System.out.println(author.getTimestamp().toString());
+			if (author.getTimestamp().equals(current.get(author.getId())) && !author.getTimestamp().equals(null)) {
 			// executeUpdate is used to run insert, update, and delete statements
 				st.executeUpdate();
 				PreparedStatement st3 = conn.prepareStatement(timequery);
@@ -280,6 +277,8 @@ public class DBGateway {
 				ResultSet rs3 = st3.executeQuery();
 				if (rs3.first()) {
 					author.setTimestamp(rs3.getTimestamp("lastmodified").toLocalDateTime());
+					current.remove(author.getId());
+					current.put(author.getId(), rs3.getTimestamp("lastmodified").toLocalDateTime());
 				}
 				else {
 					throw new SQLException("Error updated timestamp for author model");
@@ -344,6 +343,26 @@ public class DBGateway {
 			} catch (SQLException e) {
 				logger.error("Set close Statement or Result error: " + e.getMessage());
 			}
+		}
+	}
+	
+	public void setAuthorTimestamp(Author author) {
+		try {
+			
+			String timequery = "select lastmodified from author where id = ?";
+			PreparedStatement st2 = conn.prepareStatement(timequery);
+			st2.setInt(1, author.getId());
+			//System.out.println(st2.toString());
+			ResultSet rs2 = st2.executeQuery();
+			if (rs2.first()) {
+				author.setTimestamp(rs2.getTimestamp("lastmodified").toLocalDateTime());
+				current.put(author.getId(), rs2.getTimestamp("lastmodified").toLocalDateTime());
+			}
+			st2.close();
+			rs2.close();
+		}
+		catch (Exception e) {
+			logger.error("Error saving author timestamp: " + e.getMessage());
 		}
 	}
 
