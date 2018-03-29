@@ -9,6 +9,9 @@ import org.apache.logging.log4j.Logger;
 import java.sql.*;
 import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
 
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.ButtonType;
 import model.AuditTrail;
 import model.Author;
 import model.Book;
@@ -238,9 +241,16 @@ public class DBGateway {
 	// modify an existing author
 	public void updateAuthor(Author author) {
 		PreparedStatement st = null;
+		PreparedStatement st2 = null;
 		ResultSet rs = null;
+		ResultSet rs2 = null;
 		try {
-
+			
+			String timequery = "select lastmodified from author where id = ?";
+			st2 = conn.prepareStatement(timequery);
+			st2.setInt(1, author.getId());
+			rs2 = st2.executeQuery();
+			
 			String query = "update author set firstname = ?, lastname = ?, dob = ?, gender = ?, website = ? "
 					+ "where id = ? ";
 			st = conn.prepareStatement(query);
@@ -250,10 +260,39 @@ public class DBGateway {
 			st.setString(4, author.getGender());
 			st.setString(5, author.getWebsite());
 			st.setInt(6, author.getId());
-
+			
+			LocalDateTime current;
+			
+			if (rs2.first()) {
+				current = rs2.getTimestamp(1).toLocalDateTime();
+				if (author.getTimestamp() == null) {
+					author.setTimestamp(current);
+				}
+			}
+			else {
+				throw new SQLException("Error in getting lastmodified for author");
+			}
+			if (author.getTimestamp().equals(current) || author.getTimestamp().equals(null)) {
 			// executeUpdate is used to run insert, update, and delete statements
-			st.executeUpdate();
+				st.executeUpdate();
+				PreparedStatement st3 = conn.prepareStatement(timequery);
+				st3.setInt(1, author.getId());
+				ResultSet rs3 = st3.executeQuery();
+				if (rs3.first()) {
+					author.setTimestamp(rs3.getTimestamp("lastmodified").toLocalDateTime());
+				}
+				else {
+					throw new SQLException("Error updated timestamp for author model");
+				}
+				st3.close();
+				rs3.close();
+			}
+			else {
+				Alert alert = new Alert(AlertType.ERROR, "Unable to save author, timestamps differ!");
+				alert.showAndWait();
 
+				throw new SQLException("unable to insert author, timestamps differ");
+			}
 			logger.info("Updated author");
 		} catch (SQLException e) {
 			logger.error("Error updating author table in database: " + e.getMessage());
@@ -263,6 +302,11 @@ public class DBGateway {
 					rs.close();
 				if (st != null)
 					st.close();
+				if (rs2 != null)
+					rs2.close();
+				if (st2 != null)
+					st2.close();
+				
 			} catch (SQLException e) {
 				logger.error("Set close Statement or Result error: " + e.getMessage());
 			}
@@ -323,6 +367,10 @@ public class DBGateway {
 			rs = st.getGeneratedKeys();
 			if (rs.first()) {
 				author.setId(rs.getInt(1));
+				PreparedStatement st2 = conn.prepareStatement("select lastmodified from author where id = ?");
+				st2.setInt(1, author.getId());
+				ResultSet rs2 = st2.executeQuery();
+				author.setTimestamp(rs.getTimestamp(1).toLocalDateTime());
 			} else {
 				logger.error("Didn't get the new key.");
 			}
@@ -341,7 +389,7 @@ public class DBGateway {
 		}
 	}
 	
-	// create a new author
+	// create a new book
 		public void saveBook(Book book) {
 			PreparedStatement st = null;
 			ResultSet rs = null;

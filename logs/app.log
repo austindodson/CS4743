@@ -768,3 +768,160 @@
 23:38:05.070 INFO  controller.MenuController : Add book selected.
 23:38:09.051 INFO  gateway.DBGateway : Database connection closed.
 23:38:09.052 INFO  controller.MenuController$1 : Application closed.
+12:32:42.925 INFO  controller.MenuController : Add author selected.
+12:33:11.526 ERROR gateway.DBGateway : Error inserting into Author table in database: Column 'lastmodified' not found.
+12:34:59.088 INFO  gateway.DBGateway : Database connection closed.
+12:34:59.089 INFO  controller.MenuController$1 : Application closed.
+12:37:59.788 INFO  controller.MenuController : Add author selected.
+12:38:20.835 ERROR gateway.DBGateway : Error inserting into Author table in database: Data truncation: Incorrect date value: '1995-29-02' for column 'dob' at row 1
+12:38:55.362 ERROR gateway.DBGateway : Error inserting into Author table in database: Data truncation: Incorrect date value: '1995-02-29' for column 'dob' at row 1
+12:39:03.175 INFO  controller.MenuController : Author list selected.
+12:39:06.159 INFO  controller.MenuController : Add author selected.
+12:39:23.985 ERROR gateway.DBGateway : Error inserting into Author table in database: Column 'lastmodified' not found.
+12:43:02.758 INFO  gateway.DBGateway : Database connection closed.
+12:43:02.758 INFO  controller.MenuController$1 : Application closed.
+12:43:14.101 INFO  controller.MenuController : Add author selected.
+12:43:33.749 ERROR gateway.DBGateway : Error inserting into Author table in database: Column Index out of range, 7 > 1. 
+12:43:52.182 INFO  gateway.DBGateway : Database connection closed.
+12:43:52.182 INFO  controller.MenuController$1 : Application closed.
+13:15:13.114 INFO  controller.MenuController : Add author selected.
+13:15:29.210 ERROR gateway.DBGateway : Error inserting into Author table in database: After end of result set
+13:16:23.454 INFO  gateway.DBGateway : Database connection closed.
+13:16:23.455 INFO  controller.MenuController$1 : Application closed.
+13:16:35.497 INFO  controller.MenuController : Add author selected.
+13:16:54.808 ERROR gateway.DBGateway : Error inserting into Author table in database: Column Index out of range, 7 > 1. 
+13:17:29.279 INFO  gateway.DBGateway : Database connection closed.
+13:17:29.279 INFO  controller.MenuController$1 : Application closed.
+13:17:47.435 INFO  controller.MenuController : Add author selected.
+13:18:05.811 ERROR gateway.DBGateway : Error inserting into Author table in database: Column 'lastmodified' not found.
+13:20:15.048 INFO  gateway.DBGateway : Database connection closed.
+13:20:15.049 INFO  controller.MenuController$1 : Application closed.
+13:20:21.122 INFO  controller.MenuController : Add author selected.
+13:20:36.241 ERROR gateway.DBGateway : Error inserting into Author table in database: Column Index out of range, 2 > 1. 
+13:29:25.393 INFO  gateway.DBGateway : Database connection closed.
+13:29:25.393 INFO  controller.MenuController$1 : Application closed.
+13:29:42.454 INFO  controller.MenuController : Add author selected.
+13:30:04.470 ERROR gateway.DBGateway : Error inserting into Author table in database: Column 'lastmodified' not found.
+13:35:43.223 INFO  gateway.DBGateway : Database connection closed.
+13:35:43.223 INFO  controller.MenuController$1 : Application closed.
+13:41:09.744 INFO  controller.MenuController : Add author selected.
+13:41:22.772 ERROR gateway.DBGateway : Error inserting into Author table in database: Column 'lastmodified' not found.
+13:42:52.733 INFO  gateway.DBGateway : Database connection closed.
+13:42:52.733 INFO  controller.MenuController$1 : Application closed.
+13:42:55.052 INFO  controller.MenuController : Add author selected.
+13:43:11.780 ERROR gateway.DBGateway : Error inserting into Author table in database: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'lastmodified' at line 1
+13:46:08.246 INFO  gateway.DBGateway : Database connection closed.
+13:46:08.247 INFO  controller.MenuController$1 : Application closed.
+13:46:14.091 INFO  controller.MenuController : Add author selected.
+13:46:31.584 ERROR gateway.DBGateway : Error inserting into Author table in database: Column 'lastmodified' not found.
+13:47:12.918 INFO  gateway.DBGateway : Database connection closed.
+13:47:12.918 INFO  controller.MenuController$1 : Application closed.
+13:47:17.883 INFO  controller.MenuController : Add author selected.
+13:47:30.857 INFO  gateway.DBGateway : New author created. Id = 18
+13:48:46.449 INFO  controller.MenuController : Author list selected.
+13:48:48.962 INFO  controller.AuthorListController$1 : Author ldsk selected.
+13:48:55.297 ERROR gateway.DBGateway : Error updating author table in database: Before start of result set
+13:51:20.907 INFO  gateway.DBGateway : Database connection closed.
+13:51:20.907 INFO  controller.MenuController$1 : Application closed.
+13:51:30.307 INFO  controller.MenuController : Author list selected.
+13:51:32.486 INFO  controller.AuthorListController$1 : Author ldsk selected.
+13:51:35.981 ERROR gateway.DBGateway : Error updating author table in database: Before start of result set
+13:51:40.737 INFO  controller.AuthorListController$1 : Author ldsk selected.
+13:56:29.507 INFO  gateway.DBGateway : Database connection closed.
+13:56:29.507 INFO  controller.MenuController$1 : Application closed.
+11:48:39.502 INFO  controller.MenuController : Author list selected.
+11:48:41.872 INFO  controller.AuthorListController$1 : Author cheldo selected.
+11:48:50.759 ERROR gateway.DBGateway : Error updating author table in database: Column Index out of range, 0 < 1.
+11:49:12.230 INFO  gateway.DBGateway : Database connection closed.
+11:49:12.231 INFO  controller.MenuController$1 : Application closed.
+11:49:18.885 INFO  controller.MenuController : Author list selected.
+11:49:34.265 INFO  controller.AuthorListController$1 : Author heeloo selected.
+11:51:00.275 INFO  gateway.DBGateway : Database connection closed.
+11:51:00.276 INFO  controller.MenuController$1 : Application closed.
+11:51:04.937 INFO  controller.MenuController : Author list selected.
+11:51:07.300 INFO  controller.AuthorListController$1 : Author cheldo selected.
+11:52:07.311 ERROR controller.AuthorListController$1 : Error opening authordetail.fxml: 
+/C:/Users/austin/Documents/compsci/CS%204743/CS4743Assignment%203/bin/view/AuthorDetail.fxml
+
+11:52:08.294 ERROR controller.AuthorListController$1 : Error opening authordetail.fxml: 
+/C:/Users/austin/Documents/compsci/CS%204743/CS4743Assignment%203/bin/view/AuthorDetail.fxml
+
+11:52:16.534 INFO  gateway.DBGateway : Database connection closed.
+11:52:16.534 INFO  controller.MenuController$1 : Application closed.
+11:52:24.292 INFO  controller.MenuController : Author list selected.
+11:52:25.646 INFO  controller.AuthorListController$1 : Author cheldo selected.
+11:54:37.954 INFO  controller.MenuController : Author list selected.
+11:54:38.961 INFO  controller.AuthorListController$1 : Author afsadasdgasd selected.
+11:54:48.100 INFO  controller.AuthorListController$1 : Author heeloo selected.
+11:56:27.773 INFO  gateway.DBGateway : Database connection closed.
+11:56:27.773 INFO  controller.MenuController$1 : Application closed.
+12:01:08.462 INFO  controller.MenuController : Author list selected.
+12:01:10.106 INFO  controller.AuthorListController$1 : Author cheldo selected.
+12:01:14.639 ERROR gateway.DBGateway : Error updating author table in database: Before start of result set
+12:02:19.445 INFO  gateway.DBGateway : Database connection closed.
+12:02:19.447 INFO  controller.MenuController$1 : Application closed.
+12:02:21.462 INFO  gateway.DBGateway : Database connection closed.
+12:02:21.462 INFO  controller.MenuController$1 : Application closed.
+12:02:26.935 INFO  gateway.DBGateway : Database connection closed.
+12:02:26.936 INFO  controller.MenuController$1 : Application closed.
+12:02:33.259 INFO  controller.MenuController : Author list selected.
+12:02:35.024 INFO  controller.AuthorListController$1 : Author cheld selected.
+12:02:40.686 ERROR gateway.DBGateway : Error updating author table in database: Before start of result set
+12:04:54.280 INFO  gateway.DBGateway : Database connection closed.
+12:04:54.280 INFO  controller.MenuController$1 : Application closed.
+12:05:00.877 INFO  controller.MenuController : Author list selected.
+12:05:01.983 INFO  controller.AuthorListController$1 : Author cheld selected.
+12:05:06.191 ERROR gateway.DBGateway : Error updating author table in database: Operation not allowed after ResultSet closed
+12:06:50.080 INFO  gateway.DBGateway : Database connection closed.
+12:06:50.080 INFO  controller.MenuController$1 : Application closed.
+12:07:06.089 INFO  controller.MenuController : Author list selected.
+12:07:07.547 INFO  controller.AuthorListController$1 : Author cheld selected.
+12:07:11.627 ERROR gateway.DBGateway : Error updating author table in database: Operation not allowed after ResultSet closed
+12:07:14.768 INFO  gateway.DBGateway : Database connection closed.
+12:07:14.769 INFO  controller.MenuController$1 : Application closed.
+12:07:35.474 INFO  controller.MenuController : Author list selected.
+12:07:36.859 INFO  controller.AuthorListController$1 : Author cheld selected.
+12:07:41.463 ERROR gateway.DBGateway : Error updating author table in database: Operation not allowed after ResultSet closed
+12:07:46.823 INFO  gateway.DBGateway : Database connection closed.
+12:07:46.823 INFO  controller.MenuController$1 : Application closed.
+12:09:28.887 INFO  controller.MenuController : Add author selected.
+12:09:31.290 INFO  controller.MenuController : Author list selected.
+12:09:32.448 INFO  controller.AuthorListController$1 : Author cheld selected.
+12:09:36.436 ERROR gateway.DBGateway : Error updating author table in database: No value specified for parameter 1
+12:10:57.862 INFO  gateway.DBGateway : Database connection closed.
+12:10:57.862 INFO  controller.MenuController$1 : Application closed.
+12:11:00.017 INFO  controller.MenuController : Author list selected.
+12:11:01.105 INFO  controller.AuthorListController$1 : Author chel selected.
+12:11:04.659 ERROR gateway.DBGateway : Error updating author table in database: No value specified for parameter 1
+12:11:32.811 INFO  gateway.DBGateway : Database connection closed.
+12:11:32.812 INFO  controller.MenuController$1 : Application closed.
+12:11:38.247 INFO  controller.MenuController : Author list selected.
+12:11:39.760 INFO  controller.AuthorListController$1 : Author chel selected.
+12:11:43.946 ERROR gateway.DBGateway : Error updating author table in database: No value specified for parameter 1
+12:12:23.821 INFO  gateway.DBGateway : Database connection closed.
+12:12:23.821 INFO  controller.MenuController$1 : Application closed.
+12:12:29.457 INFO  controller.MenuController : Author list selected.
+12:12:30.504 INFO  controller.AuthorListController$1 : Author che selected.
+12:12:37.123 ERROR gateway.DBGateway : Error updating author table in database: No value specified for parameter 1
+12:12:41.106 INFO  gateway.DBGateway : Database connection closed.
+12:12:41.107 INFO  controller.MenuController$1 : Application closed.
+12:13:13.926 INFO  controller.MenuController : Author list selected.
+12:13:15.816 INFO  controller.AuthorListController$1 : Author cheldo selected.
+12:13:19.745 ERROR gateway.DBGateway : Error updating author table in database: No value specified for parameter 1
+12:16:46.155 INFO  gateway.DBGateway : Database connection closed.
+12:16:46.155 INFO  controller.MenuController$1 : Application closed.
+12:18:01.818 INFO  controller.MenuController : Author list selected.
+12:18:02.968 INFO  controller.AuthorListController$1 : Author cheldo selected.
+12:18:06.507 ERROR gateway.DBGateway : Error updating author table in database: No value specified for parameter 1
+12:18:42.709 INFO  gateway.DBGateway : Database connection closed.
+12:18:42.709 INFO  controller.MenuController$1 : Application closed.
+12:18:53.548 INFO  controller.MenuController : Author list selected.
+12:18:54.942 INFO  controller.AuthorListController$1 : Author heeloo selected.
+12:18:58.737 ERROR gateway.DBGateway : Error updating author table in database: No value specified for parameter 1
+12:19:04.681 INFO  gateway.DBGateway : Database connection closed.
+12:19:04.681 INFO  controller.MenuController$1 : Application closed.
+12:19:37.230 INFO  controller.MenuController : Author list selected.
+12:19:38.886 INFO  controller.AuthorListController$1 : Author heelo selected.
+12:19:42.977 INFO  gateway.DBGateway : Updated author
+12:20:00.252 INFO  gateway.DBGateway : Database connection closed.
+12:20:00.252 INFO  controller.MenuController$1 : Application closed.

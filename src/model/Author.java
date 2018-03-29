@@ -1,5 +1,8 @@
 package model;
 
+import java.sql.Timestamp;
+import java.time.LocalDateTime;
+
 import gateway.DBGateway;
 
 public class Author {
@@ -11,6 +14,7 @@ public class Author {
 	private String gender;
 	private String website;
 	private DBGateway gateway;
+	private LocalDateTime lastmodified;
 
 	public Author() {
 		id = 0;
@@ -31,6 +35,7 @@ public class Author {
 		this.setGender(gender);
 		this.setWebsite(website);
 		this.gateway = gateway;
+		this.lastmodified = null;
 
 	}
 
@@ -45,6 +50,14 @@ public class Author {
 			updateAuthor();
 		}
 
+	}
+	
+	public void setTimestamp(LocalDateTime update) {
+		this.lastmodified = update;
+	}
+	
+	public LocalDateTime getTimestamp() {
+		return lastmodified;
 	}
 
 	// Getters and setters
