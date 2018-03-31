@@ -7,6 +7,11 @@ import gateway.DBGateway;
 
 public class Author {
 
+	@Override
+	public String toString() {
+		return "Author [id=" + id + ", firstname=" + firstname + ", lastname=" + lastname + "]";
+	}
+
 	private int id;
 	private String firstname;
 	private String lastname;

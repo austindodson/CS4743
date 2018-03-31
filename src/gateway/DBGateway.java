@@ -22,6 +22,7 @@ import java.time.*;
 
 public class DBGateway {
 	Map<Integer, LocalDateTime> current = new HashMap<Integer, LocalDateTime>();
+	Map<Integer, Author> authors = new HashMap<Integer, Author>();
 	private Connection conn;
 	private Logger logger = LogManager.getLogger(DBGateway.class);
 
@@ -310,6 +311,35 @@ public class DBGateway {
 				logger.error("Set close Statement or Result error: " + e.getMessage());
 			}
 		}
+	}
+	
+	public ArrayList<Author> getAuthorsForBook(Book book) {
+		PreparedStatement st = null;
+		ResultSet rs = null;
+		ArrayList<Author> authorList = new ArrayList<Author>();
+		try {
+			String query = "SELECT * FROM author join author_book on author.id = author_book.author_id where author_book.book_id = ?";
+			st = conn.prepareStatement(query);
+			st.setInt(1, book.getId());
+			rs = st.executeQuery();
+			while (rs.next()) {
+				authorList.add(new Author(rs.getInt("id"), rs.getString("firstname"), rs.getString("lastname"),
+						rs.getString("dob"), rs.getString("gender"), rs.getString("website"), this));
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			try {
+				if (rs != null)
+					rs.close();
+				if (st != null)
+					st.close();
+			} catch (SQLException e) {
+				logger.error("Set close Statement or Result error: " + e.getMessage());
+			}
+		}
+		return authorList;
 	}
 	
 	public void updateBook(Book book) {

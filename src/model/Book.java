@@ -1,11 +1,13 @@
 package model;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 import gateway.DBGateway;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
+import model.Author;
 
 public class Book {
 	private int id;
@@ -49,6 +51,11 @@ public class Book {
 
 	public void updateBook() {
 		gateway.updateBook(this);
+	}
+	
+	public ArrayList<Author> getAuthors() {
+		ArrayList<Author> authorlist = gateway.getAuthorsForBook(this);
+		return authorlist;
 	}
 	
 	public void saveBook() {

@@ -5,9 +5,11 @@
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.control.Label?>
 
 <GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity"
-	minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+	minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0"
 	prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
 	<columnConstraints>
 		<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"
@@ -109,7 +111,7 @@
 		</Pane>
 		<Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="5">
 			<children>
-				<Label layoutX="133.0" layoutY="-1.0" text="ISBN:">
+				<Label layoutX="133.0" layoutY="-2.0" text="ISBN:">
 					<font>
 						<Font size="20.0" />
 					</font>
@@ -149,7 +151,7 @@
 		<Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1"
 			GridPane.rowIndex="5">
 			<children>
-				<Label fx:id="isbn" layoutX="103.0" layoutY="-1.0" text="isbn">
+				<Label fx:id="isbn" layoutX="103.0" layoutY="-2.0" text="isbn">
 					<font>
 						<Font size="20.0" />
 					</font>
@@ -169,10 +171,24 @@
 		<Pane prefHeight="57.0" prefWidth="466.0" GridPane.rowIndex="6">
 			<children>
 				<Button fx:id="audit" layoutX="250" layoutY="13.0" mnemonicParsing="false"
-				prefHeight="31.0" prefWidth="82.0" text="Audit Trail"/>
-				<Button fx:id="edit" layoutX="338.0" layoutY="13.0"
+				prefHeight="31.0" prefWidth="100.0" text="Audit Trail"/>
+				<Button fx:id="edit" layoutX="375.0" layoutY="13.0"
 					mnemonicParsing="false" prefHeight="31.0" prefWidth="82.0" text="Edit" />
 			</children>
 		</Pane>
+		<Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="8">
+		<children>
+			<TableView fx:id="authorTable" layoutX="0.0" layoutY="20.0" prefHeight="175.0" prefWidth="600.0">
+			<columns>
+				<TableColumn prefWidth="400" text="Author" fx:id="authorName"></TableColumn>
+				<TableColumn prefWidth="200" text="Royalty" fx:id="authorRoyalty"></TableColumn>
+			</columns>
+			</TableView>
+			<Button fx:id="addAuthor" layoutX="625.0" layoutY="30.0" prefHeight="31.0" prefWidth="100.0" text="Add Author"/>
+			<Button fx:id="deleteAuthor" layoutX="625.0" layoutY="100.0" prefHeight="31.0" prefWidth="100.0" text="Delete Author"/>
+		</children>
+		</Pane>
 	</children>
 </GridPane>
+
+

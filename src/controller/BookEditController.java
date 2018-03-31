@@ -13,6 +13,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
@@ -43,6 +44,8 @@ public class BookEditController {
 	private Button cancel;
 	@FXML
 	private Button save;
+	
+	
 
 	public BookEditController(Book book, Stage stage) {
 		this.book = book;
@@ -62,7 +65,6 @@ public class BookEditController {
 		yearPublished.setText(book.getYearPublished()+"");
 		publisher.setItems(publisherList);
 		isbn.setText(book.getIsbn());
-
 	}
 
 	public void setButtonHandlers() {

@@ -1,15 +1,20 @@
 package controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import javafx.beans.property.SimpleStringProperty;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
@@ -22,6 +27,7 @@ public class BookDetailController {
 	private Book book;
 	private Stage stage;
 	private Logger logger = LogManager.getLogger(BookDetailController.class);
+	private ObservableList<Author> authorList;
 	@FXML
 	private Label id;
 	@FXML
@@ -40,10 +46,19 @@ public class BookDetailController {
 	private Button edit;
 	@FXML
 	private Button audit;
+	@FXML 
+	private TableView<Author> authorTable;
+	@FXML
+	private TableColumn<Author, String> authorName;
+	@FXML
+	private TableColumn<Author, Integer> authorRoyalty;
 
 	public BookDetailController(Book book, Stage stage) {
 		this.book = book;
 		this.stage = stage;
+		ArrayList<Author> authors = book.getGateway().getAuthorsForBook(book);
+		this.authorList = FXCollections.observableArrayList(authors);
+		System.out.println(authorList.toString());
 	}
 
 	//Set the label texts for author's fields. 
@@ -55,6 +70,11 @@ public class BookDetailController {
 		publisher.setText(book.getPublisher().getPublisherName());
 		isbn.setText(book.getIsbn());
 		dateAdded.setText(book.getDateAdded());
+		if (authorList != null) {
+			authorTable.getItems().addAll(authorList);
+			authorName.setCellValueFactory(c-> new SimpleStringProperty(c.getValue().getFirstname() + " " + c.getValue().getLastname()));
+			
+		}
 	}
 
 	public void setButtonHandler() {
