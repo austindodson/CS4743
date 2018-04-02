@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -22,6 +23,7 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.util.converter.DefaultStringConverter;
 import model.Author;
+import model.AuthorBook;
 import model.Book;
 
 public class BookDetailController {
@@ -49,12 +51,13 @@ public class BookDetailController {
 	@FXML
 	private Button audit;
 	@FXML
-	private TableView<Author> authorTable;
+	private TableView<AuthorBook> authorTable;
 	@FXML
-	private TableColumn<Author, String> authorName;
+	private TableColumn<AuthorBook, String> authorName;
 	@FXML
-	private TableColumn<Author, Integer> authorRoyalty;
+	private TableColumn<AuthorBook, String> authorRoyalty;
 
+	private ObservableList<AuthorBook> authorBookList;
 	public BookDetailController(Book book, Stage stage) {
 		this.book = book;
 		this.stage = stage;
@@ -74,14 +77,15 @@ public class BookDetailController {
 		isbn.setText(book.getIsbn());
 		dateAdded.setText(book.getDateAdded());
 		if (authorList != null) {
-			authorTable.getItems().addAll(authorList);
-			ArrayList<String> authorNames = new ArrayList<String>();
+			ArrayList<AuthorBook> authbook = new ArrayList<AuthorBook>();
 			for (Author x: authorList) {
-				authorNames.add(x.getFirstname()+ " " + x.getLastname());
+				AuthorBook temp = new AuthorBook(x.getId(), book.getId(), book.getGateway().getRoyalty(x, book), false, x.getFirstname(), x.getLastname());
+				authbook.add(temp);
 			}
-			ObservableList<String> auth = FXCollections.observableArrayList(authorNames);
-			System.out.println(auth.toString());
-			authorName.setCellFactory(ComboBoxTableCell.forTableColumn(new DefaultStringConverter(), auth));
+			authorBookList = FXCollections.observableArrayList(authbook);
+			authorTable.getItems().addAll(authorBookList);
+			authorName.setCellValueFactory(c-> new SimpleStringProperty(c.getValue().getfirst()+ " " +c.getValue().getlast()));
+			authorRoyalty.setCellValueFactory(c-> new SimpleStringProperty(c.getValue().getRoyalty() + "%"));
 			authorName.setEditable(true);
 
 		}

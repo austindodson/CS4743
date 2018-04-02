@@ -6,14 +6,26 @@ import model.Book;
 public class AuthorBook {
 	private int author_id;
 	private int book_id;
+	private String author_firstname;
+	private String author_lastname;
 	private int royalty;
 	private boolean newRecord;
 
-	public AuthorBook(int a_id, int b_id, int royalty, boolean newRec) {
+	public AuthorBook(int a_id, int b_id, int royalty, boolean newRec, String a, String b) {
 		this.author_id = a_id;
 		this.book_id = b_id;
 		this.royalty = royalty;
 		this.newRecord = newRec;
+		this.author_firstname = a;
+		this.author_lastname = b;
+	}
+	
+	public String getfirst() {
+		return author_firstname;
+	}
+	
+	public String getlast() {
+		return author_lastname;
 	}
 
 	public int getAuthor_id() {

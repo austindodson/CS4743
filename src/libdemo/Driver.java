@@ -1,4 +1,4 @@
-//ASSIGN 3 BY AUSTIN DODSON AND FAISAL KHURRAM
+//ASSIGN 4 BY AUSTIN DODSON AND FAISAL KHURRAM
 package libdemo;
 
 import controller.MenuController;
@@ -54,7 +54,7 @@ public class Driver extends Application {
 		app.rootPane.setTop(menu);
 
 		Scene scene = new Scene(app.rootPane, 640, 480);
-		app.stage.setTitle("Assign3");
+		app.stage.setTitle("Assign4");
 		app.stage.setScene(scene);
 		app.stage.show();
 	}

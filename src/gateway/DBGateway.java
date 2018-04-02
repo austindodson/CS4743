@@ -550,6 +550,38 @@ public class DBGateway {
 			}
 		}
 	}
+	
+	public int getRoyalty(Author author, Book book) {
+		String query = "select royalty from author_book where author_id = ? and book_id = ?";
+		ResultSet rs = null;
+		PreparedStatement st = null;
+		try {
+			st = conn.prepareStatement(query);
+			st.setInt(1, author.getId());
+			st.setInt(2, book.getId());
+			rs = st.executeQuery();
+			if(rs.first()) {
+				return (int) (rs.getDouble(1)*100);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		finally {
+			try {
+				if (rs != null)
+					rs.close();
+				if (st != null)
+					st.close();
+			} catch (SQLException e) {
+				logger.error("Set close Statement or Result error" + e.getMessage());
+		
+			}
+		}
+		
+		
+		return 0;
+	}
 
 	public void close() {
 		try {

@@ -3,3 +3,156 @@
 /C:/Users/austin/Documents/compsci/CS%204743/CS4743Assignment%203/bin/view/AuthorDetail.fxml
 
 20:49:42.776 INFO  controller.AuthorListController$1 : Author he selected.
+21:09:39.488 INFO  gateway.DBGateway : Database connection closed.
+21:09:39.488 INFO  controller.MenuController$1 : Application closed.
+21:09:43.756 INFO  controller.MenuController : Author list selected.
+21:09:45.886 INFO  controller.AuthorListController$1 : Author he selected.
+21:09:59.953 INFO  controller.MenuController : Book List selected.
+21:10:01.231 INFO  controller.BookListController$1 : Book hell selected.
+21:10:26.292 INFO  controller.BookListController$1 : Book hell selected.
+21:11:34.289 INFO  controller.MenuController : Author list selected.
+21:11:36.202 INFO  controller.AuthorListController$1 : Author he selected.
+21:11:42.472 INFO  gateway.DBGateway : Database connection closed.
+21:11:42.473 INFO  controller.MenuController$1 : Application closed.
+21:13:22.191 INFO  gateway.DBGateway : Database connection closed.
+21:13:22.192 INFO  controller.MenuController$1 : Application closed.
+21:13:24.712 INFO  controller.MenuController : Author list selected.
+21:13:55.937 INFO  gateway.DBGateway : Database connection closed.
+21:13:55.937 INFO  controller.MenuController$1 : Application closed.
+21:15:32.650 INFO  controller.MenuController : Author list selected.
+21:15:32.677 ERROR controller.MenuController : Error opening authorList.fxml 
+/C:/Users/austin/Documents/compsci/CS%204743/CS4743Assignment%203/bin/view/authorList.fxml:12
+
+21:15:36.062 INFO  gateway.DBGateway : Database connection closed.
+21:15:36.062 INFO  controller.MenuController$1 : Application closed.
+21:15:50.594 INFO  controller.MenuController : Author list selected.
+21:15:54.560 INFO  gateway.DBGateway : Database connection closed.
+21:15:54.561 INFO  controller.MenuController$1 : Application closed.
+21:16:23.562 INFO  controller.MenuController : Author list selected.
+21:16:30.498 INFO  gateway.DBGateway : Author with id = 10 deleted from database.
+21:16:36.556 INFO  controller.MenuController : Author list selected.
+21:16:42.926 INFO  gateway.DBGateway : Author with id = 11 deleted from database.
+21:16:47.078 INFO  controller.MenuController : Author list selected.
+21:16:55.593 INFO  controller.MenuController : Book List selected.
+21:16:57.436 INFO  controller.BookListController$1 : Book hell selected.
+21:20:42.334 INFO  gateway.DBGateway : Database connection closed.
+21:20:42.335 INFO  controller.MenuController$1 : Application closed.
+21:20:45.933 INFO  controller.MenuController : Book List selected.
+21:20:47.401 INFO  controller.BookListController$1 : Book hell selected.
+21:21:03.260 INFO  gateway.DBGateway : Database connection closed.
+21:21:03.260 INFO  controller.MenuController$1 : Application closed.
+21:21:47.956 INFO  controller.MenuController : Book List selected.
+21:21:49.161 INFO  controller.BookListController$1 : Book lord of the flies selected.
+21:21:53.817 INFO  controller.BookListController$1 : Book hell selected.
+21:22:12.055 INFO  gateway.DBGateway : Database connection closed.
+21:22:12.056 INFO  controller.MenuController$1 : Application closed.
+21:23:00.793 INFO  controller.MenuController : Book List selected.
+21:23:02.434 INFO  controller.BookListController$1 : Book hell selected.
+21:23:06.651 INFO  gateway.DBGateway : Database connection closed.
+21:23:06.652 INFO  controller.MenuController$1 : Application closed.
+21:24:22.081 INFO  controller.MenuController : Book List selected.
+21:24:23.498 INFO  controller.BookListController$1 : Book hell selected.
+21:26:14.774 INFO  gateway.DBGateway : Database connection closed.
+21:26:14.775 INFO  controller.MenuController$1 : Application closed.
+21:30:40.502 INFO  gateway.DBGateway : Database connection closed.
+21:30:40.504 INFO  controller.MenuController$1 : Application closed.
+21:59:28.973 INFO  controller.MenuController : Book List selected.
+21:59:30.881 ERROR controller.BookListController$1 : Error opening bookdetail.fxml: 
+/C:/Users/austin/Documents/compsci/CS%204743/CS4743Assignment%203/bin/view/BookDetail.fxml
+
+21:59:30.882 INFO  controller.BookListController$1 : Book hell selected.
+21:59:36.366 ERROR controller.BookListController$1 : Error opening bookdetail.fxml: 
+/C:/Users/austin/Documents/compsci/CS%204743/CS4743Assignment%203/bin/view/BookDetail.fxml
+
+21:59:36.366 INFO  controller.BookListController$1 : Book lord of the flies selected.
+21:59:39.159 ERROR controller.BookListController$1 : Error opening bookdetail.fxml: 
+/C:/Users/austin/Documents/compsci/CS%204743/CS4743Assignment%203/bin/view/BookDetail.fxml
+
+21:59:39.159 INFO  controller.BookListController$1 : Book hell selected.
+22:00:09.550 INFO  gateway.DBGateway : Database connection closed.
+22:00:09.551 INFO  controller.MenuController$1 : Application closed.
+22:00:13.799 INFO  controller.MenuController : Book List selected.
+22:00:15.491 ERROR controller.BookListController$1 : Error opening bookdetail.fxml: 
+/C:/Users/austin/Documents/compsci/CS%204743/CS4743Assignment%203/bin/view/BookDetail.fxml
+
+22:00:15.491 INFO  controller.BookListController$1 : Book hell selected.
+22:00:20.950 INFO  gateway.DBGateway : Database connection closed.
+22:00:20.951 INFO  controller.MenuController$1 : Application closed.
+22:01:18.290 INFO  controller.MenuController : Book List selected.
+22:01:20.373 ERROR controller.BookListController$1 : Error opening bookdetail.fxml: 
+/C:/Users/austin/Documents/compsci/CS%204743/CS4743Assignment%203/bin/view/BookDetail.fxml
+
+22:01:20.374 INFO  controller.BookListController$1 : Book hell selected.
+22:01:57.196 INFO  gateway.DBGateway : Database connection closed.
+22:01:57.197 INFO  controller.MenuController$1 : Application closed.
+22:02:02.993 INFO  controller.MenuController : Book List selected.
+22:02:04.899 ERROR controller.BookListController$1 : Error opening bookdetail.fxml: 
+/C:/Users/austin/Documents/compsci/CS%204743/CS4743Assignment%203/bin/view/BookDetail.fxml
+
+22:02:04.899 INFO  controller.BookListController$1 : Book hell selected.
+22:32:22.470 INFO  gateway.DBGateway : Database connection closed.
+22:32:22.472 INFO  controller.MenuController$1 : Application closed.
+22:32:41.608 INFO  gateway.DBGateway : Database connection closed.
+22:32:41.611 INFO  controller.MenuController$1 : Application closed.
+22:33:40.193 INFO  controller.MenuController : Book List selected.
+22:33:41.938 ERROR controller.BookListController$1 : Error opening bookdetail.fxml: 
+/C:/Users/austin/Documents/compsci/CS%204743/CS4743Assignment%203/bin/view/BookDetail.fxml
+
+22:33:41.938 INFO  controller.BookListController$1 : Book hell selected.
+22:33:46.910 INFO  gateway.DBGateway : Database connection closed.
+22:33:46.911 INFO  controller.MenuController$1 : Application closed.
+22:34:06.609 INFO  controller.MenuController : Book List selected.
+22:34:08.404 ERROR controller.BookListController$1 : Error opening bookdetail.fxml: 
+/C:/Users/austin/Documents/compsci/CS%204743/CS4743Assignment%203/bin/view/BookDetail.fxml
+
+22:34:08.404 INFO  controller.BookListController$1 : Book hell selected.
+22:34:13.858 INFO  gateway.DBGateway : Database connection closed.
+22:34:13.859 INFO  controller.MenuController$1 : Application closed.
+22:34:53.064 INFO  controller.MenuController : Book List selected.
+22:34:54.615 ERROR controller.BookListController$1 : Error opening bookdetail.fxml: 
+/C:/Users/austin/Documents/compsci/CS%204743/CS4743Assignment%203/bin/view/BookDetail.fxml
+
+22:34:54.615 INFO  controller.BookListController$1 : Book hell selected.
+22:35:17.755 INFO  gateway.DBGateway : Database connection closed.
+22:35:17.756 INFO  controller.MenuController$1 : Application closed.
+22:37:08.586 INFO  controller.MenuController : Book List selected.
+22:37:09.926 ERROR controller.BookListController$1 : Error opening bookdetail.fxml: 
+/C:/Users/austin/Documents/compsci/CS%204743/CS4743Assignment%203/bin/view/BookDetail.fxml
+
+22:37:09.926 INFO  controller.BookListController$1 : Book hell selected.
+22:37:47.036 INFO  controller.MenuController : Book List selected.
+22:37:48.386 ERROR controller.BookListController$1 : Error opening bookdetail.fxml: 
+/C:/Users/austin/Documents/compsci/CS%204743/CS4743Assignment%203/bin/view/BookDetail.fxml
+
+22:37:48.386 INFO  controller.BookListController$1 : Book hell selected.
+22:38:31.853 INFO  gateway.DBGateway : Database connection closed.
+22:38:31.854 INFO  controller.MenuController$1 : Application closed.
+22:38:32.854 INFO  gateway.DBGateway : Database connection closed.
+22:38:32.854 INFO  controller.MenuController$1 : Application closed.
+22:38:39.109 INFO  controller.MenuController : Book List selected.
+22:38:41.286 ERROR controller.BookListController$1 : Error opening bookdetail.fxml: 
+/C:/Users/austin/Documents/compsci/CS%204743/CS4743Assignment%203/bin/view/BookDetail.fxml
+
+22:38:41.287 INFO  controller.BookListController$1 : Book hell selected.
+22:38:47.276 INFO  gateway.DBGateway : Database connection closed.
+22:38:47.277 INFO  controller.MenuController$1 : Application closed.
+22:40:46.614 INFO  controller.MenuController : Book List selected.
+22:40:48.543 INFO  controller.BookListController$1 : Book hell selected.
+22:40:56.977 INFO  gateway.DBGateway : Database connection closed.
+22:40:56.978 INFO  controller.MenuController$1 : Application closed.
+22:42:13.985 INFO  controller.MenuController : Book List selected.
+22:42:15.819 INFO  controller.BookListController$1 : Book hell selected.
+22:42:26.845 INFO  gateway.DBGateway : Database connection closed.
+22:42:26.846 INFO  controller.MenuController$1 : Application closed.
+22:42:55.641 INFO  controller.MenuController : Book List selected.
+22:42:57.746 INFO  controller.BookListController$1 : Book hell selected.
+22:43:12.716 INFO  gateway.DBGateway : Database connection closed.
+22:43:12.716 INFO  controller.MenuController$1 : Application closed.
+22:44:03.349 INFO  controller.MenuController : Book List selected.
+22:44:04.885 INFO  controller.BookListController$1 : Book hell selected.
+22:44:09.666 INFO  gateway.DBGateway : Database connection closed.
+22:44:09.667 INFO  controller.MenuController$1 : Application closed.
+22:44:21.215 INFO  controller.MenuController : Book List selected.
+22:44:22.934 INFO  controller.BookListController$1 : Book hell selected.
+22:44:26.001 INFO  gateway.DBGateway : Database connection closed.
+22:44:26.001 INFO  controller.MenuController$1 : Application closed.
