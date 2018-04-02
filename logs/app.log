@@ -221,3 +221,84 @@
 23:43:25.042 INFO  controller.BookListController$1 : Book hell selected.
 23:43:39.595 INFO  gateway.DBGateway : Database connection closed.
 23:43:39.595 INFO  controller.MenuController$1 : Application closed.
+23:49:48.501 INFO  controller.MenuController : Book List selected.
+23:49:50.493 INFO  controller.BookListController$1 : Book hell selected.
+23:50:06.321 INFO  gateway.DBGateway : AuthorBook with author_id = 1 and book_id 1 deleted from database.
+23:50:06.380 INFO  gateway.DBGateway : New audit trail created for book 1
+23:50:17.253 INFO  controller.BookListController$1 : Book hell selected.
+23:50:19.309 INFO  gateway.DBGateway : Database connection closed.
+23:50:19.309 INFO  controller.MenuController$1 : Application closed.
+23:51:10.509 INFO  controller.MenuController : Book List selected.
+23:51:12.941 INFO  controller.BookListController$1 : Book hell selected.
+23:51:41.213 INFO  gateway.DBGateway : Database connection closed.
+23:51:41.214 INFO  controller.MenuController$1 : Application closed.
+23:52:32.821 INFO  controller.MenuController : Book List selected.
+23:52:34.058 INFO  controller.BookListController$1 : Book hell selected.
+23:52:41.975 INFO  gateway.DBGateway : Database connection closed.
+23:52:41.976 INFO  controller.MenuController$1 : Application closed.
+23:53:47.912 INFO  controller.MenuController : Book List selected.
+23:53:49.319 INFO  controller.BookListController$1 : Book hell selected.
+23:53:58.625 INFO  gateway.DBGateway : New audit trail created for book 1
+23:53:58.625 INFO  gateway.DBGateway : New AuthorBook created. author_id = 3book_id = 1
+23:54:02.291 INFO  controller.BookListController$1 : Book hell selected.
+23:54:07.229 INFO  gateway.DBGateway : Database connection closed.
+23:54:07.230 INFO  controller.MenuController$1 : Application closed.
+23:54:45.676 INFO  controller.MenuController : Book List selected.
+23:54:47.514 INFO  controller.BookListController$1 : Book hell selected.
+23:54:49.386 INFO  gateway.DBGateway : AuthorBook with author_id = 3 and book_id 1 deleted from database.
+23:54:49.456 INFO  gateway.DBGateway : New audit trail created for book 1
+23:54:51.763 INFO  controller.BookListController$1 : Book hell selected.
+23:54:59.377 INFO  gateway.DBGateway : New audit trail created for book 1
+23:54:59.378 INFO  gateway.DBGateway : New AuthorBook created. author_id = 1book_id = 1
+23:55:03.140 INFO  controller.BookListController$1 : Book hell selected.
+23:55:10.146 INFO  gateway.DBGateway : New audit trail created for book 1
+23:55:10.203 ERROR gateway.DBGateway : Error updating book table in database: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'author_id = 1 and book_id = 1' at line 1
+23:56:41.344 INFO  gateway.DBGateway : Database connection closed.
+23:56:41.345 INFO  controller.MenuController$1 : Application closed.
+23:56:47.002 INFO  controller.MenuController : Book List selected.
+23:56:48.599 INFO  controller.BookListController$1 : Book hell selected.
+23:56:54.054 INFO  gateway.DBGateway : New audit trail created for book 1
+23:56:54.122 ERROR gateway.DBGateway : Error updating book table in database: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'author_id = 1 and book_id = 1' at line 1
+23:57:03.584 INFO  gateway.DBGateway : Database connection closed.
+23:57:03.584 INFO  controller.MenuController$1 : Application closed.
+23:58:22.343 INFO  controller.MenuController : Book List selected.
+23:58:23.794 INFO  controller.BookListController$1 : Book hell selected.
+23:58:24.609 ERROR controller.BookDetailController$5 : 
+/C:/Users/austin/Documents/compsci/CS%204743/CS4743Assignment%203/bin/view/authorbookadd.fxml
+
+23:58:30.255 INFO  gateway.DBGateway : New audit trail created for book 1
+23:58:30.298 ERROR gateway.DBGateway : Error updating book table in database: FUNCTION hyq004.30where does not exist
+23:58:36.104 INFO  gateway.DBGateway : Database connection closed.
+23:58:36.104 INFO  controller.MenuController$1 : Application closed.
+13:00:34.957 INFO  controller.MenuController : Add author selected.
+13:00:36.541 INFO  controller.MenuController : Author list selected.
+13:00:37.795 INFO  controller.AuthorListController$1 : Author he selected.
+13:00:43.220 INFO  controller.AuthorListController$1 : Author he selected.
+13:00:47.316 INFO  gateway.DBGateway : New audit trail created for author 1
+13:00:47.316 INFO  gateway.DBGateway : Updated author
+13:01:21.574 INFO  gateway.DBGateway : Database connection closed.
+13:01:21.575 INFO  controller.MenuController$1 : Application closed.
+13:05:22.543 INFO  controller.MenuController : Book List selected.
+13:05:26.740 INFO  controller.BookListController$1 : Book hell selected.
+13:05:33.673 ERROR gateway.DBGateway : Error updating book table in database: Parameter index out of range (5 > number of parameters, which is 4).
+13:05:56.506 INFO  gateway.DBGateway : Database connection closed.
+13:05:56.507 INFO  controller.MenuController$1 : Application closed.
+13:06:01.675 INFO  controller.MenuController : Book List selected.
+13:06:02.882 INFO  controller.BookListController$1 : Book hell selected.
+13:06:10.439 INFO  gateway.DBGateway : New audit trail created for book 1
+13:06:10.445 ERROR gateway.DBGateway : Error updating book table in database: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'book_id = 1' at line 1
+13:07:15.519 INFO  controller.MenuController : Book List selected.
+13:07:16.795 INFO  controller.BookListController$1 : Book hell selected.
+13:07:21.990 INFO  gateway.DBGateway : New audit trail created for book 1
+13:07:21.993 ERROR gateway.DBGateway : Error updating book table in database: Data truncation: Out of range value for column 'royalty' at row 1
+13:08:09.091 INFO  gateway.DBGateway : Database connection closed.
+13:08:09.092 INFO  controller.MenuController$1 : Application closed.
+13:08:10.733 INFO  gateway.DBGateway : Database connection closed.
+13:08:10.734 INFO  controller.MenuController$1 : Application closed.
+13:08:15.893 INFO  controller.MenuController : Book List selected.
+13:08:17.097 INFO  controller.BookListController$1 : Book hell selected.
+13:08:22.762 INFO  gateway.DBGateway : New audit trail created for book 1
+13:08:22.788 INFO  gateway.DBGateway : Updated AuthorBook
+13:08:26.335 INFO  controller.BookListController$1 : Book hell selected.
+13:08:31.640 INFO  gateway.DBGateway : Database connection closed.
+13:08:31.640 INFO  controller.MenuController$1 : Application closed.

@@ -70,7 +70,68 @@ public class DBGateway {
 		return audits;
 
 	}
+	
+	public ArrayList<AuditTrail> getAuthorAudits(int author_id) {
+		ArrayList<AuditTrail> audits = new ArrayList<AuditTrail>();
+		PreparedStatement st = null;
+		ResultSet rs = null;
+		try {
 
+			String query = "select * " + " from author_audit_trail WHERE author_id = ?";
+			st = conn.prepareStatement(query);
+			st.setInt(1, author_id);
+
+			// used to run select statements
+			rs = st.executeQuery();
+
+			// create a book object for each row in the book table
+			while (rs.next()) {
+				audits.add(new AuditTrail(rs.getInt("id"), rs.getDate("date_added").toString(),
+						rs.getString("entry_msg")));
+			}
+
+		} catch (SQLException e) {
+			logger.error("Error reading from audit table in database: " + e.getMessage());
+		} finally {
+			try {
+				if (rs != null)
+					rs.close();
+				if (st != null)
+					st.close();
+			} catch (SQLException e) {
+				logger.error("Set close Statement or Result error: " + e.getMessage());
+			}
+		}
+
+		return audits;
+
+	}
+
+	public void addAuditTrailAuthor(String message, int authorid) {
+		PreparedStatement st = null;
+		ResultSet rs = null;
+
+		try {
+			String query = "insert into author_audit_trail (entry_msg, author_id)" + "values (?,?)";
+			st = conn.prepareStatement(query);
+			st.setString(1, message);
+			st.setInt(2, authorid);
+			st.executeUpdate();
+			logger.info("New audit trail created for author " + authorid);
+		} catch (SQLException e) {
+			logger.error("Error in audit trail entry " + e.getMessage());
+		} finally {
+			try {
+				if (rs != null)
+					rs.close();
+				if (st != null)
+					st.close();
+			} catch (SQLException e) {
+				logger.error("Set close Statement or Result error" + e.getMessage());
+			}
+		}
+	}
+	
 	public void addAuditTrailBook(String message, int bookid) {
 		PreparedStatement st = null;
 		ResultSet rs = null;
@@ -279,6 +340,7 @@ public class DBGateway {
 					author.setTimestamp(rs3.getTimestamp("lastmodified").toLocalDateTime());
 					current.remove(author.getId());
 					current.put(author.getId(), rs3.getTimestamp("lastmodified").toLocalDateTime());
+					addAuditTrailAuthor(author.toString() + "changed", author.getId());
 				} else {
 					throw new SQLException("Error updated timestamp for author model");
 				}
@@ -409,14 +471,13 @@ public class DBGateway {
 		ResultSet rs = null;
 		try {
 
-			String query = "update author_book set author_id = ?, book_id = ?, roylaty = ?"
-					+ "where author_id = ? and book_id = ?";
+			String query = "update author_book set author_id = ?, book_id = ?, royalty = ? " 
+					+ "where book_id = ?";
 			st = conn.prepareStatement(query);
 			st.setInt(1, ab.getAuthor_id());
 			st.setInt(2, book.getId());
-			st.setInt(3, ab.getRoyalty());
-			st.setInt(4, ab.getAuthor_id());
-			st.setInt(5, book.getId());
+			st.setDouble(3, ab.getRoyalty()*.01);
+			st.setInt(4, book.getId());
 			
 			addAuditTrailBook(book.toString() + "changed", book.getId());
 			// executeUpdate is used to run insert, update, and delete statements
@@ -479,6 +540,7 @@ public class DBGateway {
 				st2.setInt(1, author.getId());
 				ResultSet rs2 = st2.executeQuery();
 				author.setTimestamp(rs.getTimestamp(1).toLocalDateTime());
+				addAuditTrailAuthor(author.toString() + "saved", author.getId());
 			} else {
 				logger.error("Didn't get the new key.");
 			}

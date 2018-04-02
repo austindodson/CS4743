@@ -40,7 +40,7 @@ public class AuthorAuditListController {
 
 		title.setText("Audit Table for " + author.getFirstname());
 
-		auditList = gateway.getAudits(author.getId());
+		auditList = gateway.getAuthorAudits(author.getId());
 
 		ObservableList<String> auditItems = FXCollections.observableArrayList();
 		// fill the ObservableList with the author names
