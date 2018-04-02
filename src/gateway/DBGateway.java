@@ -341,6 +341,36 @@ public class DBGateway {
 		}
 		return authorList;
 	}
+	public ArrayList<Book> getBooksForAuthor(Author author) {
+		PreparedStatement st = null;
+		ResultSet rs = null;
+		ArrayList<Book> bookList = new ArrayList<Book>();
+		try {
+			String query = "SELECT * FROM book join author_book on book.id = author_book.book_id where author_book.author_id = ?";
+			st = conn.prepareStatement(query);
+			st.setInt(1, author.getId());
+			rs = st.executeQuery();
+			while (rs.next()) {
+				bookList.add(new Book(rs.getInt("id"), rs.getString("title"), rs.getString("summary"),
+						rs.getInt("year_published"), new Publisher(rs.getInt("publisher_id"), "unknown"), rs.getString("isbn"),
+						rs.getString("date_added"), this));
+
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			try {
+				if (rs != null)
+					rs.close();
+				if (st != null)
+					st.close();
+			} catch (SQLException e) {
+				logger.error("Set close Statement or Result error: " + e.getMessage());
+			}
+		}
+		return bookList;
+	}
 	
 	public void updateBook(Book book) {
 		PreparedStatement st = null;

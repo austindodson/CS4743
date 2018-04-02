@@ -1328,3 +1328,76 @@
 23:53:23.773 INFO  controller.BookListController$1 : Book hell selected.
 23:53:30.406 INFO  gateway.DBGateway : Database connection closed.
 23:53:30.407 INFO  controller.MenuController$1 : Application closed.
+17:48:59.539 INFO  controller.MenuController : Book List selected.
+17:49:02.358 INFO  controller.BookListController$1 : Book ssssssss selected.
+17:49:29.392 INFO  controller.MenuController : Book List selected.
+17:49:33.358 INFO  controller.BookListController$1 : Book lord of the flies selected.
+17:49:46.014 INFO  gateway.DBGateway : New audit trail created for book 7
+17:49:46.081 INFO  gateway.DBGateway : Updated book
+17:50:09.791 INFO  controller.MenuController : Author list selected.
+17:50:13.491 INFO  controller.AuthorListController$1 : Author hell selected.
+17:50:19.329 INFO  gateway.DBGateway : Updated author
+17:50:30.444 INFO  controller.MenuController : Book List selected.
+17:50:33.113 INFO  controller.BookListController$1 : Book ssssssss selected.
+17:50:41.534 INFO  controller.MenuController : Author list selected.
+17:50:44.114 INFO  controller.AuthorListController$1 : Author afsadasdgasd selected.
+17:52:37.408 INFO  controller.MenuController : Book List selected.
+17:52:40.523 INFO  controller.BookListController$1 : Book ssssssss selected.
+17:52:51.028 INFO  controller.BookListController$1 : Book lord of the flies selected.
+17:53:02.753 INFO  gateway.DBGateway : New audit trail created for book 7
+17:53:02.835 INFO  gateway.DBGateway : Updated book
+17:53:22.979 INFO  controller.BookListController$1 : Book hell selected.
+17:53:42.572 INFO  gateway.DBGateway : Database connection closed.
+17:53:42.573 INFO  controller.MenuController$1 : Application closed.
+18:18:23.441 INFO  controller.MenuController : Author list selected.
+18:18:26.942 INFO  controller.AuthorListController$1 : Author hell selected.
+18:18:33.997 INFO  gateway.DBGateway : Updated author
+18:18:45.689 INFO  controller.MenuController : Book List selected.
+18:18:47.732 INFO  controller.BookListController$1 : Book ssssssss selected.
+18:19:17.916 INFO  controller.MenuController : Author list selected.
+18:19:22.636 INFO  controller.AuthorListController$1 : Author heel selected.
+18:19:27.979 INFO  gateway.DBGateway : Database connection closed.
+18:19:27.980 INFO  controller.MenuController$1 : Application closed.
+18:19:33.015 INFO  gateway.DBGateway : Database connection closed.
+18:19:33.016 INFO  controller.MenuController$1 : Application closed.
+18:30:20.572 INFO  controller.MenuController : Author list selected.
+18:30:38.254 INFO  controller.AuthorListController$1 : Author afsadasdgasd selected.
+18:30:48.588 INFO  gateway.DBGateway : Updated author
+18:30:57.634 INFO  controller.MenuController : Book List selected.
+18:31:01.616 INFO  controller.BookListController$1 : Book ssssssss selected.
+18:31:25.344 INFO  gateway.DBGateway : Book with id = 2 deleted from database.
+18:31:39.550 INFO  controller.BookListController$1 : Book hell selected.
+18:31:57.416 INFO  controller.MenuController : Author list selected.
+18:32:03.056 INFO  controller.AuthorListController$1 : Author hell selected.
+18:32:12.226 INFO  gateway.DBGateway : Database connection closed.
+18:32:12.227 INFO  controller.MenuController$1 : Application closed.
+18:35:07.070 INFO  controller.MenuController : Author list selected.
+18:35:10.049 INFO  controller.AuthorListController$1 : Author heel selected.
+18:35:27.033 INFO  controller.AuthorListController$1 : Author hell selected.
+18:35:47.017 INFO  gateway.DBGateway : Database connection closed.
+18:35:47.018 INFO  controller.MenuController$1 : Application closed.
+18:36:02.416 INFO  controller.MenuController : Book List selected.
+18:36:05.548 INFO  controller.BookListController$1 : Book lord of the flies selected.
+18:37:23.532 INFO  controller.MenuController : Author list selected.
+18:37:27.735 INFO  controller.AuthorListController$1 : Author hell selected.
+18:37:58.689 INFO  controller.MenuController : Book List selected.
+18:38:02.470 INFO  controller.BookListController$1 : Book lord of the flies selected.
+18:38:56.373 INFO  controller.MenuController : Author list selected.
+18:38:59.457 INFO  controller.AuthorListController$1 : Author hell selected.
+18:39:13.394 INFO  gateway.DBGateway : Database connection closed.
+18:39:13.395 INFO  controller.MenuController$1 : Application closed.
+18:42:40.246 INFO  gateway.DBGateway : Database connection closed.
+18:42:40.247 INFO  controller.MenuController$1 : Application closed.
+19:47:19.223 INFO  controller.MenuController : Author list selected.
+19:47:23.571 INFO  controller.AuthorListController$1 : Author heel selected.
+19:47:40.071 INFO  controller.MenuController : Book List selected.
+19:47:43.409 INFO  controller.BookListController$1 : Book lord of the flies selected.
+19:47:54.869 INFO  controller.MenuController : Book List selected.
+19:48:02.856 INFO  controller.MenuController : Author list selected.
+19:48:04.981 INFO  controller.AuthorListController$1 : Author heel selected.
+19:48:11.747 INFO  gateway.DBGateway : Database connection closed.
+19:48:11.748 INFO  controller.MenuController$1 : Application closed.
+19:50:04.800 INFO  controller.MenuController : Book List selected.
+19:50:07.466 INFO  controller.BookListController$1 : Book hell selected.
+19:50:23.244 INFO  gateway.DBGateway : Database connection closed.
+19:50:23.245 INFO  controller.MenuController$1 : Application closed.
