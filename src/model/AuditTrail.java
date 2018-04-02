@@ -2,20 +2,19 @@ package model;
 
 import java.sql.Timestamp;
 
-
 public class AuditTrail {
 
 	private int id;
 	private String dateAdded;
 	private String message;
-	
-	public AuditTrail(){
+
+	public AuditTrail() {
 		id = 0;
 		dateAdded = null;
 		message = null;
 	}
-	
-	public AuditTrail(int id, String dateAdded, String message){
+
+	public AuditTrail(int id, String dateAdded, String message) {
 		this.id = id;
 		this.dateAdded = dateAdded;
 		this.message = message;
@@ -44,5 +43,5 @@ public class AuditTrail {
 	public void setMessage(String message) {
 		this.message = message;
 	}
-	
+
 }

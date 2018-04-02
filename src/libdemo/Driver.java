@@ -33,6 +33,7 @@ public class Driver extends Application {
 	public Stage getStage() {
 		return stage;
 	}
+
 	// singleton pattern to create a single instance, if already exist, return exist
 	public static Driver getInstance() {
 		if (instance == null) {

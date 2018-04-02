@@ -18,9 +18,8 @@ public class Book {
 	private String isbn;
 	private String dateAdded;
 	private DBGateway gateway;
-	
-	public Book(int id, String title, String summary, int yearPublished,
-			Publisher publisher, String isbn,
+
+	public Book(int id, String title, String summary, int yearPublished, Publisher publisher, String isbn,
 			String localDate, DBGateway gateway) {
 		super();
 		this.id = id;
@@ -32,17 +31,17 @@ public class Book {
 		this.setDateAdded(localDate);
 		this.gateway = gateway;
 	}
-	
+
 	public Book() {
-		this.id= 0;
+		this.id = 0;
 		this.title = "";
-		this.summary= "";
+		this.summary = "";
 		this.yearPublished = 0;
 		this.isbn = "";
 		this.dateAdded = "";
-		
+
 	}
-	
+
 	@Override
 	public String toString() {
 		return "Book [id=" + id + ", title=" + title + ", summary=" + summary + ", yearPublished=" + yearPublished
@@ -52,12 +51,12 @@ public class Book {
 	public void updateBook() {
 		gateway.updateBook(this);
 	}
-	
+
 	public ArrayList<Author> getAuthors() {
 		ArrayList<Author> authorlist = gateway.getAuthorsForBook(this);
 		return authorlist;
 	}
-	
+
 	public void saveBook() {
 		System.out.println("saving book");
 		gateway.saveBook(this);
@@ -118,11 +117,11 @@ public class Book {
 	public void setDateAdded(String dateAdded) {
 		this.dateAdded = dateAdded;
 	}
-	
+
 	public void setGateway(DBGateway gateway) {
 		this.gateway = gateway;
 	}
-	
+
 	public DBGateway getGateway() {
 		return gateway;
 	}

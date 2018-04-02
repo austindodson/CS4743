@@ -19,7 +19,6 @@ import model.Publisher;
 import java.time.LocalDate;
 import java.time.*;
 
-
 public class DBGateway {
 	Map<Integer, LocalDateTime> current = new HashMap<Integer, LocalDateTime>();
 	Map<Integer, Author> authors = new HashMap<Integer, Author>();
@@ -34,7 +33,7 @@ public class DBGateway {
 			logger.error("An error occured in creating a connection to the database: " + e.getMessage());
 		}
 	}
-	
+
 	public ArrayList<AuditTrail> getAudits(int book_id) {
 		ArrayList<AuditTrail> audits = new ArrayList<AuditTrail>();
 		PreparedStatement st = null;
@@ -68,24 +67,23 @@ public class DBGateway {
 		}
 
 		return audits;
-		
+
 	}
-	
+
 	public void addAuditTrailBook(String message, int bookid) {
 		PreparedStatement st = null;
 		ResultSet rs = null;
-		
+
 		try {
-			String query = "insert into book_audit_trail (entry_msg, book_id)"+"values (?,?)";
-			st=conn.prepareStatement(query);
+			String query = "insert into book_audit_trail (entry_msg, book_id)" + "values (?,?)";
+			st = conn.prepareStatement(query);
 			st.setString(1, message);
 			st.setInt(2, bookid);
 			st.executeUpdate();
-			logger.info("New audit trail created for book "+ bookid);
-		}
-		catch(SQLException e){
+			logger.info("New audit trail created for book " + bookid);
+		} catch (SQLException e) {
 			logger.error("Error in audit trail entry " + e.getMessage());
-		}finally {
+		} finally {
 			try {
 				if (rs != null)
 					rs.close();
@@ -132,7 +130,7 @@ public class DBGateway {
 
 		return authors;
 	}
-	
+
 	public ArrayList<Publisher> getPublishers() {
 
 		ArrayList<Publisher> publishers = new ArrayList<Publisher>();
@@ -183,8 +181,8 @@ public class DBGateway {
 			// create a book object for each row in the book table
 			while (rs.next()) {
 				books.add(new Book(rs.getInt("id"), rs.getString("title"), rs.getString("summary"),
-						rs.getInt("year_published"), new Publisher(rs.getInt("publisher_id"), "unknown"), rs.getString("isbn"),
-						rs.getString("date_added"), this));
+						rs.getInt("year_published"), new Publisher(rs.getInt("publisher_id"), "unknown"),
+						rs.getString("isbn"), rs.getString("date_added"), this));
 			}
 
 		} catch (SQLException e) {
@@ -202,7 +200,7 @@ public class DBGateway {
 
 		return books;
 	}
-	
+
 	public ArrayList<Book> getBooksLike(String matching) {
 
 		ArrayList<Book> books = new ArrayList<Book>();
@@ -212,7 +210,7 @@ public class DBGateway {
 
 			String query = "select * " + " from book WHERE title LIKE ?";
 			st = conn.prepareStatement(query);
-			st.setString(1, "%"+matching+"%");
+			st.setString(1, "%" + matching + "%");
 
 			// used to run select statements
 			rs = st.executeQuery();
@@ -220,8 +218,8 @@ public class DBGateway {
 			// create a book object for each row in the book table
 			while (rs.next()) {
 				books.add(new Book(rs.getInt("id"), rs.getString("title"), rs.getString("summary"),
-						rs.getInt("year_published"), new Publisher(rs.getInt("publisher_id"), "unknown"), rs.getString("isbn"),
-						rs.getString("date_added"), this));
+						rs.getInt("year_published"), new Publisher(rs.getInt("publisher_id"), "unknown"),
+						rs.getString("isbn"), rs.getString("date_added"), this));
 			}
 
 		} catch (SQLException e) {
@@ -239,7 +237,7 @@ public class DBGateway {
 
 		return books;
 	}
-	
+
 	// modify an existing author
 	public void updateAuthor(Author author) {
 		PreparedStatement st = null;
@@ -247,14 +245,14 @@ public class DBGateway {
 		ResultSet rs = null;
 		ResultSet rs2 = null;
 		try {
-			
+
 			String timequery = "select lastmodified from author where id = ?";
 			st2 = conn.prepareStatement(timequery);
 			st2.setInt(1, author.getId());
 			rs2 = st2.executeQuery();
 			current.remove(author.getId());
-			if(rs2.first()) {
-				current.put(author.getId(),rs2.getTimestamp("lastmodified").toLocalDateTime()); 
+			if (rs2.first()) {
+				current.put(author.getId(), rs2.getTimestamp("lastmodified").toLocalDateTime());
 			}
 			String query = "update author set firstname = ?, lastname = ?, dob = ?, gender = ?, website = ? "
 					+ "where id = ? ";
@@ -265,13 +263,13 @@ public class DBGateway {
 			st.setString(4, author.getGender());
 			st.setString(5, author.getWebsite());
 			st.setInt(6, author.getId());
-			
-			//NEED TO UPDATE TIME EACH TIME ITS SELECTED
+
+			// NEED TO UPDATE TIME EACH TIME ITS SELECTED
 			System.out.println("author: " + author.getTimestamp().toString());
 			System.out.println(current.get(author.getId()).toString());
 			System.out.println(author.getTimestamp().toString());
 			if (author.getTimestamp().equals(current.get(author.getId())) && !author.getTimestamp().equals(null)) {
-			// executeUpdate is used to run insert, update, and delete statements
+				// executeUpdate is used to run insert, update, and delete statements
 				st.executeUpdate();
 				PreparedStatement st3 = conn.prepareStatement(timequery);
 				st3.setInt(1, author.getId());
@@ -280,14 +278,12 @@ public class DBGateway {
 					author.setTimestamp(rs3.getTimestamp("lastmodified").toLocalDateTime());
 					current.remove(author.getId());
 					current.put(author.getId(), rs3.getTimestamp("lastmodified").toLocalDateTime());
-				}
-				else {
+				} else {
 					throw new SQLException("Error updated timestamp for author model");
 				}
 				st3.close();
 				rs3.close();
-			}
-			else {
+			} else {
 				Alert alert = new Alert(AlertType.ERROR, "Unable to save author, timestamps differ!");
 				alert.showAndWait();
 
@@ -306,13 +302,13 @@ public class DBGateway {
 					rs2.close();
 				if (st2 != null)
 					st2.close();
-				
+
 			} catch (SQLException e) {
 				logger.error("Set close Statement or Result error: " + e.getMessage());
 			}
 		}
 	}
-	
+
 	public ArrayList<Author> getAuthorsForBook(Book book) {
 		PreparedStatement st = null;
 		ResultSet rs = null;
@@ -341,6 +337,7 @@ public class DBGateway {
 		}
 		return authorList;
 	}
+
 	public ArrayList<Book> getBooksForAuthor(Author author) {
 		PreparedStatement st = null;
 		ResultSet rs = null;
@@ -352,8 +349,8 @@ public class DBGateway {
 			rs = st.executeQuery();
 			while (rs.next()) {
 				bookList.add(new Book(rs.getInt("id"), rs.getString("title"), rs.getString("summary"),
-						rs.getInt("year_published"), new Publisher(rs.getInt("publisher_id"), "unknown"), rs.getString("isbn"),
-						rs.getString("date_added"), this));
+						rs.getInt("year_published"), new Publisher(rs.getInt("publisher_id"), "unknown"),
+						rs.getString("isbn"), rs.getString("date_added"), this));
 
 			}
 		} catch (SQLException e) {
@@ -371,7 +368,7 @@ public class DBGateway {
 		}
 		return bookList;
 	}
-	
+
 	public void updateBook(Book book) {
 		PreparedStatement st = null;
 		ResultSet rs = null;
@@ -405,14 +402,14 @@ public class DBGateway {
 			}
 		}
 	}
-	
+
 	public void setAuthorTimestamp(Author author) {
 		try {
-			
+
 			String timequery = "select lastmodified from author where id = ?";
 			PreparedStatement st2 = conn.prepareStatement(timequery);
 			st2.setInt(1, author.getId());
-			//System.out.println(st2.toString());
+			// System.out.println(st2.toString());
 			ResultSet rs2 = st2.executeQuery();
 			if (rs2.first()) {
 				author.setTimestamp(rs2.getTimestamp("lastmodified").toLocalDateTime());
@@ -420,8 +417,7 @@ public class DBGateway {
 			}
 			st2.close();
 			rs2.close();
-		}
-		catch (Exception e) {
+		} catch (Exception e) {
 			logger.error("Error saving author timestamp: " + e.getMessage());
 		}
 	}
@@ -432,8 +428,7 @@ public class DBGateway {
 		ResultSet rs = null;
 		try {
 
-			String query = "insert into author (firstname, lastname, dob, gender, website) "
-					+ "values (?, ?, ?, ?, ?)";
+			String query = "insert into author (firstname, lastname, dob, gender, website) " + "values (?, ?, ?, ?, ?)";
 			st = conn.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
 			st.setString(1, author.getFirstname());
 			st.setString(2, author.getLastname());
@@ -467,46 +462,46 @@ public class DBGateway {
 			}
 		}
 	}
-	
-	// create a new book
-		public void saveBook(Book book) {
-			PreparedStatement st = null;
-			ResultSet rs = null;
-			try {
 
-				String query = "insert into book (title, summary, year_published, publisher_id, isbn) "
-						+ "values (?, ?, ?, ?, ?)";
-				st = conn.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
-				st.setString(1, book.getTitle());
-				st.setString(2, book.getSummary());
-				st.setInt(3, book.getYearPublished());
-				st.setInt(4, book.getPublisher().getId());
-				st.setString(5, book.getIsbn());
-				// executeUpdate is used to run insert, update, and delete statements
-				st.executeUpdate();
-				rs = st.getGeneratedKeys();
-				if (rs.first()) {
-					book.setId(rs.getInt(1));
-				} else {
-					logger.error("Didn't get the new key.");
-				}
-				logger.info("New book created. Id = " + book.getId());
-				addAuditTrailBook(book.toString() + " added", book.getId());
+	// create a new book
+	public void saveBook(Book book) {
+		PreparedStatement st = null;
+		ResultSet rs = null;
+		try {
+
+			String query = "insert into book (title, summary, year_published, publisher_id, isbn) "
+					+ "values (?, ?, ?, ?, ?)";
+			st = conn.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
+			st.setString(1, book.getTitle());
+			st.setString(2, book.getSummary());
+			st.setInt(3, book.getYearPublished());
+			st.setInt(4, book.getPublisher().getId());
+			st.setString(5, book.getIsbn());
+			// executeUpdate is used to run insert, update, and delete statements
+			st.executeUpdate();
+			rs = st.getGeneratedKeys();
+			if (rs.first()) {
+				book.setId(rs.getInt(1));
+			} else {
+				logger.error("Didn't get the new key.");
+			}
+			logger.info("New book created. Id = " + book.getId());
+			addAuditTrailBook(book.toString() + " added", book.getId());
+		} catch (SQLException e) {
+			logger.error("Error inserting into book table in database: " + e.getMessage());
+		} finally {
+			try {
+				if (rs != null)
+					rs.close();
+				if (st != null)
+					st.close();
 			} catch (SQLException e) {
-				logger.error("Error inserting into book table in database: " + e.getMessage());
-			} finally {
-				try {
-					if (rs != null)
-						rs.close();
-					if (st != null)
-						st.close();
-				} catch (SQLException e) {
-					logger.error("Set close Statement or Result error: " + e.getMessage());
-				}
+				logger.error("Set close Statement or Result error: " + e.getMessage());
 			}
 		}
+	}
 
-	//To delete the author
+	// To delete the author
 	public void deleteAuthor(Author author) {
 		PreparedStatement st = null;
 		ResultSet rs = null;
@@ -530,31 +525,31 @@ public class DBGateway {
 			}
 		}
 	}
-	
-	//To delete the author
-		public void deleteBook(Book book) {
-			PreparedStatement st = null;
-			ResultSet rs = null;
+
+	// To delete the author
+	public void deleteBook(Book book) {
+		PreparedStatement st = null;
+		ResultSet rs = null;
+		try {
+			String query = "Delete from book " + "where id = ?";
+			st = conn.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
+			st.setInt(1, book.getId());
+			// executeUpdate is used to run insert, update, and delete statements
+			st.executeUpdate();
+			logger.info("Book with id = " + book.getId() + " deleted from database.");
+		} catch (SQLException e) {
+			logger.error("Error: deleting from book table in Database: " + e.getMessage());
+		} finally {
 			try {
-				String query = "Delete from book " + "where id = ?";
-				st = conn.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
-				st.setInt(1, book.getId());
-				// executeUpdate is used to run insert, update, and delete statements
-				st.executeUpdate();
-				logger.info("Book with id = " + book.getId() + " deleted from database.");
+				if (rs != null)
+					rs.close();
+				if (st != null)
+					st.close();
 			} catch (SQLException e) {
-				logger.error("Error: deleting from book table in Database: " + e.getMessage());
-			} finally {
-				try {
-					if (rs != null)
-						rs.close();
-					if (st != null)
-						st.close();
-				} catch (SQLException e) {
-					logger.error("Set close Statement or Result error" + e.getMessage());
-				}
+				logger.error("Set close Statement or Result error" + e.getMessage());
 			}
 		}
+	}
 
 	public void close() {
 		try {
@@ -571,16 +566,16 @@ public class DBGateway {
 	private void makeConnection() throws IOException, SQLException {
 		Properties props = new Properties();
 		FileInputStream fis = null;
-		//Change this file to access your database table
+		// Change this file to access your database table
 		fis = new FileInputStream("db.properties");
 		props.load(fis);
 		fis.close();
-		//Database creation by using login and password 
+		// Database creation by using login and password
 		MysqlDataSource ds = new MysqlDataSource();
 		ds.setURL(props.getProperty("MYSQL_DB_URL"));
 		ds.setUser(props.getProperty("MYSQL_DB_USERNAME"));
 		ds.setPassword(props.getProperty("MYSQL_DB_PASSWORD"));
-		//Connection Creation
+		// Connection Creation
 		conn = ds.getConnection();
 	}
 }
