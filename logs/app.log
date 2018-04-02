@@ -1,0 +1,5 @@
+20:49:38.104 INFO  controller.MenuController : Author list selected.
+20:49:42.776 ERROR controller.AuthorListController$1 : Error opening authordetail.fxml: 
+/C:/Users/austin/Documents/compsci/CS%204743/CS4743Assignment%203/bin/view/AuthorDetail.fxml
+
+20:49:42.776 INFO  controller.AuthorListController$1 : Author he selected.
