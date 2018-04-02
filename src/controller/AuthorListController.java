@@ -50,7 +50,7 @@ public class AuthorListController {
 					if (mouseEvent.getClickCount() == 2) {
 
 						Author selected = findAuthor(list.getSelectionModel().getSelectedItem());
-						//To make a new window
+						// To make a new window
 						try {
 							Stage stage = new Stage();
 							Pane pane = new Pane();
@@ -103,7 +103,7 @@ public class AuthorListController {
 		setListView();
 		setButtonHandler();
 	}
-	
+
 	// On the base of author's ID find author list.
 	public Author findAuthor(String name) {
 		for (int i = 0; i < authorsList.size(); i++) {

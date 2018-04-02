@@ -40,13 +40,13 @@ public class BookDetailController {
 	private Label publisher;
 	@FXML
 	private Label isbn;
-	@FXML 
+	@FXML
 	private Label dateAdded;
 	@FXML
 	private Button edit;
 	@FXML
 	private Button audit;
-	@FXML 
+	@FXML
 	private TableView<Author> authorTable;
 	@FXML
 	private TableColumn<Author, String> authorName;
@@ -61,46 +61,47 @@ public class BookDetailController {
 		System.out.println(authorList.toString());
 	}
 
-	//Set the label texts for author's fields. 
+	// Set the label texts for author's fields.
 	public void setLabels() {
 		id.setText(String.valueOf(book.getId()));
 		title.setText(book.getTitle());
 		summary.setText(book.getSummary());
-		yearPublished.setText(book.getYearPublished()+"");
+		yearPublished.setText(book.getYearPublished() + "");
 		publisher.setText(book.getPublisher().getPublisherName());
 		isbn.setText(book.getIsbn());
 		dateAdded.setText(book.getDateAdded());
 		if (authorList != null) {
 			authorTable.getItems().addAll(authorList);
-			authorName.setCellValueFactory(c-> new SimpleStringProperty(c.getValue().getFirstname() + " " + c.getValue().getLastname()));
-			
+			authorName.setCellValueFactory(
+					c -> new SimpleStringProperty(c.getValue().getFirstname() + " " + c.getValue().getLastname()));
+
 		}
 	}
 
 	public void setButtonHandler() {
 		EventHandler<MouseEvent> editHandler = new EventHandler<MouseEvent>() {
-			//Overriden function for EventHandler
+			// Overriden function for EventHandler
 			@Override
 			public void handle(MouseEvent mouseEvent) {
-				//Mouse button usually the left one
+				// Mouse button usually the left one
 				if (mouseEvent.getButton().equals(MouseButton.PRIMARY)) {
-					//Creating of another scene
+					// Creating of another scene
 					try {
-						//New pane layout to set the scene
+						// New pane layout to set the scene
 						Pane pane = new Pane();
-						//Loader for the fxml file
+						// Loader for the fxml file
 						FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/BookDetailEdit.fxml"));
-						//Controller setting for the author editing
+						// Controller setting for the author editing
 						loader.setController(new BookEditController(book, stage));
-						//Loading of fxml file to the pane
+						// Loading of fxml file to the pane
 						pane = (Pane) loader.load();
-						//Setting of the scene
+						// Setting of the scene
 						Scene scene = new Scene(pane, 500, 400);
-						//The title setting
+						// The title setting
 						stage.setTitle("Edit Book Details");
-						//Setting scene on the stage
+						// Setting scene on the stage
 						stage.setScene(scene);
-						//Show time
+						// Show time
 						stage.show();
 					} catch (IOException e) {
 						logger.error(e.getMessage());
@@ -111,28 +112,28 @@ public class BookDetailController {
 		// Setting mouse click event to the List View
 		edit.setOnMouseClicked(editHandler);
 		EventHandler<MouseEvent> auditHandler = new EventHandler<MouseEvent>() {
-			//Overriden function for EventHandler
+			// Overriden function for EventHandler
 			@Override
 			public void handle(MouseEvent mouseEvent) {
-				//Mouse button usually the left one
+				// Mouse button usually the left one
 				if (mouseEvent.getButton().equals(MouseButton.PRIMARY)) {
-					//Creating of another scene
+					// Creating of another scene
 					try {
-						//New pane layout to set the scene
+						// New pane layout to set the scene
 						Pane pane = new Pane();
-						//Loader for the fxml file
+						// Loader for the fxml file
 						FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/bookaudittrail.fxml"));
-						//Controller setting for the author editing
+						// Controller setting for the author editing
 						loader.setController(new bookauditlistController(book, book.getGateway()));
-						//Loading of fxml file to the pane
+						// Loading of fxml file to the pane
 						pane = (Pane) loader.load();
-						//Setting of the scene
+						// Setting of the scene
 						Scene scene = new Scene(pane, 500, 400);
-						//The title setting
+						// The title setting
 						stage.setTitle("Book Audit");
-						//Setting scene on the stage
+						// Setting scene on the stage
 						stage.setScene(scene);
-						//Show time
+						// Show time
 						stage.show();
 					} catch (IOException e) {
 						logger.error(e.getMessage());
@@ -143,11 +144,11 @@ public class BookDetailController {
 		// Setting mouse click event to the List View
 		audit.setOnMouseClicked(auditHandler);
 	}
-	//Initialize to run stLabels in the fxml as part og the controller
+
+	// Initialize to run stLabels in the fxml as part og the controller
 	@FXML
 	public void initialize() {
 		setLabels();
 		setButtonHandler();
 	}
 }
-

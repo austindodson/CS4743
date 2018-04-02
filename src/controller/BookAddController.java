@@ -45,31 +45,31 @@ public class BookAddController {
 		this.gateway = gateway;
 		ArrayList<Publisher> pubs = gateway.getPublishers();
 		ArrayList<String> names = new ArrayList<String>();
-		for(Publisher pub: pubs) {
+		for (Publisher pub : pubs) {
 			names.add(pub.getPublisherName());
 		}
 		this.publisherList = FXCollections.observableArrayList(names);
 	}
 
-	
-	//Another way to handle an event on the base of an object instead of creating an event handler
+	// Another way to handle an event on the base of an object instead of creating
+	// an event handler
 	@FXML
 	private void handleButton(ActionEvent event) throws Exception {
 		if (event.getSource() == cancel) {
-			//Set the center to blank
+			// Set the center to blank
 			app.getInstance().getRootPane().setCenter(new Pane());
 		} else if (event.getSource() == saveButton) {
 			logger.info("Book add selected.");
-			//Instance variable for author
+			// Instance variable for author
 			book.setTitle(title.getText());
 			book.setSummary(summary.getText());
-			book.setPublisher(new Publisher(1,publisher.getValue()));
+			book.setPublisher(new Publisher(1, publisher.getValue()));
 			book.setYearPublished(Integer.parseInt(yearPublished.getText()));
 			book.setIsbn(isbn.getText());
 			book.setGateway(gateway);
-			//Function for saving author details
+			// Function for saving author details
 			book.saveBook();
-			//Setting of the text in the view
+			// Setting of the text in the view
 			title.setText(String.valueOf(book.getTitle()));
 			summary.setText(book.getSummary());
 			publisher.setValue(book.getPublisher().getPublisherName());
@@ -77,11 +77,11 @@ public class BookAddController {
 			isbn.setText(book.getIsbn());
 		}
 	}
-	//To initialize the gender list
+
+	// To initialize the gender list
 	@FXML
 	public void initialize() {
 		publisher.setItems(publisherList);
 		publisher.setValue("Unknown");
 	}
 }
-

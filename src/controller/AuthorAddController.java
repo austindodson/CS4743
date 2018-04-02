@@ -43,25 +43,25 @@ public class AuthorAddController {
 		this.gateway = gateway;
 	}
 
-	
-	//Another way to handle an event on the base of an object instead of creating an event handler
+	// Another way to handle an event on the base of an object instead of creating
+	// an event handler
 	@FXML
 	private void handleButtonAction(ActionEvent event) throws Exception {
 		if (event.getSource() == cancel) {
 			logger.info("Author add selected.");
-			//Set the center to blank
+			// Set the center to blank
 			app.getInstance().getRootPane().setCenter(new Pane());
 		} else if (event.getSource() == save) {
-			//Instance variable for author
+			// Instance variable for author
 			author.setFirstname(firstname.getText());
 			author.setLastname(lastname.getText());
 			author.setDateOfBirth(dateofbirth.getText());
 			author.setGender(gender.getValue());
 			author.setWebsite(website.getText());
 			author.setGateway(gateway);
-			//Function for saving author details
+			// Function for saving author details
 			author.saveAuthor();
-			//Setting of the text in the view
+			// Setting of the text in the view
 			id.setText(String.valueOf(author.getId()));
 			firstname.setText(author.getFirstname());
 			lastname.setText(author.getLastname());
@@ -70,7 +70,8 @@ public class AuthorAddController {
 			website.setText(author.getWebsite());
 		}
 	}
-	//To initialize the gender list
+
+	// To initialize the gender list
 	@FXML
 	public void initialize() {
 		gender.setItems(genderList);

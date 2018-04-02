@@ -42,7 +42,7 @@ public class AuthorDetailController {
 	private Button edit;
 	@FXML
 	private Button audit;
-	
+
 	public AuthorDetailController(Author author, Stage stage) {
 		this.author = author;
 		this.stage = stage;
@@ -95,41 +95,42 @@ public class AuthorDetailController {
 		// Setting mouse click event to the List View
 		edit.setOnMouseClicked(editHandler);
 		EventHandler<MouseEvent> auditHandler = new EventHandler<MouseEvent>() {
-			//Overriden function for EventHandler
-		
-	@Override
-	public void handle(MouseEvent mouseEvent) {
-		// Mouse button usually the left one
-		if (mouseEvent.getButton().equals(MouseButton.PRIMARY)) {
-			// Creating of another scene
-			try {
-				// New pane layout to set the scene
-				Pane pane = new Pane();
-				// Loader for the fxml file
-				FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/AuthorAuditTrail.fxml"));
-				// Controller setting for the author editing
-				loader.setController(new AuthorAuditListController(author, author.getGateway()));
-				// Loading of fxml file to the pane
-				pane = (Pane) loader.load();
-				// Setting of the scene
-				Scene scene = new Scene(pane, 500, 400);
-				// The title setting
-				stage.setTitle("Author Audit");
-				// Setting scene on the stage
-				stage.setScene(scene);
-				// Show time
-				stage.show();
-			} catch (IOException e) {
-				logger.error(e.getMessage());
+			// Overriden function for EventHandler
+
+			@Override
+			public void handle(MouseEvent mouseEvent) {
+				// Mouse button usually the left one
+				if (mouseEvent.getButton().equals(MouseButton.PRIMARY)) {
+					// Creating of another scene
+					try {
+						// New pane layout to set the scene
+						Pane pane = new Pane();
+						// Loader for the fxml file
+						FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/AuthorAuditTrail.fxml"));
+						// Controller setting for the author editing
+						loader.setController(new AuthorAuditListController(author, author.getGateway()));
+						// Loading of fxml file to the pane
+						pane = (Pane) loader.load();
+						// Setting of the scene
+						Scene scene = new Scene(pane, 500, 400);
+						// The title setting
+						stage.setTitle("Author Audit");
+						// Setting scene on the stage
+						stage.setScene(scene);
+						// Show time
+						stage.show();
+					} catch (IOException e) {
+						logger.error(e.getMessage());
+					}
+				}
+
 			}
-		}
-	
-	}
-};
-//Setting mouse click event to the List View
+		};
+		// Setting mouse click event to the List View
 		audit.setOnMouseClicked(auditHandler);
 	}
-	//Initialize to run stLabels in the fxml as part og the controller
+
+	// Initialize to run stLabels in the fxml as part og the controller
 	@FXML
 	public void initialize() {
 		setLabels();

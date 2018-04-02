@@ -25,7 +25,7 @@ public class MenuController {
 	private MenuItem authorAdd;
 	@FXML
 	private MenuItem bookList;
-	@FXML 
+	@FXML
 	private MenuItem bookAdd;
 	private Logger logger = LogManager.getLogger(MenuController.class);
 	private DBGateway gateway;
@@ -37,7 +37,7 @@ public class MenuController {
 		gateway = new DBGateway();
 	}
 
-	//Action handler for menu items
+	// Action handler for menu items
 	@FXML
 	private void handleMenuAction(ActionEvent event) throws Exception {
 		if (event.getSource() == authorList) {
@@ -55,10 +55,10 @@ public class MenuController {
 		} else if (event.getSource() == bookAdd) {
 			logger.info("Add book selected.");
 			changeToBookAddScene();
-		} 
+		}
 	}
 
-	//Border Layout center settings
+	// Border Layout center settings
 	private void changeToAuthorScene() throws IOException {
 		Driver app = driver.getInstance();
 		try {
@@ -71,20 +71,20 @@ public class MenuController {
 			throw new IOException(e);
 		}
 	}
-	
-	//Border Layout center settings
-		private void changeToBookScene() throws IOException {
-			Driver app = driver.getInstance();
-			try {
-				FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/BooksList.fxml"));
-				loader.setController(new BookListController(gateway));
-				Pane pane = (Pane) loader.load();
-				app.getRootPane().setCenter(pane);
-			} catch (IOException e) {
-				logger.error("Error opening BooksList.fxml " + e.getMessage());
-				throw new IOException(e);
-			}
+
+	// Border Layout center settings
+	private void changeToBookScene() throws IOException {
+		Driver app = driver.getInstance();
+		try {
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/BooksList.fxml"));
+			loader.setController(new BookListController(gateway));
+			Pane pane = (Pane) loader.load();
+			app.getRootPane().setCenter(pane);
+		} catch (IOException e) {
+			logger.error("Error opening BooksList.fxml " + e.getMessage());
+			throw new IOException(e);
 		}
+	}
 
 	private void changeToAuthorAddScene() throws IOException {
 		Driver app = driver.getInstance();
@@ -99,7 +99,7 @@ public class MenuController {
 			throw new IOException(e);
 		}
 	}
-	
+
 	private void changeToBookAddScene() throws IOException {
 		Driver app = driver.getInstance();
 		try {
@@ -116,7 +116,7 @@ public class MenuController {
 
 	@FXML
 	public void initialize() {
-		//Database Gateway connection closed as stage get close
+		// Database Gateway connection closed as stage get close
 		driver.getInstance().getStage().setOnCloseRequest(new EventHandler<WindowEvent>() {
 			public void handle(WindowEvent we) {
 				gateway.close();
