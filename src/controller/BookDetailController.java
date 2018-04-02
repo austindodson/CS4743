@@ -177,6 +177,37 @@ public class BookDetailController {
 			}
 		};
 		deleteAuthor.setOnMouseClicked(deleteAuthorHandler);
+		EventHandler<MouseEvent> addAuthorHandler = new EventHandler<MouseEvent>() {
+			// Overriden function for EventHandler
+			@Override
+			public void handle(MouseEvent mouseEvent) {
+				// Mouse button usually the left one
+				if (mouseEvent.getButton().equals(MouseButton.PRIMARY)) {
+					// Creating of another scene
+					try {
+						// New pane layout to set the scene
+						Pane pane = new Pane();
+						// Loader for the fxml file
+						FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/authorbookadd.fxml"));
+						// Controller setting for the author editing
+						loader.setController(new authorbookaddcontroller(stage, book));
+						// Loading of fxml file to the pane
+						pane = (Pane) loader.load();
+						// Setting of the scene
+						Scene scene = new Scene(pane, 500, 400);
+						// The title setting
+						stage.setTitle("Add Author");
+						// Setting scene on the stage
+						stage.setScene(scene);
+						// Show time
+						stage.show();
+					} catch (IOException e) {
+						logger.error(e.getMessage());
+					}
+				}
+			}
+		};
+		addAuthor.setOnMouseClicked(addAuthorHandler);
 	}
 
 	// Initialize to run stLabels in the fxml as part og the controller

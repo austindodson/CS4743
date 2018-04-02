@@ -20,6 +20,13 @@ public class AuthorBook {
 		this.author_lastname = b;
 	}
 	
+	public AuthorBook() {
+		this.author_id = 0;
+		this.book_id = 0;
+		this.royalty = 0;
+		this.newRecord = true;
+	}
+	
 	public String getfirst() {
 		return author_firstname;
 	}

@@ -175,3 +175,49 @@
 23:12:38.504 INFO  controller.BookListController$1 : Book hell selected.
 23:12:41.373 INFO  gateway.DBGateway : Database connection closed.
 23:12:41.374 INFO  controller.MenuController$1 : Application closed.
+23:24:39.444 INFO  controller.MenuController : Book List selected.
+23:24:41.112 INFO  controller.BookListController$1 : Book hell selected.
+23:24:43.402 ERROR controller.BookDetailController$4 : GridPane is not a valid type.
+/C:/Users/austin/Documents/compsci/CS%204743/CS4743Assignment%203/bin/view/authorbookadd.fxml
+
+23:24:49.048 INFO  gateway.DBGateway : Database connection closed.
+23:24:49.048 INFO  controller.MenuController$1 : Application closed.
+23:25:19.814 INFO  controller.MenuController : Book List selected.
+23:25:21.395 INFO  controller.BookListController$1 : Book hell selected.
+23:25:25.381 INFO  gateway.DBGateway : Database connection closed.
+23:25:25.382 INFO  controller.MenuController$1 : Application closed.
+23:26:17.188 INFO  controller.MenuController : Book List selected.
+23:26:18.719 INFO  controller.BookListController$1 : Book hell selected.
+23:26:20.533 ERROR controller.BookDetailController$4 : No controller specified.
+/C:/Users/austin/Documents/compsci/CS%204743/CS4743Assignment%203/bin/view/authorbookadd.fxml:81
+
+23:26:41.364 INFO  controller.MenuController : Book List selected.
+23:26:43.400 INFO  controller.BookListController$1 : Book hell selected.
+23:26:52.890 INFO  gateway.DBGateway : Database connection closed.
+23:26:52.890 INFO  controller.MenuController$1 : Application closed.
+23:36:40.415 INFO  gateway.DBGateway : Database connection closed.
+23:36:40.416 INFO  controller.MenuController$1 : Application closed.
+23:36:43.118 INFO  controller.MenuController : Book List selected.
+23:36:45.011 INFO  controller.BookListController$1 : Book hell selected.
+23:37:43.773 INFO  gateway.DBGateway : Database connection closed.
+23:37:43.773 INFO  controller.MenuController$1 : Application closed.
+23:38:58.761 INFO  controller.MenuController : Book List selected.
+23:39:00.098 INFO  controller.BookListController$1 : Book hell selected.
+23:39:01.502 ERROR controller.BookDetailController$4 : No controller specified.
+/C:/Users/austin/Documents/compsci/CS%204743/CS4743Assignment%203/bin/view/authorbookadd.fxml:80
+
+23:39:05.312 INFO  gateway.DBGateway : Database connection closed.
+23:39:05.312 INFO  controller.MenuController$1 : Application closed.
+23:41:54.894 INFO  gateway.DBGateway : Database connection closed.
+23:41:54.896 INFO  controller.MenuController$1 : Application closed.
+23:42:02.191 INFO  controller.MenuController : Book List selected.
+23:42:03.881 INFO  controller.BookListController$1 : Book hell selected.
+23:42:41.118 INFO  gateway.DBGateway : Database connection closed.
+23:42:41.119 INFO  controller.MenuController$1 : Application closed.
+23:43:11.783 INFO  controller.MenuController : Book List selected.
+23:43:13.296 INFO  controller.BookListController$1 : Book hell selected.
+23:43:20.713 INFO  gateway.DBGateway : New audit trail created for book 1
+23:43:20.714 INFO  gateway.DBGateway : New AuthorBook created. author_id = 1book_id = 1
+23:43:25.042 INFO  controller.BookListController$1 : Book hell selected.
+23:43:39.595 INFO  gateway.DBGateway : Database connection closed.
+23:43:39.595 INFO  controller.MenuController$1 : Application closed.

@@ -546,7 +546,7 @@ public class DBGateway {
 				st = conn.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
 				st.setInt(1, ab.getAuthor_id());
 				st.setInt(2, ab.getBook_id());
-				st.setInt(3, ab.getRoyalty());
+				st.setDouble(3, ab.getRoyalty()*.01);
 				// executeUpdate is used to run insert, update, and delete statements
 				st.executeUpdate();
 				rs = st.getGeneratedKeys();
