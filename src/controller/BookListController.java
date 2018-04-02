@@ -41,11 +41,10 @@ public class BookListController {
 
 		if (!matchingString.equals("")) {
 			booksList = gateway.getBooksLike(matchingString);
-		}
-		else {
+		} else {
 			booksList = gateway.getBooks();
 		}
-		
+
 		ObservableList<String> bookItems = FXCollections.observableArrayList();
 		// fill the ObservableList with the author names
 		for (int i = 0; i < booksList.size(); i++) {
@@ -61,7 +60,7 @@ public class BookListController {
 					if (mouseEvent.getClickCount() == 2) {
 
 						Book selected = findBook(list.getSelectionModel().getSelectedItem());
-						//To make a new window
+						// To make a new window
 						try {
 							Stage stage = new Stage();
 							Pane pane = new Pane();
@@ -107,7 +106,7 @@ public class BookListController {
 			}
 		};
 		delete.setOnMouseClicked(deleteHandler);
-		
+
 		EventHandler<MouseEvent> searchHandler = new EventHandler<MouseEvent>() {
 			@Override
 			public void handle(MouseEvent mouseEvent) {
@@ -126,7 +125,7 @@ public class BookListController {
 		setListView();
 		setButtonHandler();
 	}
-	
+
 	// On the base of author's ID find author list.
 	public Book findBook(String name) {
 		for (int i = 0; i < booksList.size(); i++) {

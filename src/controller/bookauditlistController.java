@@ -29,17 +29,17 @@ public class bookauditlistController {
 	private ListView<String> list = new ListView<String>();
 	@FXML
 	private Button delete;
-	@FXML 
+	@FXML
 	private Label title;
 
-	public bookauditlistController(Book book,DBGateway gateway) {
+	public bookauditlistController(Book book, DBGateway gateway) {
 		this.gateway = gateway;
 		this.book = book;
 	}
 
 	public void setListView() {
-		
-		title.setText("Audit Table for "+book.getTitle());
+
+		title.setText("Audit Table for " + book.getTitle());
 
 		auditList = gateway.getAudits(book.getId());
 
@@ -57,7 +57,5 @@ public class bookauditlistController {
 	public void initialize() {
 		setListView();
 	}
-	
 
 }
-

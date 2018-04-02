@@ -44,15 +44,13 @@ public class BookEditController {
 	private Button cancel;
 	@FXML
 	private Button save;
-	
-	
 
 	public BookEditController(Book book, Stage stage) {
 		this.book = book;
 		this.stage = stage;
 		ArrayList<Publisher> pubs = book.getGateway().getPublishers();
 		ArrayList<String> names = new ArrayList<String>();
-		for(Publisher pub: pubs) {
+		for (Publisher pub : pubs) {
 			names.add(pub.getPublisherName());
 		}
 		this.publisherList = FXCollections.observableArrayList(names);
@@ -62,7 +60,7 @@ public class BookEditController {
 		id.setText(String.valueOf(book.getId()));
 		title.setText(book.getTitle());
 		summary.setText(book.getSummary());
-		yearPublished.setText(book.getYearPublished()+"");
+		yearPublished.setText(book.getYearPublished() + "");
 		publisher.setItems(publisherList);
 		isbn.setText(book.getIsbn());
 	}
@@ -160,4 +158,3 @@ public class BookEditController {
 	}
 
 }
-

@@ -40,7 +40,8 @@ public class Author {
 		this.setGender(gender);
 		this.setWebsite(website);
 		this.gateway = gateway;
-		gateway.setAuthorTimestamp(this);;
+		gateway.setAuthorTimestamp(this);
+		;
 	}
 
 	public void updateAuthor() {
@@ -55,11 +56,11 @@ public class Author {
 		}
 
 	}
-	
+
 	public void setTimestamp(LocalDateTime update) {
 		this.lastmodified = update;
 	}
-	
+
 	public LocalDateTime getTimestamp() {
 		return lastmodified;
 	}
