@@ -14,6 +14,7 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.ButtonType;
 import model.AuditTrail;
 import model.Author;
+import model.AuthorBook;
 import model.Book;
 import model.Publisher;
 import java.time.LocalDate;
@@ -402,6 +403,39 @@ public class DBGateway {
 			}
 		}
 	}
+	
+	public void updateAuthorBook(AuthorBook ab, Book book) {
+		PreparedStatement st = null;
+		ResultSet rs = null;
+		try {
+
+			String query = "update author_book set author_id = ?, book_id = ?, roylaty = ?"
+					+ "where author_id = ? and book_id = ?";
+			st = conn.prepareStatement(query);
+			st.setInt(1, ab.getAuthor_id());
+			st.setInt(2, book.getId());
+			st.setInt(3, ab.getRoyalty());
+			st.setInt(4, ab.getAuthor_id());
+			st.setInt(5, book.getId());
+			
+			addAuditTrailBook(book.toString() + "changed", book.getId());
+			// executeUpdate is used to run insert, update, and delete statements
+			st.executeUpdate();
+
+			logger.info("Updated AuthorBook");
+		} catch (SQLException e) {
+			logger.error("Error updating book table in database: " + e.getMessage());
+		} finally {
+			try {
+				if (rs != null)
+					rs.close();
+				if (st != null)
+					st.close();
+			} catch (SQLException e) {
+				logger.error("Set close Statement or Result error: " + e.getMessage());
+			}
+		}
+	}
 
 	public void setAuthorTimestamp(Author author) {
 		try {
@@ -501,6 +535,37 @@ public class DBGateway {
 		}
 	}
 
+	// create a new book
+		public void saveAuthorBook(AuthorBook ab, Book book) {
+			PreparedStatement st = null;
+			ResultSet rs = null;
+			try {
+
+				String query = "insert into author_book (author_id, book_id, royalty) "
+						+ "values (?, ?, ?)";
+				st = conn.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
+				st.setInt(1, ab.getAuthor_id());
+				st.setInt(2, ab.getBook_id());
+				st.setInt(3, ab.getRoyalty());
+				// executeUpdate is used to run insert, update, and delete statements
+				st.executeUpdate();
+				rs = st.getGeneratedKeys();
+				addAuditTrailBook(book.toString() + "changed", book.getId());
+				logger.info("New AuthorBook created. author_id = " + ab.getAuthor_id() + "book_id = " + book.getId());
+			} catch (SQLException e) {
+				logger.error("Error inserting into book table in database: " + e.getMessage());
+			} finally {
+				try {
+					if (rs != null)
+						rs.close();
+					if (st != null)
+						st.close();
+				} catch (SQLException e) {
+					logger.error("Set close Statement or Result error: " + e.getMessage());
+				}
+			}
+		}
+	
 	// To delete the author
 	public void deleteAuthor(Author author) {
 		PreparedStatement st = null;
@@ -525,6 +590,8 @@ public class DBGateway {
 			}
 		}
 	}
+	
+	
 
 	// To delete the author
 	public void deleteBook(Book book) {
@@ -537,6 +604,32 @@ public class DBGateway {
 			// executeUpdate is used to run insert, update, and delete statements
 			st.executeUpdate();
 			logger.info("Book with id = " + book.getId() + " deleted from database.");
+		} catch (SQLException e) {
+			logger.error("Error: deleting from book table in Database: " + e.getMessage());
+		} finally {
+			try {
+				if (rs != null)
+					rs.close();
+				if (st != null)
+					st.close();
+			} catch (SQLException e) {
+				logger.error("Set close Statement or Result error" + e.getMessage());
+			}
+		}
+	}
+	
+	public void deleteAuthorBook(AuthorBook ab, Book book) {
+		PreparedStatement st = null;
+		ResultSet rs = null;
+		try {
+			String query = "Delete from author_book " + "where author_id = ? and book_id=?";
+			st = conn.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
+			st.setInt(1, ab.getAuthor_id());
+			st.setInt(2, ab.getBook_id());
+			// executeUpdate is used to run insert, update, and delete statements
+			st.executeUpdate();
+			logger.info("AuthorBook with author_id = " + ab.getAuthor_id() + " and book_id "+ab.getBook_id()+" deleted from database.");
+			addAuditTrailBook(book.toString() + "changed", book.getId());
 		} catch (SQLException e) {
 			logger.error("Error: deleting from book table in Database: " + e.getMessage());
 		} finally {
@@ -578,8 +671,6 @@ public class DBGateway {
 		
 			}
 		}
-		
-		
 		return 0;
 	}
 

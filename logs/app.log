@@ -156,3 +156,22 @@
 22:44:22.934 INFO  controller.BookListController$1 : Book hell selected.
 22:44:26.001 INFO  gateway.DBGateway : Database connection closed.
 22:44:26.001 INFO  controller.MenuController$1 : Application closed.
+22:45:30.313 INFO  controller.MenuController : Author list selected.
+22:45:32.338 INFO  controller.AuthorListController$1 : Author he selected.
+22:46:15.003 INFO  gateway.DBGateway : Database connection closed.
+22:46:15.004 INFO  controller.MenuController$1 : Application closed.
+22:47:42.728 INFO  controller.MenuController : Book List selected.
+22:47:44.709 INFO  controller.BookListController$1 : Book hell selected.
+22:47:47.883 INFO  gateway.DBGateway : Database connection closed.
+22:47:47.883 INFO  controller.MenuController$1 : Application closed.
+22:48:01.470 INFO  controller.MenuController : Book List selected.
+22:48:03.159 INFO  controller.BookListController$1 : Book hell selected.
+22:48:06.172 INFO  gateway.DBGateway : Database connection closed.
+22:48:06.172 INFO  controller.MenuController$1 : Application closed.
+23:12:16.752 INFO  controller.MenuController : Book List selected.
+23:12:21.086 INFO  controller.BookListController$1 : Book hell selected.
+23:12:29.002 INFO  gateway.DBGateway : AuthorBook with author_id = 1 and book_id 1 deleted from database.
+23:12:29.085 INFO  gateway.DBGateway : New audit trail created for book 1
+23:12:38.504 INFO  controller.BookListController$1 : Book hell selected.
+23:12:41.373 INFO  gateway.DBGateway : Database connection closed.
+23:12:41.374 INFO  controller.MenuController$1 : Application closed.

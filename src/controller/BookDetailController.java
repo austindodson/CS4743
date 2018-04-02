@@ -50,6 +50,12 @@ public class BookDetailController {
 	private Button edit;
 	@FXML
 	private Button audit;
+	@FXML 
+	private Button addAuthor;
+	@FXML 
+	private Button editAuthor;
+	@FXML 
+	private Button deleteAuthor;
 	@FXML
 	private TableView<AuthorBook> authorTable;
 	@FXML
@@ -157,6 +163,20 @@ public class BookDetailController {
 		};
 		// Setting mouse click event to the List View
 		audit.setOnMouseClicked(auditHandler);
+		
+		EventHandler<MouseEvent> deleteAuthorHandler = new EventHandler<MouseEvent>() {
+			// Overriden function for EventHandler
+			@Override
+			public void handle(MouseEvent mouseEvent) {
+				// Mouse button usually the left one
+				if (mouseEvent.getButton().equals(MouseButton.PRIMARY)) {
+					// Creating of another scene
+					AuthorBook ab =authorTable.getSelectionModel().getSelectedItem();
+					book.getGateway().deleteAuthorBook(ab, book);
+				}
+			}
+		};
+		deleteAuthor.setOnMouseClicked(deleteAuthorHandler);
 	}
 
 	// Initialize to run stLabels in the fxml as part og the controller
