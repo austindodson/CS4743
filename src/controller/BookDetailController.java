@@ -14,11 +14,13 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.ComboBoxTableCell;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import javafx.util.converter.DefaultStringConverter;
 import model.Author;
 import model.Book;
 
@@ -58,7 +60,8 @@ public class BookDetailController {
 		this.stage = stage;
 		ArrayList<Author> authors = book.getGateway().getAuthorsForBook(book);
 		this.authorList = FXCollections.observableArrayList(authors);
-		System.out.println(authorList.toString());
+		authorTable = new TableView<>();
+		authorTable.setEditable(true);
 	}
 
 	//Set the label texts for author's fields. 
@@ -72,14 +75,20 @@ public class BookDetailController {
 		dateAdded.setText(book.getDateAdded());
 		if (authorList != null) {
 			authorTable.getItems().addAll(authorList);
-			authorName.setCellValueFactory(c-> new SimpleStringProperty(c.getValue().getFirstname() + " " + c.getValue().getLastname()));
-			
+			ArrayList<String> authorNames = new ArrayList<String>();
+			for (Author x: authorList) {
+				authorNames.add(x.getFirstname()+ " " + x.getLastname());
+			}
+			ObservableList<String> auth = FXCollections.observableArrayList(authorNames);
+			System.out.println(auth.toString());
+			authorName.setCellFactory(ComboBoxTableCell.forTableColumn(new DefaultStringConverter(), auth));
+			authorName.setEditable(true);
 		}
 	}
 
 	public void setButtonHandler() {
 		EventHandler<MouseEvent> editHandler = new EventHandler<MouseEvent>() {
-			//Overriden function for EventHandler
+			//Overridden function for EventHandler
 			@Override
 			public void handle(MouseEvent mouseEvent) {
 				//Mouse button usually the left one

@@ -1328,3 +1328,48 @@
 23:53:23.773 INFO  controller.BookListController$1 : Book hell selected.
 23:53:30.406 INFO  gateway.DBGateway : Database connection closed.
 23:53:30.407 INFO  controller.MenuController$1 : Application closed.
+15:28:29.900 INFO  controller.MenuController : Book List selected.
+15:28:51.586 INFO  controller.BookListController$1 : Book ssssssss selected.
+15:28:54.793 INFO  controller.BookListController$1 : Book hell selected.
+15:29:02.560 INFO  gateway.DBGateway : Database connection closed.
+15:29:02.560 INFO  controller.MenuController$1 : Application closed.
+15:29:12.763 INFO  controller.MenuController : Book List selected.
+15:29:13.866 INFO  controller.BookListController$1 : Book hell selected.
+15:29:25.025 INFO  gateway.DBGateway : Database connection closed.
+15:29:25.026 INFO  controller.MenuController$1 : Application closed.
+15:30:18.292 INFO  gateway.DBGateway : Database connection closed.
+15:30:18.294 INFO  controller.MenuController$1 : Application closed.
+15:30:21.058 INFO  controller.MenuController : Book List selected.
+15:30:22.309 INFO  controller.BookListController$1 : Book hell selected.
+15:30:28.633 INFO  gateway.DBGateway : Database connection closed.
+15:30:28.634 INFO  controller.MenuController$1 : Application closed.
+15:31:48.647 INFO  controller.MenuController : Book List selected.
+15:31:49.910 INFO  controller.BookListController$1 : Book hell selected.
+15:31:56.249 INFO  gateway.DBGateway : Database connection closed.
+15:31:56.249 INFO  controller.MenuController$1 : Application closed.
+15:33:24.358 INFO  controller.MenuController : Book List selected.
+15:33:25.718 INFO  controller.BookListController$1 : Book hell selected.
+15:33:41.820 INFO  gateway.DBGateway : Database connection closed.
+15:33:41.820 INFO  controller.MenuController$1 : Application closed.
+15:35:11.037 INFO  controller.MenuController : Book List selected.
+15:35:12.392 INFO  controller.BookListController$1 : Book hell selected.
+15:35:20.588 INFO  gateway.DBGateway : Database connection closed.
+15:35:20.588 INFO  controller.MenuController$1 : Application closed.
+15:35:23.843 INFO  gateway.DBGateway : Database connection closed.
+15:35:23.845 INFO  controller.MenuController$1 : Application closed.
+15:36:05.724 INFO  controller.MenuController : Book List selected.
+15:36:07.082 INFO  controller.BookListController$1 : Book hell selected.
+15:36:11.672 INFO  gateway.DBGateway : Database connection closed.
+15:36:11.672 INFO  controller.MenuController$1 : Application closed.
+15:40:13.753 INFO  gateway.DBGateway : Database connection closed.
+15:40:13.755 INFO  controller.MenuController$1 : Application closed.
+15:40:29.061 INFO  controller.MenuController : Book List selected.
+15:40:30.500 INFO  controller.BookListController$1 : Book hell selected.
+15:40:37.073 INFO  controller.BookListController$1 : Book ssssssss selected.
+15:40:40.564 INFO  controller.BookListController$1 : Book hell selected.
+15:52:55.661 INFO  gateway.DBGateway : Database connection closed.
+15:52:55.662 INFO  controller.MenuController$1 : Application closed.
+16:03:50.112 INFO  controller.MenuController : Book List selected.
+16:03:51.470 INFO  controller.BookListController$1 : Book hell selected.
+16:05:20.710 INFO  gateway.DBGateway : Database connection closed.
+16:05:20.711 INFO  controller.MenuController$1 : Application closed.
