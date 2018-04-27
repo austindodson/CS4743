@@ -302,3 +302,47 @@
 13:08:26.335 INFO  controller.BookListController$1 : Book hell selected.
 13:08:31.640 INFO  gateway.DBGateway : Database connection closed.
 13:08:31.640 INFO  controller.MenuController$1 : Application closed.
+11:52:14.454 INFO  controller.MenuController : Book List selected.
+11:52:16.205 INFO  controller.BookListController$1 : Book hell selected.
+11:52:42.185 INFO  gateway.DBGateway : Database connection closed.
+11:52:42.185 INFO  controller.MenuController$1 : Application closed.
+11:52:53.772 INFO  gateway.DBGateway : Database connection closed.
+11:52:53.777 INFO  controller.MenuController$1 : Application closed.
+12:32:34.771 INFO  gateway.DBGateway : Database connection closed.
+12:32:34.776 INFO  controller.MenuController$1 : Application closed.
+16:09:20.041 INFO  gateway.DBGateway : Database connection closed.
+16:09:20.044 INFO  controller.MenuController$1 : Application closed.
+16:10:02.843 INFO  gateway.DBGateway : Database connection closed.
+16:10:02.847 INFO  controller.MenuController$1 : Application closed.
+16:15:07.220 INFO  controller.MenuController : Login selected.
+16:15:11.991 INFO  controller.MenuController : Logout selected.
+16:15:13.608 INFO  gateway.DBGateway : Database connection closed.
+16:15:13.609 INFO  controller.MenuController$1 : Application closed.
+16:24:33.608 INFO  controller.MenuController : Login selected.
+16:24:41.265 INFO  gateway.DBGateway : Database connection closed.
+16:24:41.266 INFO  controller.MenuController$1 : Application closed.
+16:25:22.737 INFO  controller.MenuController : Login selected.
+16:25:39.711 INFO  gateway.DBGateway : Database connection closed.
+16:25:39.711 INFO  controller.MenuController$1 : Application closed.
+16:35:34.562 INFO  controller.MenuController : Login selected.
+16:35:37.965 INFO  controller.MenuController : userName is hello, password is world
+16:35:37.967 INFO  controller.MenuController : sha256 hash of password is 486ea46224d1bb4fb680f34f7c9ad96a8f24ec88be73ea8e5a6c65260e9cb8a7
+16:35:46.537 INFO  gateway.DBGateway : Database connection closed.
+16:35:46.538 INFO  controller.MenuController$1 : Application closed.
+16:50:18.340 INFO  controller.MenuController : Login selected.
+16:50:21.837 INFO  controller.MenuController : Logout selected.
+16:50:24.023 INFO  controller.MenuController : Login selected.
+16:51:36.890 INFO  controller.MenuController : Login selected.
+16:57:58.760 INFO  gateway.DBGateway : Database connection closed.
+16:57:58.760 INFO  controller.MenuController$1 : Application closed.
+16:58:00.611 INFO  gateway.DBGateway : Database connection closed.
+16:58:00.611 INFO  controller.MenuController$1 : Application closed.
+17:16:14.776 INFO  controller.MenuController : Login selected.
+17:17:55.918 INFO  controller.MenuController : Login selected.
+17:18:05.508 INFO  gateway.DBGateway : Database connection closed.
+17:18:05.508 INFO  controller.MenuController$1 : Application closed.
+17:23:44.597 INFO  controller.MenuController : Login selected.
+17:23:54.394 INFO  controller.MenuController : session id is 1
+17:24:00.893 INFO  controller.MenuController : Author list selected.
+17:24:07.163 INFO  gateway.DBGateway : Database connection closed.
+17:24:07.163 INFO  controller.MenuController$1 : Application closed.
