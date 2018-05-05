@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
+	<children>
+		<ChoiceBox fx:id="publishers" layoutX="50.0" layoutY="50.0" prefWidth="160.0">
+		</ChoiceBox>
+		<Button fx:id="submit" layoutX="93.0" layoutY="303.0" mnemonicParsing="false" text="Submit" />
+	</children>
+</Pane>

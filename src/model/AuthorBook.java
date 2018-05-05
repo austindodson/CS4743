@@ -20,6 +20,13 @@ public class AuthorBook {
 		this.author_lastname = b;
 	}
 	
+	public AuthorBook(int a_id, int b_id, int royalty, boolean newRec) {
+		this.author_id = a_id;
+		this.book_id = b_id;
+		this.royalty = royalty;
+		this.newRecord = newRec;
+	}
+	
 	public AuthorBook() {
 		this.author_id = 0;
 		this.book_id = 0;

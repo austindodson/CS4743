@@ -262,6 +262,43 @@ public class DBGateway {
 
 		return books;
 	}
+	
+	public AuthorBook getAuthorBook(int auth_id, int book_id) {
+
+		AuthorBook ab= new AuthorBook();
+		PreparedStatement st = null;
+		ResultSet rs = null;
+		try {
+
+			String query = "select * " + " from author_book where author_id = ? and book_id = ?";
+			st = conn.prepareStatement(query);
+			st.setInt(1, auth_id);
+			st.setInt(2, book_id);
+
+			// used to run select statements
+			rs = st.executeQuery();
+
+			// create a book object for each row in the book table
+			while (rs.next()) {
+				ab = new AuthorBook(rs.getInt("author_id"), rs.getInt("book_id"), 
+						(int)(rs.getDouble("royalty")*10000), false);
+			}
+
+		} catch (SQLException e) {
+			logger.error("Error reading from author_book table in database: " + e.getMessage());
+		} finally {
+			try {
+				if (rs != null)
+					rs.close();
+				if (st != null)
+					st.close();
+			} catch (SQLException e) {
+				logger.error("Set close Statement or Result error: " + e.getMessage());
+			}
+		}
+
+		return ab;
+	}
 
 	public ArrayList<Book> getBooksLike(String matching) {
 
@@ -432,6 +469,37 @@ public class DBGateway {
 		return bookList;
 	}
 
+	public ArrayList<Book> getBooksForPublisher(Publisher pub) {
+		PreparedStatement st = null;
+		ResultSet rs = null;
+		ArrayList<Book> bookList = new ArrayList<Book>();
+		try {
+			String query = "SELECT * FROM book join publisher on book.publisher_id = publisher.id where publisher.id = ?";
+			st = conn.prepareStatement(query);
+			st.setInt(1, pub.getId());
+			rs = st.executeQuery();
+			while (rs.next()) {
+				bookList.add(new Book(rs.getInt("id"), rs.getString("title"), rs.getString("summary"),
+						rs.getInt("year_published"), new Publisher(rs.getInt("publisher_id"), "unknown"),
+						rs.getString("isbn"), rs.getString("date_added"), this));
+
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			try {
+				if (rs != null)
+					rs.close();
+				if (st != null)
+					st.close();
+			} catch (SQLException e) {
+				logger.error("Set close Statement or Result error: " + e.getMessage());
+			}
+		}
+		return bookList;
+	}
+	
 	public void updateBook(Book book) {
 		PreparedStatement st = null;
 		ResultSet rs = null;
@@ -465,6 +533,8 @@ public class DBGateway {
 			}
 		}
 	}
+	
+	
 	
 	public void updateAuthorBook(AuthorBook ab, Book book) {
 		PreparedStatement st = null;

@@ -346,3 +346,321 @@
 17:24:00.893 INFO  controller.MenuController : Author list selected.
 17:24:07.163 INFO  gateway.DBGateway : Database connection closed.
 17:24:07.163 INFO  controller.MenuController$1 : Application closed.
+18:03:46.965 INFO  gateway.DBGateway : Database connection closed.
+18:03:46.966 INFO  controller.MenuController$1 : Application closed.
+15:15:08.199 INFO  controller.MenuController : Login selected.
+15:15:52.341 INFO  controller.MenuController : session id is 1
+15:16:08.790 INFO  controller.MenuController : Login selected.
+15:16:13.064 INFO  controller.MenuController : session id is 1
+15:16:15.051 INFO  gateway.DBGateway : Database connection closed.
+15:16:15.052 INFO  controller.MenuController$1 : Application closed.
+15:16:17.193 INFO  gateway.DBGateway : Database connection closed.
+15:16:17.193 INFO  controller.MenuController$1 : Application closed.
+16:12:57.060 INFO  gateway.DBGateway : Database connection closed.
+16:12:57.062 INFO  controller.MenuController$1 : Application closed.
+16:13:00.008 INFO  controller.MenuController : pubGen selected
+16:13:21.834 INFO  gateway.DBGateway : Database connection closed.
+16:13:21.835 INFO  controller.MenuController$1 : Application closed.
+16:15:29.317 INFO  controller.MenuController : Author list selected.
+16:15:33.463 INFO  controller.AuthorListController$1 : Author he8 selected.
+16:15:39.088 INFO  gateway.DBGateway : Database connection closed.
+16:15:39.088 INFO  controller.MenuController$1 : Application closed.
+16:21:49.272 INFO  controller.MenuController : pubGen selected
+16:21:52.240 INFO  gateway.DBGateway : Database connection closed.
+16:21:52.240 INFO  controller.MenuController$1 : Application closed.
+16:40:44.351 INFO  controller.MenuController : pubGen selected
+16:40:49.638 INFO  gateway.DBGateway : Database connection closed.
+16:40:49.638 INFO  controller.MenuController$1 : Application closed.
+16:41:25.267 INFO  controller.MenuController : pubGen selected
+16:41:30.638 INFO  gateway.DBGateway : Database connection closed.
+16:41:30.638 INFO  controller.MenuController$1 : Application closed.
+16:42:06.545 INFO  controller.MenuController : pubGen selected
+16:42:10.156 INFO  gateway.DBGateway : Database connection closed.
+16:42:10.156 INFO  controller.MenuController$1 : Application closed.
+16:42:19.148 INFO  controller.MenuController : pubGen selected
+16:42:23.425 INFO  gateway.DBGateway : Database connection closed.
+16:42:23.426 INFO  controller.MenuController$1 : Application closed.
+16:47:50.549 INFO  controller.MenuController : pubGen selected
+16:48:03.396 INFO  gateway.DBGateway : Database connection closed.
+16:48:03.396 INFO  controller.MenuController$1 : Application closed.
+16:48:09.219 INFO  controller.MenuController : pubGen selected
+16:48:13.653 INFO  gateway.DBGateway : Database connection closed.
+16:48:13.654 INFO  controller.MenuController$1 : Application closed.
+16:49:26.153 INFO  controller.MenuController : pubGen selected
+16:49:26.223 ERROR controller.MenuController : Error opening pubReportspubReports.fxml 
+/C:/Users/austin/Documents/compsci/CS%204743/CS4743Assignment%203/bin/view/pubReports.fxml:11
+
+16:49:28.203 INFO  gateway.DBGateway : Database connection closed.
+16:49:28.204 INFO  controller.MenuController$1 : Application closed.
+16:49:39.047 INFO  controller.MenuController : pubGen selected
+16:49:42.958 INFO  gateway.DBGateway : Database connection closed.
+16:49:42.958 INFO  controller.MenuController$1 : Application closed.
+16:50:08.151 INFO  controller.MenuController : pubGen selected
+16:50:17.758 INFO  gateway.DBGateway : Database connection closed.
+16:50:17.759 INFO  controller.MenuController$1 : Application closed.
+16:52:50.744 INFO  controller.MenuController : pubGen selected
+16:53:00.103 INFO  gateway.DBGateway : Database connection closed.
+16:53:00.103 INFO  controller.MenuController$1 : Application closed.
+16:53:18.439 INFO  controller.MenuController : pubGen selected
+16:53:26.338 INFO  gateway.DBGateway : Database connection closed.
+16:53:26.338 INFO  controller.MenuController$1 : Application closed.
+17:00:49.003 INFO  controller.MenuController : pubGen selected
+17:02:07.674 INFO  controller.MenuController : pubGen selected
+17:02:17.920 INFO  gateway.DBGateway : Database connection closed.
+17:02:17.921 INFO  controller.MenuController$1 : Application closed.
+17:02:30.336 INFO  gateway.DBGateway : Database connection closed.
+17:02:30.336 INFO  controller.MenuController$1 : Application closed.
+17:02:32.934 INFO  controller.MenuController : pubGen selected
+17:02:37.729 INFO  gateway.DBGateway : Database connection closed.
+17:02:37.729 INFO  controller.MenuController$1 : Application closed.
+17:08:15.016 INFO  controller.MenuController : Book List selected.
+17:08:17.238 INFO  gateway.DBGateway : Database connection closed.
+17:08:17.238 INFO  controller.MenuController$1 : Application closed.
+17:08:54.991 INFO  controller.MenuController : Book List selected.
+17:08:56.608 INFO  controller.BookListController$1 : Book asdf selected.
+17:09:03.387 INFO  gateway.DBGateway : Database connection closed.
+17:09:03.388 INFO  controller.MenuController$1 : Application closed.
+17:09:39.621 INFO  controller.MenuController : Book List selected.
+17:09:41.198 INFO  controller.BookListController$1 : Book fe selected.
+17:09:44.946 INFO  gateway.DBGateway : Database connection closed.
+17:09:44.946 INFO  controller.MenuController$1 : Application closed.
+17:14:24.330 INFO  controller.MenuController : pubGen selected
+17:31:13.657 INFO  controller.MenuController : pubGen selected
+18:04:50.579 INFO  gateway.DBGateway : Database connection closed.
+18:04:50.579 INFO  controller.MenuController$1 : Application closed.
+18:04:52.741 INFO  gateway.DBGateway : Database connection closed.
+18:04:52.741 INFO  controller.MenuController$1 : Application closed.
+18:05:00.984 INFO  controller.MenuController : pubGen selected
+18:07:03.395 INFO  gateway.DBGateway : Database connection closed.
+18:07:03.396 INFO  controller.MenuController$1 : Application closed.
+18:13:21.092 INFO  controller.MenuController : pubGen selected
+18:13:35.294 INFO  gateway.DBGateway : Database connection closed.
+18:13:35.294 INFO  controller.MenuController$1 : Application closed.
+18:14:12.648 INFO  controller.MenuController : pubGen selected
+18:20:28.678 INFO  gateway.DBGateway : Database connection closed.
+18:20:28.679 INFO  controller.MenuController$1 : Application closed.
+18:22:42.766 INFO  controller.MenuController : pubGen selected
+20:21:59.467 INFO  controller.MenuController : Book List selected.
+20:21:59.490 ERROR gateway.DBGateway : Error reading from book table in database: Communications link failure
+
+The last packet successfully received from the server was 7,153,782 milliseconds ago.  The last packet sent successfully to the server was 7,153,849 milliseconds ago.
+20:22:03.010 INFO  gateway.DBGateway : Database connection closed.
+20:22:03.011 INFO  controller.MenuController$1 : Application closed.
+20:22:09.186 INFO  controller.MenuController : Book List selected.
+20:22:11.023 INFO  controller.BookListController$1 : Book hell selected.
+20:22:19.268 INFO  gateway.DBGateway : Database connection closed.
+20:22:19.268 INFO  controller.MenuController$1 : Application closed.
+20:53:23.250 INFO  gateway.DBGateway : Database connection closed.
+20:53:23.252 INFO  controller.MenuController$1 : Application closed.
+20:53:50.326 INFO  controller.MenuController : pubGen selected
+20:53:54.383 ERROR gateway.DBGateway : Error reading from author_book table in database: Unknown column 'author_id' in 'where clause'
+20:53:54.423 ERROR gateway.DBGateway : Error reading from author_book table in database: Unknown column 'author_id' in 'where clause'
+20:53:54.474 ERROR gateway.DBGateway : Error reading from author_book table in database: Unknown column 'author_id' in 'where clause'
+20:53:54.661 ERROR gateway.DBGateway : Error reading from author_book table in database: Unknown column 'author_id' in 'where clause'
+20:53:54.708 ERROR gateway.DBGateway : Error reading from author_book table in database: Unknown column 'author_id' in 'where clause'
+20:58:09.763 INFO  gateway.DBGateway : Database connection closed.
+20:58:09.763 INFO  controller.MenuController$1 : Application closed.
+20:58:12.208 INFO  controller.MenuController : pubGen selected
+20:59:43.846 INFO  gateway.DBGateway : Database connection closed.
+20:59:43.846 INFO  controller.MenuController$1 : Application closed.
+20:59:50.866 INFO  controller.MenuController : pubGen selected
+21:00:15.792 INFO  gateway.DBGateway : Database connection closed.
+21:00:15.793 INFO  controller.MenuController$1 : Application closed.
+21:21:50.234 INFO  gateway.DBGateway : Database connection closed.
+21:21:50.236 INFO  controller.MenuController$1 : Application closed.
+21:22:25.686 INFO  controller.MenuController : pubGen selected
+21:22:46.068 INFO  gateway.DBGateway : Database connection closed.
+21:22:46.069 INFO  controller.MenuController$1 : Application closed.
+21:26:06.109 INFO  controller.MenuController : pubGen selected
+21:30:44.710 INFO  controller.MenuController : pubGen selected
+21:30:54.016 INFO  gateway.DBGateway : Database connection closed.
+21:30:54.017 INFO  controller.MenuController$1 : Application closed.
+21:31:21.486 INFO  controller.MenuController : pubGen selected
+21:31:28.667 INFO  gateway.DBGateway : Database connection closed.
+21:31:28.668 INFO  controller.MenuController$1 : Application closed.
+21:31:43.914 INFO  controller.MenuController : pubGen selected
+21:32:04.461 INFO  gateway.DBGateway : Database connection closed.
+21:32:04.462 INFO  controller.MenuController$1 : Application closed.
+21:32:22.581 INFO  gateway.DBGateway : Database connection closed.
+21:32:22.583 INFO  controller.MenuController$1 : Application closed.
+21:32:25.208 INFO  controller.MenuController : pubGen selected
+21:32:50.006 INFO  gateway.DBGateway : Database connection closed.
+21:32:50.007 INFO  controller.MenuController$1 : Application closed.
+21:33:29.170 INFO  controller.MenuController : pubGen selected
+21:34:17.567 INFO  gateway.DBGateway : Database connection closed.
+21:34:17.568 INFO  controller.MenuController$1 : Application closed.
+21:37:09.999 INFO  controller.MenuController : pubGen selected
+21:37:35.296 INFO  gateway.DBGateway : Database connection closed.
+21:37:35.297 INFO  controller.MenuController$1 : Application closed.
+21:37:53.466 INFO  controller.MenuController : pubGen selected
+21:38:15.338 INFO  gateway.DBGateway : Database connection closed.
+21:38:15.339 INFO  controller.MenuController$1 : Application closed.
+21:39:08.410 INFO  controller.MenuController : pubGen selected
+21:39:48.191 INFO  gateway.DBGateway : Database connection closed.
+21:39:48.192 INFO  controller.MenuController$1 : Application closed.
+21:40:08.828 INFO  controller.MenuController : pubGen selected
+21:40:29.638 INFO  gateway.DBGateway : Database connection closed.
+21:40:29.638 INFO  controller.MenuController$1 : Application closed.
+21:41:19.803 INFO  controller.MenuController : pubGen selected
+21:41:36.320 INFO  gateway.DBGateway : Database connection closed.
+21:41:36.321 INFO  controller.MenuController$1 : Application closed.
+21:41:50.573 INFO  controller.MenuController : pubGen selected
+21:42:04.803 INFO  gateway.DBGateway : Database connection closed.
+21:42:04.804 INFO  controller.MenuController$1 : Application closed.
+21:42:19.514 INFO  controller.MenuController : pubGen selected
+21:43:00.722 INFO  gateway.DBGateway : Database connection closed.
+21:43:00.723 INFO  controller.MenuController$1 : Application closed.
+21:43:35.778 INFO  controller.MenuController : pubGen selected
+21:44:17.748 INFO  controller.MenuController : pubGen selected
+21:44:43.386 INFO  gateway.DBGateway : Database connection closed.
+21:44:43.387 INFO  controller.MenuController$1 : Application closed.
+21:44:47.072 INFO  gateway.DBGateway : Database connection closed.
+21:44:47.073 INFO  controller.MenuController$1 : Application closed.
+21:44:55.748 INFO  controller.MenuController : pubGen selected
+21:45:34.904 INFO  gateway.DBGateway : Database connection closed.
+21:45:34.905 INFO  controller.MenuController$1 : Application closed.
+21:46:18.334 INFO  controller.MenuController : pubGen selected
+21:46:41.395 INFO  gateway.DBGateway : Database connection closed.
+21:46:41.396 INFO  controller.MenuController$1 : Application closed.
+21:46:57.292 INFO  controller.MenuController : pubGen selected
+21:47:20.321 INFO  gateway.DBGateway : Database connection closed.
+21:47:20.322 INFO  controller.MenuController$1 : Application closed.
+21:48:31.066 INFO  controller.MenuController : pubGen selected
+21:49:20.893 INFO  gateway.DBGateway : Database connection closed.
+21:49:20.894 INFO  controller.MenuController$1 : Application closed.
+21:49:44.832 INFO  controller.MenuController : pubGen selected
+21:50:14.848 INFO  gateway.DBGateway : Database connection closed.
+21:50:14.849 INFO  controller.MenuController$1 : Application closed.
+21:51:58.102 INFO  controller.MenuController : pubGen selected
+21:52:53.841 INFO  controller.MenuController : Book List selected.
+21:52:56.076 INFO  controller.BookListController$1 : Book asdf selected.
+21:53:16.808 INFO  gateway.DBGateway : Database connection closed.
+21:53:16.809 INFO  controller.MenuController$1 : Application closed.
+21:54:07.037 INFO  controller.MenuController : pubGen selected
+21:55:08.068 INFO  gateway.DBGateway : Database connection closed.
+21:55:08.069 INFO  controller.MenuController$1 : Application closed.
+21:55:40.917 INFO  controller.MenuController : pubGen selected
+21:56:18.071 INFO  gateway.DBGateway : Database connection closed.
+21:56:18.072 INFO  controller.MenuController$1 : Application closed.
+22:08:47.854 INFO  controller.MenuController : pubGen selected
+22:08:54.661 INFO  gateway.DBGateway : Database connection closed.
+22:08:54.662 INFO  controller.MenuController$1 : Application closed.
+22:09:07.632 INFO  controller.MenuController : pubGen selected
+22:09:51.664 INFO  gateway.DBGateway : Database connection closed.
+22:09:51.664 INFO  controller.MenuController$1 : Application closed.
+22:10:59.741 INFO  controller.MenuController : pubGen selected
+22:11:23.181 INFO  gateway.DBGateway : Database connection closed.
+22:11:23.181 INFO  controller.MenuController$1 : Application closed.
+22:15:08.679 INFO  controller.MenuController : pubGen selected
+22:15:53.515 INFO  gateway.DBGateway : Database connection closed.
+22:15:53.515 INFO  controller.MenuController$1 : Application closed.
+22:17:47.321 INFO  controller.MenuController : pubGen selected
+22:18:53.595 INFO  gateway.DBGateway : Database connection closed.
+22:18:53.595 INFO  controller.MenuController$1 : Application closed.
+22:19:57.085 INFO  controller.MenuController : pubGen selected
+22:20:36.589 INFO  gateway.DBGateway : Database connection closed.
+22:20:36.589 INFO  controller.MenuController$1 : Application closed.
+22:21:35.028 INFO  controller.MenuController : pubGen selected
+22:23:32.875 INFO  gateway.DBGateway : Database connection closed.
+22:23:32.875 INFO  controller.MenuController$1 : Application closed.
+14:23:09.718 INFO  controller.MenuController : pubGen selected
+14:24:48.492 INFO  controller.MenuController : pubGen selected
+14:25:08.191 INFO  gateway.DBGateway : Database connection closed.
+14:25:08.192 INFO  controller.MenuController$1 : Application closed.
+14:25:11.122 INFO  gateway.DBGateway : Database connection closed.
+14:25:11.123 INFO  controller.MenuController$1 : Application closed.
+14:25:17.119 INFO  controller.MenuController : pubGen selected
+14:25:57.099 INFO  gateway.DBGateway : Database connection closed.
+14:25:57.099 INFO  controller.MenuController$1 : Application closed.
+14:26:11.532 INFO  controller.MenuController : pubGen selected
+14:27:52.388 INFO  gateway.DBGateway : Database connection closed.
+14:27:52.388 INFO  controller.MenuController$1 : Application closed.
+14:27:58.090 INFO  controller.MenuController : pubGen selected
+14:29:06.295 INFO  gateway.DBGateway : Database connection closed.
+14:29:06.295 INFO  controller.MenuController$1 : Application closed.
+14:29:14.651 INFO  controller.MenuController : pubGen selected
+14:29:41.953 INFO  gateway.DBGateway : Database connection closed.
+14:29:41.954 INFO  controller.MenuController$1 : Application closed.
+14:30:36.221 INFO  controller.MenuController : Book List selected.
+14:30:38.089 INFO  controller.BookListController$1 : Book lord of the flies selected.
+14:30:40.936 INFO  gateway.DBGateway : Database connection closed.
+14:30:40.937 INFO  controller.MenuController$1 : Application closed.
+14:32:32.231 INFO  controller.MenuController : pubGen selected
+14:33:08.181 INFO  gateway.DBGateway : Database connection closed.
+14:33:08.181 INFO  controller.MenuController$1 : Application closed.
+14:35:43.518 INFO  controller.MenuController : pubGen selected
+14:36:25.641 INFO  gateway.DBGateway : Database connection closed.
+14:36:25.641 INFO  controller.MenuController$1 : Application closed.
+14:36:45.623 INFO  controller.MenuController : pubGen selected
+14:37:05.411 INFO  gateway.DBGateway : Database connection closed.
+14:37:05.411 INFO  controller.MenuController$1 : Application closed.
+14:37:33.666 INFO  controller.MenuController : pubGen selected
+14:47:39.480 INFO  controller.MenuController : pubGen selected
+14:50:13.280 INFO  controller.MenuController : pubGen selected
+14:50:50.906 INFO  gateway.DBGateway : Database connection closed.
+14:50:50.906 INFO  controller.MenuController$1 : Application closed.
+14:50:52.659 INFO  gateway.DBGateway : Database connection closed.
+14:50:52.659 INFO  controller.MenuController$1 : Application closed.
+14:50:54.466 INFO  gateway.DBGateway : Database connection closed.
+14:50:54.466 INFO  controller.MenuController$1 : Application closed.
+14:51:00.133 INFO  controller.MenuController : pubGen selected
+14:51:55.832 INFO  controller.MenuController : pubGen selected
+14:54:00.454 INFO  gateway.DBGateway : Database connection closed.
+14:54:00.455 INFO  controller.MenuController$1 : Application closed.
+14:54:01.668 INFO  gateway.DBGateway : Database connection closed.
+14:54:01.669 INFO  controller.MenuController$1 : Application closed.
+14:54:07.954 INFO  controller.MenuController : pubGen selected
+14:55:04.974 INFO  controller.MenuController : pubGen selected
+14:55:35.503 INFO  gateway.DBGateway : Database connection closed.
+14:55:35.503 INFO  controller.MenuController$1 : Application closed.
+15:06:21.526 INFO  controller.MenuController : pubGen selected
+15:06:52.949 INFO  gateway.DBGateway : Database connection closed.
+15:06:52.949 INFO  controller.MenuController$1 : Application closed.
+15:07:13.271 INFO  gateway.DBGateway : Database connection closed.
+15:07:13.273 INFO  controller.MenuController$1 : Application closed.
+15:07:15.432 INFO  controller.MenuController : pubGen selected
+15:07:30.425 INFO  gateway.DBGateway : Database connection closed.
+15:07:30.425 INFO  controller.MenuController$1 : Application closed.
+15:08:04.868 INFO  controller.MenuController : pubGen selected
+15:08:25.328 INFO  gateway.DBGateway : Database connection closed.
+15:08:25.328 INFO  controller.MenuController$1 : Application closed.
+15:16:32.871 ERROR gateway.DBGateway : An error occured in creating a connection to the database: Too many connections
+15:16:33.055 ERROR gateway.DBGateway : An error occured in creating a connection to the database: Too many connections
+15:16:38.081 INFO  controller.MenuController$1 : Application closed.
+15:16:41.853 ERROR gateway.DBGateway : An error occured in creating a connection to the database: Too many connections
+15:16:42.025 ERROR gateway.DBGateway : An error occured in creating a connection to the database: Too many connections
+15:16:45.077 INFO  controller.MenuController$1 : Application closed.
+15:16:52.568 ERROR gateway.DBGateway : An error occured in creating a connection to the database: Too many connections
+15:16:52.882 ERROR gateway.DBGateway : An error occured in creating a connection to the database: Too many connections
+15:16:56.826 INFO  controller.MenuController : pubGen selected
+15:17:02.088 INFO  controller.MenuController$1 : Application closed.
+15:17:07.990 ERROR gateway.DBGateway : An error occured in creating a connection to the database: Too many connections
+15:17:08.146 ERROR gateway.DBGateway : An error occured in creating a connection to the database: Too many connections
+15:17:11.190 INFO  controller.MenuController$1 : Application closed.
+15:19:38.048 INFO  controller.MenuController : pubGen selected
+15:20:29.894 INFO  gateway.DBGateway : Database connection closed.
+15:20:29.894 INFO  controller.MenuController$1 : Application closed.
+15:24:58.015 INFO  controller.MenuController : pubGen selected
+15:26:17.087 INFO  gateway.DBGateway : Database connection closed.
+15:26:17.087 INFO  controller.MenuController$1 : Application closed.
+15:26:24.602 INFO  controller.MenuController : pubGen selected
+15:26:53.765 INFO  gateway.DBGateway : Database connection closed.
+15:26:53.765 INFO  controller.MenuController$1 : Application closed.
+15:27:00.796 INFO  controller.MenuController : pubGen selected
+15:27:20.875 INFO  gateway.DBGateway : Database connection closed.
+15:27:20.875 INFO  controller.MenuController$1 : Application closed.
+15:28:42.186 INFO  controller.MenuController : pubGen selected
+15:28:54.955 INFO  gateway.DBGateway : Database connection closed.
+15:28:54.956 INFO  controller.MenuController$1 : Application closed.
+15:31:58.293 INFO  controller.MenuController : pubGen selected
+15:32:21.249 INFO  gateway.DBGateway : Database connection closed.
+15:32:21.249 INFO  controller.MenuController$1 : Application closed.
+15:33:12.204 INFO  controller.MenuController : pubGen selected
+15:33:32.606 INFO  gateway.DBGateway : Database connection closed.
+15:33:32.606 INFO  controller.MenuController$1 : Application closed.
+15:34:01.790 INFO  controller.MenuController : pubGen selected
+15:34:45.184 INFO  gateway.DBGateway : Database connection closed.
+15:34:45.184 INFO  controller.MenuController$1 : Application closed.
+15:42:30.762 INFO  controller.MenuController : pubGen selected
+15:42:59.033 INFO  gateway.DBGateway : Database connection closed.
+15:42:59.033 INFO  controller.MenuController$1 : Application closed.

@@ -5,5 +5,27 @@
 	<classpathentry exported="true" kind="lib" path="log4j-api-2.7.jar"/>
 	<classpathentry exported="true" kind="lib" path="log4j-core-2.7.jar"/>
 	<classpathentry kind="lib" path="mysql-connector-java-5.1.40-bin.jar"/>
+	<classpathentry kind="lib" path="C:/Users/austin/Downloads/poi-bin-3.17-20170915/poi-3.17/poi-3.17.jar"/>
+	<classpathentry kind="lib" path="C:/Users/austin/Downloads/poi-bin-3.17-20170915/poi-3.17/poi-examples-3.17.jar"/>
+	<classpathentry kind="lib" path="C:/Users/austin/Downloads/poi-bin-3.17-20170915/poi-3.17/poi-excelant-3.17.jar"/>
+	<classpathentry kind="lib" path="C:/Users/austin/Downloads/poi-bin-3.17-20170915/poi-3.17/poi-ooxml-3.17.jar"/>
+	<classpathentry kind="lib" path="C:/Users/austin/Downloads/poi-bin-3.17-20170915/poi-3.17/poi-ooxml-schemas-3.17.jar"/>
+	<classpathentry kind="lib" path="C:/Users/austin/Downloads/poi-bin-3.17-20170915/poi-3.17/poi-scratchpad-3.17.jar"/>
+	<classpathentry kind="lib" path="C:/Users/austin/Downloads/commons-io-2.6-bin/commons-io-2.6/commons-io-2.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/austin/Downloads/commons-io-2.6-bin/commons-io-2.6/commons-io-2.6-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/austin/Downloads/commons-io-2.6-bin/commons-io-2.6/commons-io-2.6-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/austin/Downloads/commons-io-2.6-bin/commons-io-2.6/commons-io-2.6-tests.jar"/>
+	<classpathentry kind="lib" path="C:/Users/austin/Downloads/commons-io-2.6-bin/commons-io-2.6/commons-io-2.6-test-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/austin/Downloads/commons-lang3-3.7-bin/commons-lang3-3.7/commons-lang3-3.7.jar"/>
+	<classpathentry kind="lib" path="C:/Users/austin/Downloads/commons-lang3-3.7-bin/commons-lang3-3.7/commons-lang3-3.7-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/austin/Downloads/commons-lang3-3.7-bin/commons-lang3-3.7/commons-lang3-3.7-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/austin/Downloads/commons-lang3-3.7-bin/commons-lang3-3.7/commons-lang3-3.7-tests.jar"/>
+	<classpathentry kind="lib" path="C:/Users/austin/Downloads/commons-lang3-3.7-bin/commons-lang3-3.7/commons-lang3-3.7-test-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/austin/Downloads/poi-bin-3.17-20170915/poi-3.17/ooxml-lib/curvesapi-1.04.jar"/>
+	<classpathentry kind="lib" path="C:/Users/austin/Downloads/poi-bin-3.17-20170915/poi-3.17/ooxml-lib/xmlbeans-2.6.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/austin/Downloads/poi-bin-3.17-20170915/poi-3.17/lib/commons-codec-1.10.jar"/>
+	<classpathentry kind="lib" path="C:/Users/austin/Downloads/poi-bin-3.17-20170915/poi-3.17/lib/commons-collections4-4.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/austin/Downloads/poi-bin-3.17-20170915/poi-3.17/lib/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/austin/Downloads/poi-bin-3.17-20170915/poi-3.17/lib/junit-4.12.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

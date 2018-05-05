@@ -37,6 +37,8 @@ public class MenuController {
 	private MenuItem bookList;
 	@FXML
 	private MenuItem bookAdd;
+	@FXML
+	private MenuItem pubGen;
 	private Logger logger = LogManager.getLogger(MenuController.class);
 	private DBGateway gateway;
 
@@ -86,9 +88,26 @@ public class MenuController {
 			logger.info("Logout selected.");
 			
 		}
+		else if (event.getSource() == pubGen) {
+			logger.info("pubGen selected");
+			publisherReports();
+		}
 	}
 
-	// Border Layout center settings
+	private void publisherReports() throws IOException{
+		Driver app = driver.getInstance();
+		try {
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/pubReports.fxml"));
+			loader.setController(new pubReportsController(gateway));
+			Pane pane = (Pane) loader.load();
+			app.getRootPane().setCenter(pane);
+		} catch (IOException e) {
+			logger.error("Error opening pubReports"
+					+ "pubReports.fxml " + e.getMessage());
+			throw new IOException(e);
+		}
+	}
+	
 	private void changeToAuthorScene() throws IOException {
 		Driver app = driver.getInstance();
 		try {

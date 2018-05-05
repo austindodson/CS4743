@@ -4,6 +4,11 @@ import javafx.beans.property.SimpleStringProperty;
 
 public class Publisher {
 
+	@Override
+	public String toString() {
+		return publisherName;
+	}
+
 	private int id;
 	private String publisherName;
 
