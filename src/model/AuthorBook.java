@@ -4,6 +4,12 @@ import model.Author;
 import model.Book;
 
 public class AuthorBook {
+	@Override
+	public String toString() {
+		return "AuthorBook [author_id=" + author_id + ", book_id=" + book_id + ", author_firstname=" + author_firstname
+				+ ", author_lastname=" + author_lastname + ", royalty=" + royalty + ", newRecord=" + newRecord + "]";
+	}
+
 	private int author_id;
 	private int book_id;
 	private String author_firstname;

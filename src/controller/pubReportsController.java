@@ -141,6 +141,7 @@ public class pubReportsController {
 		
 		index = 5;
 		for(Book book: books) {
+			System.out.println(book);
 			authors = gateway.getAuthorsForBook(book);
 			if (authors.size() == 1) {
 				AuthorBook ab = gateway.getAuthorBook(authors.get(0).getId(), book.getId());
@@ -171,7 +172,16 @@ public class pubReportsController {
 			}
 			else {
 				int authIndex = 0;
+				if (authors.size() == 0) {
+					row2 = sheet.createRow(index);
+					cell = row2.createCell(0);
+					cell.setCellValue(book.getTitle());
+					cell = row2.createCell(1);
+					cell.setCellValue(book.getIsbn());
+					index++;
+				}
 				for(Author auth: authors) {
+					System.out.println("\t" + auth);
 					if (authIndex==0) {
 						AuthorBook ab = gateway.getAuthorBook(auth.getId(), book.getId());
 						double roy = (double) (ab.getRoyalty()*.01);

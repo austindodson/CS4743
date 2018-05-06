@@ -26,7 +26,9 @@
 				<MenuItem fx:id="bookAdd" mnemonicParsing="false"
 					onAction="#handleMenuAction" text="Add book" />	
 				<MenuItem fx:id="pubGen" mnemonicParsing="false"
-					onAction="#handleMenuAction" text="Publisher Reports" />	
+					onAction="#handleMenuAction" text="Publisher Reports" />
+				 <!-- <MenuItem fx:id="ten" mnemonicParsing="false"
+					onAction="#handleMenuAction" text="10000" /> -->	 	
 			</items>
 		</Menu>
 	</menus>

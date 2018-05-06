@@ -32,26 +32,71 @@ public class BookListController {
 	private Button goSearch;
 	@FXML
 	private TextField search;
-
+	@FXML
+	private Button first;
+	@FXML
+	private Button prev;
+	@FXML
+	private Button next;
+	@FXML
+	private Button last;
+	@FXML 
+	private Label page;
+	
+	private ObservableList<String> bookItems;
+	
+	private int listStart;
+	
 	public BookListController(DBGateway gateway) {
 		this.gateway = gateway;
+		this.listStart = 0;
 	}
 
+	@FXML
 	public void setListView() {
+		
 
 		if (!matchingString.equals("")) {
 			booksList = gateway.getBooksLike(matchingString);
+			if (booksList.size() < 50) {
+				int start = 0;
+				if (booksList.size() != 0) {
+					start = 1;
+				}
+				page.setText("Fetched records "+ start +" to "+ booksList.size()+" out of "+ booksList.size());
+			}else {
+				int start = 0;
+				if (booksList.size() != 0) {
+					start = listStart+1;
+				}
+				int temp = start+50;
+				if(temp >= booksList.size()) {
+					temp = booksList.size();
+				}
+				page.setText("Fetched records "+ start +" to "+ temp+" out of "+ booksList.size());
+			}
+		
 		} else {
 			booksList = gateway.getBooks();
+			page.setText("Fetched records 1 to "+ booksList.size()+" out of "+ booksList.size());
 		}
 
-		ObservableList<String> bookItems = FXCollections.observableArrayList();
+		bookItems = FXCollections.observableArrayList();
 		// fill the ObservableList with the author names
-		for (int i = 0; i < booksList.size(); i++) {
-			bookItems.add(booksList.get(i).getTitle());
+		if ((booksList.size()-listStart) >= 50) {
+			for (int i = listStart; i < listStart+50; i++) {
+				bookItems.add(booksList.get(i).getTitle());
+			}
 		}
+		else {
+			for (int i = listStart; i < listStart+(booksList.size()-listStart); i++) {
+				bookItems.add(booksList.get(i).getTitle());
+			}
+		}
+
 		// set the list with the ObservableList
 		list.setItems(bookItems);
+		//page.setText("Fetched records 1 to "+ bookItems.size()+" out of "+ booksList.size());
 		EventHandler<MouseEvent> doubleClick = new EventHandler<MouseEvent>() {
 
 			@Override
@@ -112,11 +157,85 @@ public class BookListController {
 			public void handle(MouseEvent mouseEvent) {
 				if (mouseEvent.getButton().equals(MouseButton.PRIMARY)) {
 					matchingString = search.getText();
+					listStart = 0;
+					page.setText("Fetched records 1 to "+ bookItems.size()+" out of "+ booksList.size());
 					setListView();
 				}
 			}
 		};
 		goSearch.setOnMouseClicked(searchHandler);
+		
+		EventHandler<MouseEvent> firstHandler = new EventHandler<MouseEvent>() {
+			@Override
+			public void handle(MouseEvent mouseEvent) {
+				if (mouseEvent.getButton().equals(MouseButton.PRIMARY)) {
+					if (listStart != 0 && booksList.size() > 50) {
+						if (search.getText() != null || search.getText() != "") {
+							matchingString = search.getText();
+						}
+						page.setText("Fetched records 1 to "+ bookItems.size()+" out of "+ booksList.size());
+						listStart=0;
+						setListView();
+					}
+				}
+			}
+		};
+		first.setOnMouseClicked(firstHandler);
+		
+		EventHandler<MouseEvent> prevHandler = new EventHandler<MouseEvent>() {
+			@Override
+			public void handle(MouseEvent mouseEvent) {
+				if (mouseEvent.getButton().equals(MouseButton.PRIMARY)) {
+					if ((listStart-50) >= 0) {	
+						if (search.getText() != null || search.getText() != "") {
+							matchingString = search.getText();
+						}
+						listStart=listStart-50;
+						int start = listStart+1;
+						int listtemp = start+(booksList.size()-listStart);
+						page.setText("Fetched records "+ start +" to "+ listtemp +" out of "+ booksList.size());
+						setListView();
+					}
+				}
+			}
+		};
+		prev.setOnMouseClicked(prevHandler);
+		
+		EventHandler<MouseEvent> nextHandler = new EventHandler<MouseEvent>() {
+			@Override
+			public void handle(MouseEvent mouseEvent) {
+				if (mouseEvent.getButton().equals(MouseButton.PRIMARY)) {
+					if((listStart+50) < booksList.size()) {	
+						if (search.getText() != null || search.getText() != "") {
+							matchingString = search.getText();
+						}
+						listStart=listStart+50;
+						int start = listStart+1;
+						int listtemp = start+(booksList.size()-listStart);
+						page.setText("Fetched records "+ start +" to "+ listtemp +" out of "+ booksList.size());
+						setListView();
+					}
+				}
+			}
+		};
+		next.setOnMouseClicked(nextHandler);
+		
+		EventHandler<MouseEvent> lastHandler = new EventHandler<MouseEvent>() {
+			@Override
+			public void handle(MouseEvent mouseEvent) {
+				if (mouseEvent.getButton().equals(MouseButton.PRIMARY)) {
+					if (search.getText() != null || search.getText() != "") {
+						matchingString = search.getText();
+					}
+					if (listStart <= (booksList.size()-50) && booksList.size() > 50) {
+						listStart = booksList.size()-50;
+						page.setText("Fetched records "+ listStart +" to "+ booksList.size() +" out of "+ booksList.size());
+						setListView();
+					}
+				}
+			}
+		};
+		last.setOnMouseClicked(lastHandler);
 	}
 
 	// Activate fxml to set List View.

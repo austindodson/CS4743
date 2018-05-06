@@ -1,6 +1,10 @@
 package controller;
 
 import java.io.IOException;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.Random;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -9,6 +13,10 @@ import authdemo.auth.Authenticator;
 import authdemo.auth.AuthenticatorLocal;
 import libdemo.Driver;
 import misc.CryptoStuff;
+import model.Author;
+import model.AuthorBook;
+import model.Book;
+import model.Publisher;
 import gateway.DBGateway;
 import javafx.event.*;
 import javafx.fxml.*;
@@ -39,6 +47,8 @@ public class MenuController {
 	private MenuItem bookAdd;
 	@FXML
 	private MenuItem pubGen;
+	@FXML
+	private MenuItem ten;
 	private Logger logger = LogManager.getLogger(MenuController.class);
 	private DBGateway gateway;
 
@@ -62,6 +72,10 @@ public class MenuController {
 	}
 
 	// Action handler for menu items
+	/**
+	 * @param event
+	 * @throws Exception
+	 */
 	@FXML
 	private void handleMenuAction(ActionEvent event) throws Exception {
 		if (event.getSource() == authorList) {
@@ -86,13 +100,32 @@ public class MenuController {
 		}
 		else if (event.getSource() == logout) {
 			logger.info("Logout selected.");
-			
 		}
 		else if (event.getSource() == pubGen) {
 			logger.info("pubGen selected");
 			publisherReports();
 		}
+	/*else if (event.getSource() == ten){
+			generateTenThousand();
+		}*/
 	}
+	
+	/*private void generateTenThousand() {
+		ArrayList<Author> authors = gateway.getAuthors();
+		ArrayList<Publisher> pubs = gateway.getPublishers();
+		ArrayList<Book> books = gateway.getBooks();
+		Random random = new Random();
+		
+		for(Book book: books) {
+			System.out.println(book);
+			Author auth = authors.get(random.nextInt(authors.size()));
+			System.out.println(auth);
+			AuthorBook ab = new AuthorBook(auth.getId(), book.getId(), random.nextInt(100), true);
+			System.out.println(ab);
+			gateway.saveAuthorBook(ab, book);
+		}
+		System.out.println("10000!!!!!!!!!!!!!!!1");
+	}*/
 
 	private void publisherReports() throws IOException{
 		Driver app = driver.getInstance();
